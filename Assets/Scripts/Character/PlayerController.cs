@@ -28,7 +28,7 @@ public class PlayerController : MonoBehaviour
 
             if(input != Vector2.zero)
             {
-                StartCoroutine(character.Move(input));
+                StartCoroutine(character.Move(input, CheckForEncounters));
             }
         }
 
@@ -48,6 +48,18 @@ public class PlayerController : MonoBehaviour
         {
             collider.GetComponent<NPCController>()?.Interact(transform);
 
+        }
+    }
+
+    private void CheckForEncounters()
+    {
+        if(Physics2D.OverlapCircle(transform.position, 0.0f, GameLayers.i.GrassLayer) != null)
+        {
+            if(UnityEngine.Random.Range(1, 101) <= 10)
+            {
+                character.Animator.isMoving = false;
+                Debug.Log("Encontre un puchamon");
+            }
         }
     }
 }
