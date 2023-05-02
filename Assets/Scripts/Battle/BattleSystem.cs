@@ -15,6 +15,7 @@ public class BattleSystem : MonoBehaviour
     [SerializeField] BattleHud playerHud;
     [SerializeField] BattleHud enemyHud;
     [SerializeField] BattleDialogBox dialogBox;
+    [SerializeField] PartyScreen partyScreen;
 
     public event Action<bool> onBattleOver;
 
@@ -25,17 +26,24 @@ public class BattleSystem : MonoBehaviour
     bool presionadoHorizontal = false;
     bool presionadoVertical = false;
 
-    public void StartBattle()
+    PokemonParty playerParty;
+    Pokemon wildPokemon;
+
+    public void StartBattle(PokemonParty playerParty, Pokemon wildPokemon)
     {
-       StartCoroutine(SetupBattle());
+        this. playerParty = playerParty;
+        this. wildPokemon = wildPokemon;
+        StartCoroutine(SetupBattle());
     }
 
     public IEnumerator SetupBattle()
     {
-        playerUnit.Setup();
-        enemyUnit.Setup();
+        playerUnit.Setup(playerParty.GetHealthyPokemon());
+        enemyUnit.Setup(wildPokemon);
         playerHud.SetData(playerUnit.Pokemon);
         enemyHud.SetData(enemyUnit.Pokemon);
+
+        partyScreen.Init();
 
         dialogBox.SetMovesNames(playerUnit.Pokemon.Moves);
 
@@ -47,8 +55,14 @@ public class BattleSystem : MonoBehaviour
     void PlayerAction()
     {
         state = BattleState.PlayerAction;
-        StartCoroutine(dialogBox.TypeDialog("Elije una acción"));
+        dialogBox.SetDialog("Elije una acción");
         dialogBox.EnableActionSelector(true);
+    }
+
+    void OpenPartyScreen()
+    {
+        partyScreen.SetPartyData(playerParty.Pokemons);
+        partyScreen.gameObject.SetActive(true);
     }
 
     void PlayerMove()
@@ -64,6 +78,7 @@ public class BattleSystem : MonoBehaviour
         state = BattleState.Busy;
 
         var move = playerUnit.Pokemon.Moves[currentMove];
+        move.PP--;
         yield return dialogBox.TypeDialog($"¡{playerUnit.Pokemon.Base.Name} usó {move.Base.Name}!");
 
         playerUnit.PlayAttackAnimation();
@@ -94,6 +109,7 @@ public class BattleSystem : MonoBehaviour
         state = BattleState.EnemyMove;
 
         var move = enemyUnit.Pokemon.GetRandomMove();
+        move.PP--;
         yield return dialogBox.TypeDialog($"¡{enemyUnit.Pokemon.Base.Name} enemigo usó {move.Base.Name}!");
 
         enemyUnit.PlayAttackAnimation();
@@ -107,11 +123,29 @@ public class BattleSystem : MonoBehaviour
 
         if (damageDetails.Fainted)
         {
-            yield return dialogBox.TypeDialog($"¡{playerUnit.Pokemon.Base.Name} enemigo se debilitó!");
+            yield return dialogBox.TypeDialog($"¡{playerUnit.Pokemon.Base.Name} se debilitó!");
             playerUnit.PlayFaintAnimation();
 
-            yield return new WaitForSeconds(2f);
-            onBattleOver(false);
+            yield return new WaitForSeconds(1f);
+
+            var nextPokemon = playerParty.GetHealthyPokemon();
+
+            if(nextPokemon != null)
+            {
+                playerUnit.Setup(nextPokemon);
+                playerHud.SetData(playerUnit.Pokemon);
+
+
+                dialogBox.SetMovesNames(playerUnit.Pokemon.Moves);
+
+                yield return dialogBox.TypeDialog($"¡Vamos {enemyUnit.Pokemon.Base.Name}!");
+
+                PlayerAction();
+            }
+            else
+            {
+                onBattleOver(false);
+            }
         }
         else
         {
@@ -144,15 +178,37 @@ public class BattleSystem : MonoBehaviour
 
     void HandleActionSelection()
     {
-        if (Input.GetKeyDown(KeyCode.DownArrow) || (SimpleInput.GetAxisRaw("Vertical") < 0))
+        if ((Input.GetKeyDown(KeyCode.RightArrow) || (SimpleInput.GetAxisRaw("Horizontal") > 0)) && !presionadoHorizontal)
         {
-            if (currentAction < 1)
-                ++currentAction;
+            presionadoHorizontal = true;
+            ++currentAction;
         }
-        else if (Input.GetKeyDown(KeyCode.UpArrow) || (SimpleInput.GetAxisRaw("Vertical") > 0))
+        else if ((Input.GetKeyDown(KeyCode.LeftArrow) || (SimpleInput.GetAxisRaw("Horizontal") < 0)) && !presionadoHorizontal)
         {
-            if(currentAction > 0)
-                --currentAction;
+            presionadoHorizontal = true;
+            --currentAction;
+        }
+        else if ((Input.GetKeyDown(KeyCode.DownArrow) || (SimpleInput.GetAxisRaw("Vertical") < 0)) && !presionadoVertical)
+        {
+            presionadoVertical = true;
+            currentAction += 2;
+        }
+        else if ((Input.GetKeyDown(KeyCode.UpArrow) || (SimpleInput.GetAxisRaw("Vertical") > 0)) && !presionadoVertical)
+        {
+            presionadoVertical = true;
+            currentAction -= 2;
+        }
+
+        currentAction = Mathf.Clamp(currentAction, 0, 3);
+
+        if (SimpleInput.GetAxisRaw("Horizontal") == 0)
+        {
+            presionadoHorizontal = false;
+        }
+
+        if (SimpleInput.GetAxisRaw("Vertical") == 0)
+        {
+            presionadoVertical = false;
         }
 
         dialogBox.UpdateActionSelection(currentAction);
@@ -166,6 +222,15 @@ public class BattleSystem : MonoBehaviour
             }
             else if (currentAction == 1)
             {
+                //Mochila
+            }
+            else if (currentAction == 2)
+            {
+                //Pokemon
+                OpenPartyScreen();
+            }
+            else if (currentAction == 3)
+            {
                 //Huir
             }
         }
@@ -176,41 +241,25 @@ public class BattleSystem : MonoBehaviour
         if ((Input.GetKeyDown(KeyCode.RightArrow) || (SimpleInput.GetAxisRaw("Horizontal") > 0)) && !presionadoHorizontal)
         {
             presionadoHorizontal = true;
-            if (currentMove < playerUnit.Pokemon.Moves.Count - 1)
-            {
-                Debug.Log("currenMove right: " + currentMove);
-                currentMove++;
-            }
+            ++currentMove;
         }
         else if ((Input.GetKeyDown(KeyCode.LeftArrow) || (SimpleInput.GetAxisRaw("Horizontal") < 0)) && !presionadoHorizontal)
         {
             presionadoHorizontal = true;
-            if (currentMove > 0)
-            {
-                Debug.Log("currenMove left: " + currentMove);
-                --currentMove;
-            }
+            --currentMove;
         }
         else if ((Input.GetKeyDown(KeyCode.DownArrow) || (SimpleInput.GetAxisRaw("Vertical") < 0)) && !presionadoVertical)
         {
             presionadoVertical = true;
-            if (currentMove < playerUnit.Pokemon.Moves.Count - 2)
-            {
-                Debug.Log("currenMove down: " + currentMove);
-                currentMove += 2;
-            }
+            currentMove += 2;
         }
         else if ((Input.GetKeyDown(KeyCode.UpArrow) || (SimpleInput.GetAxisRaw("Vertical") > 0)) && !presionadoVertical)
         {
             presionadoVertical = true;
-            if (currentMove > 1)
-            {
-                Debug.Log("currenMove up: " + currentMove);
-                currentMove -= 2;
-            }
+            currentMove -= 2;
         }
 
-        dialogBox.UpdateMoveSelection(currentMove, playerUnit.Pokemon.Moves[currentMove]);
+        currentMove = Mathf.Clamp(currentMove, 0, playerUnit.Pokemon.Moves.Count-1);
 
         if (SimpleInput.GetAxisRaw("Horizontal") == 0)
         {
@@ -222,11 +271,19 @@ public class BattleSystem : MonoBehaviour
             presionadoVertical = false;
         }
 
+        dialogBox.UpdateMoveSelection(currentMove, playerUnit.Pokemon.Moves[currentMove]);
+
         if ((Input.GetKeyDown(KeyCode.Z)) || CrossPlatformInputManager.GetButtonDown("ButtonA"))
         {
             dialogBox.EnableMoveSelector(false);
             dialogBox.EnableDialogText(true);
             StartCoroutine(PerformPlayerMove());
+        }
+        else if((Input.GetKeyDown(KeyCode.X)) || CrossPlatformInputManager.GetButtonDown("ButtonB"))
+        {
+            dialogBox.EnableMoveSelector(false);
+            dialogBox.EnableDialogText(true);
+            PlayerAction();
         }
     }
 }

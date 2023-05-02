@@ -1,4 +1,5 @@
 using DG.Tweening;
+using Mono.Cecil.Cil;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -6,8 +7,6 @@ using UnityEngine.UI;
 
 public class BattleUnit : MonoBehaviour
 {
-    [SerializeField] PokemonBase _base;
-    [SerializeField] int level;
     [SerializeField] bool isPlayerUnit;
 
     public Pokemon Pokemon { get; set; }
@@ -23,14 +22,15 @@ public class BattleUnit : MonoBehaviour
         originalColor = image.color;
     }
 
-    public void Setup()
+    public void Setup(Pokemon pokemon)
     {
-        Pokemon = new Pokemon(_base, level);
+        Pokemon = pokemon;
         if (isPlayerUnit)
             image.sprite = Pokemon.Base.BackSprite;
         else
             image.sprite = Pokemon.Base.FrontSprite;
 
+        //orginalPos = image.transform.localPosition;
         image.color = originalColor;
         PlayEnterAnimation();
     }

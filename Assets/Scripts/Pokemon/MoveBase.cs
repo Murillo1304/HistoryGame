@@ -45,4 +45,19 @@ public class MoveBase : ScriptableObject
     {
         get { return pp;}
     }
+
+    public bool IsSpecial
+    {
+        get
+        {
+            if(type == PokemonType.Fuego || type == PokemonType.Agua)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+    }
 }
