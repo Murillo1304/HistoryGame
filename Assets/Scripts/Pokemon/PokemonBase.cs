@@ -132,6 +132,15 @@ public enum PokemonType
     Hada,
 }
 
+public enum Stat
+{
+    Attack,
+    Defense,
+    SpAttack,
+    SpDefense,
+    Speed,
+}
+
 public class TypeChart
 {
     static float[][] chart =
