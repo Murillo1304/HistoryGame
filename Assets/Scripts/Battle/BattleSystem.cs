@@ -22,6 +22,9 @@ public class BattleSystem : MonoBehaviour
     int currentAction;
     int currentMove;
 
+    bool presionadoHorizontal = false;
+    bool presionadoVertical = false;
+
     public void StartBattle()
     {
        StartCoroutine(SetupBattle());
@@ -141,12 +144,12 @@ public class BattleSystem : MonoBehaviour
 
     void HandleActionSelection()
     {
-        if (Input.GetKeyDown(KeyCode.DownArrow))
+        if (Input.GetKeyDown(KeyCode.DownArrow) || (SimpleInput.GetAxisRaw("Vertical") < 0))
         {
             if (currentAction < 1)
                 ++currentAction;
         }
-        else if (Input.GetKeyDown(KeyCode.UpArrow))
+        else if (Input.GetKeyDown(KeyCode.UpArrow) || (SimpleInput.GetAxisRaw("Vertical") > 0))
         {
             if(currentAction > 0)
                 --currentAction;
@@ -154,7 +157,7 @@ public class BattleSystem : MonoBehaviour
 
         dialogBox.UpdateActionSelection(currentAction);
 
-        if ((Input.GetKeyDown(KeyCode.Z)) || (CrossPlatformInputManager.GetButtonDown("ButtonA")))
+        if (Input.GetKeyDown(KeyCode.Z) || CrossPlatformInputManager.GetButtonDown("ButtonA"))
         {
             if (currentAction == 0)
             {
@@ -170,28 +173,30 @@ public class BattleSystem : MonoBehaviour
 
     void HandleMoveSelection()
     {
-        if ((Input.GetKeyDown(KeyCode.RightArrow)))
+        if ((Input.GetKeyDown(KeyCode.RightArrow) || (SimpleInput.GetAxisRaw("Horizontal") > 0)) && !presionadoHorizontal)
         {
+            presionadoHorizontal = true;
             if (currentMove < playerUnit.Pokemon.Moves.Count - 1)
             {
                 Debug.Log("currenMove right: " + currentMove);
                 currentMove++;
             }
         }
-        else if ((Input.GetKeyDown(KeyCode.LeftArrow)))
+        else if ((Input.GetKeyDown(KeyCode.LeftArrow) || (SimpleInput.GetAxisRaw("Horizontal") < 0)) && !presionadoHorizontal)
         {
+            presionadoHorizontal = true;
             if (currentMove > 0)
             {
                 Debug.Log("currenMove left: " + currentMove);
                 --currentMove;
             }
         }
-        else if (Input.GetKeyDown(KeyCode.DownArrow))
+        else if ((Input.GetKeyDown(KeyCode.DownArrow) || (SimpleInput.GetAxisRaw("Vertical") < 0)) && !presionadoVertical)
         {
             if (currentMove < playerUnit.Pokemon.Moves.Count - 2)
                 currentMove += 2;
         }
-        else if (Input.GetKeyDown(KeyCode.UpArrow))
+        else if ((Input.GetKeyDown(KeyCode.UpArrow) || (SimpleInput.GetAxisRaw("Vertical") < 0)) && !presionadoVertical)
         {
             if (currentMove > 1)
                 currentMove -= 2;
@@ -199,7 +204,17 @@ public class BattleSystem : MonoBehaviour
 
         dialogBox.UpdateMoveSelection(currentMove, playerUnit.Pokemon.Moves[currentMove]);
 
-        if (Input.GetKeyDown(KeyCode.Z))
+        if (SimpleInput.GetAxisRaw("Horizontal") == 0)
+        {
+            presionadoHorizontal = false;
+        }
+
+        if (SimpleInput.GetAxisRaw("Vertical") == 0)
+        {
+            presionadoVertical = false;
+        }
+
+        if ((Input.GetKeyDown(KeyCode.Z)) || CrossPlatformInputManager.GetButtonDown("ButtonA"))
         {
             dialogBox.EnableMoveSelector(false);
             dialogBox.EnableDialogText(true);
