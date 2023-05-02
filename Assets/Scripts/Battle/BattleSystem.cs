@@ -193,13 +193,21 @@ public class BattleSystem : MonoBehaviour
         }
         else if ((Input.GetKeyDown(KeyCode.DownArrow) || (SimpleInput.GetAxisRaw("Vertical") < 0)) && !presionadoVertical)
         {
+            presionadoVertical = true;
             if (currentMove < playerUnit.Pokemon.Moves.Count - 2)
+            {
+                Debug.Log("currenMove down: " + currentMove);
                 currentMove += 2;
+            }
         }
-        else if ((Input.GetKeyDown(KeyCode.UpArrow) || (SimpleInput.GetAxisRaw("Vertical") < 0)) && !presionadoVertical)
+        else if ((Input.GetKeyDown(KeyCode.UpArrow) || (SimpleInput.GetAxisRaw("Vertical") > 0)) && !presionadoVertical)
         {
+            presionadoVertical = true;
             if (currentMove > 1)
+            {
+                Debug.Log("currenMove up: " + currentMove);
                 currentMove -= 2;
+            }
         }
 
         dialogBox.UpdateMoveSelection(currentMove, playerUnit.Pokemon.Moves[currentMove]);
