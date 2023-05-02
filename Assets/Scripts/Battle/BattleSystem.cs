@@ -1,6 +1,10 @@
+using SimpleInputNamespace;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+using UnityStandardAssets.CrossPlatformInput;
 
 public enum BattleState {Start, PlayerAction, PlayerMove, EnemyMove, Busy }
 
@@ -12,11 +16,13 @@ public class BattleSystem : MonoBehaviour
     [SerializeField] BattleHud enemyHud;
     [SerializeField] BattleDialogBox dialogBox;
 
+    public event Action<bool> onBattleOver;
+
     BattleState state;
     int currentAction;
     int currentMove;
 
-    private void Start()
+    public void StartBattle()
     {
        StartCoroutine(SetupBattle());
     }
@@ -31,7 +37,6 @@ public class BattleSystem : MonoBehaviour
         dialogBox.SetMovesNames(playerUnit.Pokemon.Moves);
 
         yield return dialogBox.TypeDialog($"¡Un {enemyUnit.Pokemon.Base.Name} salvaje apareció!");
-        yield return new WaitForSeconds(1f/2);
 
         PlayerAction();
     }
@@ -51,7 +56,78 @@ public class BattleSystem : MonoBehaviour
         dialogBox.EnableMoveSelector(true);
     }
 
-    private void Update()
+    IEnumerator PerformPlayerMove()
+    {
+        state = BattleState.Busy;
+
+        var move = playerUnit.Pokemon.Moves[currentMove];
+        yield return dialogBox.TypeDialog($"¡{playerUnit.Pokemon.Base.Name} usó {move.Base.Name}!");
+
+        playerUnit.PlayAttackAnimation();
+        yield return new WaitForSeconds(1f);
+
+        enemyUnit.PlayHitAnimation();
+
+        var damageDetails = enemyUnit.Pokemon.TakeDamage(move, playerUnit.Pokemon);
+        yield return enemyHud.UpdateHP();
+        yield return ShowDamageDetails(damageDetails);
+
+        if (damageDetails.Fainted)
+        {
+            yield return dialogBox.TypeDialog($"¡{enemyUnit.Pokemon.Base.Name} enemigo se debilitó!");
+            enemyUnit.PlayFaintAnimation();
+
+            yield return new WaitForSeconds(2f);
+            onBattleOver(true);
+        }
+        else
+        {
+            StartCoroutine(EnemyMove());
+        }
+    }
+
+    IEnumerator EnemyMove()
+    {
+        state = BattleState.EnemyMove;
+
+        var move = enemyUnit.Pokemon.GetRandomMove();
+        yield return dialogBox.TypeDialog($"¡{enemyUnit.Pokemon.Base.Name} enemigo usó {move.Base.Name}!");
+
+        enemyUnit.PlayAttackAnimation();
+        yield return new WaitForSeconds(1f);
+
+        playerUnit.PlayHitAnimation();
+
+        var damageDetails = playerUnit.Pokemon.TakeDamage(move, enemyUnit.Pokemon);
+        yield return playerHud.UpdateHP();
+        yield return ShowDamageDetails(damageDetails);
+
+        if (damageDetails.Fainted)
+        {
+            yield return dialogBox.TypeDialog($"¡{playerUnit.Pokemon.Base.Name} enemigo se debilitó!");
+            playerUnit.PlayFaintAnimation();
+
+            yield return new WaitForSeconds(2f);
+            onBattleOver(false);
+        }
+        else
+        {
+            PlayerAction();
+        }
+    }
+
+    IEnumerator ShowDamageDetails(DamageDetails damageDetails)
+    {
+        if (damageDetails.Critical > 1f)
+            yield return dialogBox.TypeDialog("¡Un golpe crítico!");
+
+        if (damageDetails.TypeEffectiveness > 1f)
+            yield return dialogBox.TypeDialog("¡Es muy eficaz!");
+        else if (damageDetails.TypeEffectiveness < 1f)
+            yield return dialogBox.TypeDialog("No es muy eficaz...");
+    }
+
+    public void HandleUpdate()
     {
         if(state == BattleState.PlayerAction)
         {
@@ -78,7 +154,7 @@ public class BattleSystem : MonoBehaviour
 
         dialogBox.UpdateActionSelection(currentAction);
 
-        if (Input.GetKeyDown(KeyCode.Z))
+        if ((Input.GetKeyDown(KeyCode.Z)) || (CrossPlatformInputManager.GetButtonDown("ButtonA")))
         {
             if (currentAction == 0)
             {
@@ -94,27 +170,40 @@ public class BattleSystem : MonoBehaviour
 
     void HandleMoveSelection()
     {
-        if (Input.GetKeyDown(KeyCode.RightArrow))
+        if ((Input.GetKeyDown(KeyCode.RightArrow)))
         {
             if (currentMove < playerUnit.Pokemon.Moves.Count - 1)
-                ++currentMove;
+            {
+                Debug.Log("currenMove right: " + currentMove);
+                currentMove++;
+            }
         }
-        else if (Input.GetKeyDown(KeyCode.LeftArrow))
+        else if ((Input.GetKeyDown(KeyCode.LeftArrow)))
         {
             if (currentMove > 0)
+            {
+                Debug.Log("currenMove left: " + currentMove);
                 --currentMove;
+            }
         }
         else if (Input.GetKeyDown(KeyCode.DownArrow))
         {
             if (currentMove < playerUnit.Pokemon.Moves.Count - 2)
-                currentMove +=2;
+                currentMove += 2;
         }
         else if (Input.GetKeyDown(KeyCode.UpArrow))
         {
             if (currentMove > 1)
-                currentMove-=2;
+                currentMove -= 2;
         }
 
         dialogBox.UpdateMoveSelection(currentMove, playerUnit.Pokemon.Moves[currentMove]);
+
+        if (Input.GetKeyDown(KeyCode.Z))
+        {
+            dialogBox.EnableMoveSelector(false);
+            dialogBox.EnableDialogText(true);
+            StartCoroutine(PerformPlayerMove());
+        }
     }
 }

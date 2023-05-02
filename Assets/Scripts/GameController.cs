@@ -7,10 +7,15 @@ public enum GameState {FreeRoam, Battle, Dialog}
 public class GameController : MonoBehaviour
 {
     [SerializeField] PlayerController playerController;
+    [SerializeField] BattleSystem battleSystem;
+    [SerializeField] Camera worldCamera;
     GameState state;
 
     private void Start()
     {
+        playerController.OnEncountered += StartBattle;
+        battleSystem.onBattleOver += EndBattle;
+
         DialogManager.Instance.OnShowDialog += () =>
         {
             state = GameState.Dialog;
@@ -23,12 +28,32 @@ public class GameController : MonoBehaviour
         };
     }
 
+    void StartBattle()
+    {
+        state = GameState.Battle;
+        battleSystem.gameObject.SetActive(true);
+        worldCamera.gameObject.SetActive(false);
+
+        battleSystem.StartBattle();
+    }
+
+    void EndBattle(bool won)
+    {
+        state = GameState.FreeRoam;
+        battleSystem.gameObject.SetActive(false);
+        worldCamera.gameObject.SetActive(true);
+    }
+
     // Update is called once per frame
     void Update()
     {
         if(state == GameState.FreeRoam)
         {
             playerController.HangleUpdate();
+        }
+        else if(state == GameState.Battle)
+        {
+            battleSystem.HandleUpdate();
         }
         else if (state == GameState.Dialog)
         {

@@ -11,6 +11,8 @@ public class PlayerController : MonoBehaviour
 
     private Character character;
 
+    public event Action OnEncountered;
+
     private void Awake()
     {
         character = GetComponent<Character>();
@@ -28,6 +30,7 @@ public class PlayerController : MonoBehaviour
 
             if(input != Vector2.zero)
             {
+                //Debug.Log("X: " + input.x + "Y: " + input.y);
                 StartCoroutine(character.Move(input, CheckForEncounters));
             }
         }
@@ -58,7 +61,7 @@ public class PlayerController : MonoBehaviour
             if(UnityEngine.Random.Range(1, 101) <= 10)
             {
                 character.Animator.isMoving = false;
-                Debug.Log("Encontre un puchamon");
+                OnEncountered();
             }
         }
     }
