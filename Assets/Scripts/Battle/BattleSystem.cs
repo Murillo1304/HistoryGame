@@ -6,7 +6,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityStandardAssets.CrossPlatformInput;
 
-public enum BattleState {Start, PlayerAction, PlayerMove, EnemyMove, Busy }
+public enum BattleState {Start, PlayerAction, PlayerMove, EnemyMove, Busy, PartyScreen}
 
 public class BattleSystem : MonoBehaviour
 {
@@ -22,6 +22,7 @@ public class BattleSystem : MonoBehaviour
     BattleState state;
     int currentAction;
     int currentMove;
+    int currentMember;
 
     bool presionadoHorizontal = false;
     bool presionadoVertical = false;
@@ -31,8 +32,8 @@ public class BattleSystem : MonoBehaviour
 
     public void StartBattle(PokemonParty playerParty, Pokemon wildPokemon)
     {
-        this. playerParty = playerParty;
-        this. wildPokemon = wildPokemon;
+        this.playerParty = playerParty;
+        this.wildPokemon = wildPokemon;
         StartCoroutine(SetupBattle());
     }
 
@@ -61,6 +62,7 @@ public class BattleSystem : MonoBehaviour
 
     void OpenPartyScreen()
     {
+        state = BattleState.PartyScreen;
         partyScreen.SetPartyData(playerParty.Pokemons);
         partyScreen.gameObject.SetActive(true);
     }
@@ -130,17 +132,9 @@ public class BattleSystem : MonoBehaviour
 
             var nextPokemon = playerParty.GetHealthyPokemon();
 
-            if(nextPokemon != null)
+            if (nextPokemon != null)
             {
-                playerUnit.Setup(nextPokemon);
-                playerHud.SetData(playerUnit.Pokemon);
-
-
-                dialogBox.SetMovesNames(playerUnit.Pokemon.Moves);
-
-                yield return dialogBox.TypeDialog($"¡Vamos {enemyUnit.Pokemon.Base.Name}!");
-
-                PlayerAction();
+                OpenPartyScreen();
             }
             else
             {
@@ -166,13 +160,17 @@ public class BattleSystem : MonoBehaviour
 
     public void HandleUpdate()
     {
-        if(state == BattleState.PlayerAction)
+        if (state == BattleState.PlayerAction)
         {
             HandleActionSelection();
         }
-        else if(state == BattleState.PlayerMove)
+        else if (state == BattleState.PlayerMove)
         {
             HandleMoveSelection();
+        }
+        else if (state == BattleState.PartyScreen)
+        {
+            HandlePartySelection();
         }
     }
 
@@ -259,7 +257,7 @@ public class BattleSystem : MonoBehaviour
             currentMove -= 2;
         }
 
-        currentMove = Mathf.Clamp(currentMove, 0, playerUnit.Pokemon.Moves.Count-1);
+        currentMove = Mathf.Clamp(currentMove, 0, playerUnit.Pokemon.Moves.Count - 1);
 
         if (SimpleInput.GetAxisRaw("Horizontal") == 0)
         {
@@ -279,11 +277,90 @@ public class BattleSystem : MonoBehaviour
             dialogBox.EnableDialogText(true);
             StartCoroutine(PerformPlayerMove());
         }
-        else if((Input.GetKeyDown(KeyCode.X)) || CrossPlatformInputManager.GetButtonDown("ButtonB"))
+        else if ((Input.GetKeyDown(KeyCode.X)) || CrossPlatformInputManager.GetButtonDown("ButtonB"))
         {
             dialogBox.EnableMoveSelector(false);
             dialogBox.EnableDialogText(true);
             PlayerAction();
         }
+    }
+
+    void HandlePartySelection()
+    {
+        if ((Input.GetKeyDown(KeyCode.RightArrow) || (SimpleInput.GetAxisRaw("Horizontal") > 0)) && !presionadoHorizontal)
+        {
+            presionadoHorizontal = true;
+            ++currentMember;
+        }
+        else if ((Input.GetKeyDown(KeyCode.LeftArrow) || (SimpleInput.GetAxisRaw("Horizontal") < 0)) && !presionadoHorizontal)
+        {
+            presionadoHorizontal = true;
+            --currentMember;
+        }
+        else if ((Input.GetKeyDown(KeyCode.DownArrow) || (SimpleInput.GetAxisRaw("Vertical") < 0)) && !presionadoVertical)
+        {
+            presionadoVertical = true;
+            currentMember += 2;
+        }
+        else if ((Input.GetKeyDown(KeyCode.UpArrow) || (SimpleInput.GetAxisRaw("Vertical") > 0)) && !presionadoVertical)
+        {
+            presionadoVertical = true;
+            currentMember -= 2;
+        }
+
+        currentMember = Mathf.Clamp(currentMember, 0, playerParty.Pokemons.Count - 1);
+
+        if (SimpleInput.GetAxisRaw("Horizontal") == 0)
+        {
+            presionadoHorizontal = false;
+        }
+
+        if (SimpleInput.GetAxisRaw("Vertical") == 0)
+        {
+            presionadoVertical = false;
+        }
+
+        partyScreen.UpdateMemberSelection(currentMember);
+
+        if ((Input.GetKeyDown(KeyCode.Z)) || CrossPlatformInputManager.GetButtonDown("ButtonA"))
+        {
+            var selectedMember = playerParty.Pokemons[currentMember];
+            if (selectedMember.HP <= 0)
+            {
+                partyScreen.SetMessageText("No puedes sacar un pokemon debilitado");
+                return;
+            }
+            if (selectedMember == playerUnit.Pokemon)
+            {
+                partyScreen.SetMessageText("No puedes cambiar con el mismo pokemon");
+                return;
+            }
+
+            partyScreen.gameObject.SetActive(false);
+            state = BattleState.Busy;
+            StartCoroutine(SwitchPokemon(selectedMember));
+        }
+        else if ((Input.GetKeyDown(KeyCode.X)) || CrossPlatformInputManager.GetButtonDown("ButtonB"))
+        {
+            partyScreen.gameObject.SetActive(false);
+            PlayerAction();
+        }
+    }
+
+    IEnumerator SwitchPokemon(Pokemon newPokemon, bool isTrainerAboutToUse = false)
+    {
+        if (playerUnit.Pokemon.HP > 0)
+        {
+            yield return dialogBox.TypeDialog($"Regresa {playerUnit.Pokemon.Base.Name}");
+            playerUnit.PlayFaintAnimation();
+            yield return new WaitForSeconds(2f);
+        }
+
+        playerUnit.Setup(newPokemon);
+        playerHud.SetData(newPokemon);
+        dialogBox.SetMovesNames(newPokemon.Moves);
+        yield return dialogBox.TypeDialog($"¡Vamos {newPokemon.Base.Name}!");
+
+        StartCoroutine(EnemyMove());
     }
 }
