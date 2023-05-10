@@ -7,11 +7,15 @@ using UnityStandardAssets.CrossPlatformInput;
 
 public class PlayerController : MonoBehaviour
 {
+    [SerializeField] string name;
+    [SerializeField] Sprite sprite;
+
+    public event Action OnEncountered;
+    public event Action<Collider2D> OnEnterTrainersView;
+
     private Vector2 input;
 
     private Character character;
-
-    public event Action OnEncountered;
 
     private void Awake()
     {
@@ -31,7 +35,7 @@ public class PlayerController : MonoBehaviour
             if(input != Vector2.zero)
             {
                 //Debug.Log("X: " + input.x + "Y: " + input.y);
-                StartCoroutine(character.Move(input, CheckForEncounters));
+                StartCoroutine(character.Move(input, OnMoveOver));
             }
         }
 
@@ -49,9 +53,15 @@ public class PlayerController : MonoBehaviour
         var collider = Physics2D.OverlapCircle(interacPos, 0.3f, GameLayers.i.InteractableLayer);
         if(collider != null)
         {
-            collider.GetComponent<NPCController>()?.Interact(transform);
+            collider.GetComponent<Interactable>()?.Interact(transform);
 
         }
+    }
+
+    private void OnMoveOver()
+    {
+        CheckForEncounters();
+        CheckIfInTrainersViews();
     }
 
     private void CheckForEncounters()
@@ -64,5 +74,25 @@ public class PlayerController : MonoBehaviour
                 OnEncountered();
             }
         }
+    }
+
+    private void CheckIfInTrainersViews()
+    {
+        var collider = Physics2D.OverlapCircle(transform.position, 0.0f, GameLayers.i.FovLayer);
+        if (collider != null)
+        {
+            character.Animator.isMoving = false;
+            OnEnterTrainersView?.Invoke(collider);
+        }
+    }
+
+    public string Name
+    {
+        get => name;
+    }
+
+    public Sprite Sprite
+    {
+        get => sprite;
     }
 }
