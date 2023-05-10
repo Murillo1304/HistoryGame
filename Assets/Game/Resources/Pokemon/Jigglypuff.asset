@@ -10,24 +10,24 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 55eb119118472dd42a727667cfd82ca1, type: 3}
-  m_Name: Bulbasaur
+  m_Name: Jigglypuff
   m_EditorClassIdentifier: 
-  name: Bulbasaur
+  name: Jigglypuff
   description: 
-  frontSprite: {fileID: 21300000, guid: 0f37bf3cf5680a64d863b5f155b2a597, type: 3}
-  backSprite: {fileID: 21300000, guid: aacaae602a38f884ab9e02e43de3736d, type: 3}
-  type1: 5
-  type2: 8
-  maxHp: 45
-  attack: 49
-  defense: 49
-  spAttack: 65
-  spDefense: 65
-  speed: 45
+  frontSprite: {fileID: 21300000, guid: 5ba574f6be4ed6644abaa3b3044ce6c0, type: 3}
+  backSprite: {fileID: 21300000, guid: 443d8bbc61a837d4880aa1066a8835c5, type: 3}
+  type1: 1
+  type2: 0
+  maxHp: 115
+  attack: 45
+  defense: 20
+  spAttack: 45
+  spDefense: 20
+  speed: 20
   learnableMoves:
-  - moveBase: {fileID: 11400000, guid: 40dc725a5fb587e429cfe3e1ef20a9e4, type: 2}
+  - moveBase: {fileID: 11400000, guid: 846a1e2b1dd4bc940b370bde60c0bb85, type: 2}
     level: 1
   - moveBase: {fileID: 11400000, guid: 771624cfde7dc0d468cf8314cbbb5529, type: 2}
-    level: 4
-  - moveBase: {fileID: 11400000, guid: 0246891d697305d46a7fb964672e3aa1, type: 2}
-    level: 7
+    level: 1
+  - moveBase: {fileID: 11400000, guid: 4e6a0cc106c62234f94fad9d00ff4f23, type: 2}
+    level: 10

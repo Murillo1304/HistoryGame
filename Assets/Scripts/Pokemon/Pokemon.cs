@@ -1,5 +1,7 @@
+using Mono.Cecil.Cil;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 [System.Serializable]
@@ -18,8 +20,16 @@ public class Pokemon
     }
     public int HP { get; set; }
     public List<Move> Moves { get; set; }
+    public Move CurrentMove { get; set; }
     public Dictionary<Stat, int> Stats { get; private set; }
     public Dictionary<Stat, int> StatBoosts { get; private set; }
+    public Condition Status { get; private set; }
+    public int StatusTime { get; set; }
+    public Condition VolatileStatus { get; set; }
+    public int VolatileStatusTime { get; set; }
+    public Queue<string> StatusChanges { get; private set; } = new Queue<string>();
+    public bool HpChanged { get; set; }
+    public event System.Action OnStatusChanged;
 
     public void Init()
     {
@@ -37,26 +47,35 @@ public class Pokemon
         CalculateStats();
         HP = MaxHp;
 
-        StatBoosts = new Dictionary<Stat, int>()
-        {
-            {Stat.Attack,0},
-            {Stat.Defense,0},
-            {Stat.SpAttack,0},
-            {Stat.SpDefense,0},
-            {Stat.Speed,0},
-        };
+        ResetStatBoost();
+        Status = null;
+        VolatileStatus = null;
     }
 
     void CalculateStats()
     {
         Stats = new Dictionary<Stat, int>();
-        Stats.Add(Stat.Attack, Mathf.FloorToInt((Base.Attack * Level) / 100f) + 5);
-        Stats.Add(Stat.Defense, Mathf.FloorToInt((Base.Defense * Level) / 100f) + 5);
-        Stats.Add(Stat.SpAttack, Mathf.FloorToInt((Base.SpAttack * Level) / 100f) + 5);
-        Stats.Add(Stat.SpDefense, Mathf.FloorToInt((Base.SpDefense * Level) / 100f) + 5);
-        Stats.Add(Stat.Speed, Mathf.FloorToInt((Base.Speed * Level) / 100f) + 5);
+        Stats.Add(Stat.Ataque, Mathf.FloorToInt((Base.Attack * Level) / 100f) + 5);
+        Stats.Add(Stat.Defensa, Mathf.FloorToInt((Base.Defense * Level) / 100f) + 5);
+        Stats.Add(Stat.SpAtaque, Mathf.FloorToInt((Base.SpAttack * Level) / 100f) + 5);
+        Stats.Add(Stat.SpDefensa, Mathf.FloorToInt((Base.SpDefense * Level) / 100f) + 5);
+        Stats.Add(Stat.Velocidad, Mathf.FloorToInt((Base.Speed * Level) / 100f) + 5);
 
         MaxHp = Mathf.FloorToInt((Base.MaxHp * Level) / 100f) + Level + 10;
+    }
+
+    void ResetStatBoost()
+    {
+        StatBoosts = new Dictionary<Stat, int>()
+        {
+            {Stat.Ataque,0},
+            {Stat.Defensa,0},
+            {Stat.SpAtaque,0},
+            {Stat.SpDefensa,0},
+            {Stat.Velocidad,0},
+            {Stat.Precision,0},
+            {Stat.Evasion,0},
+        };
     }
 
     int GetStat(Stat stat)
@@ -75,42 +94,50 @@ public class Pokemon
         return statVal;
     }
 
-    public void ApplyBoosts(List<StatBoost> statBoosts)
+    public void ApplyBoosts(List<StatBoost> statBoosts, bool isPlayerUnit)
     {
         foreach(var statBoost in statBoosts)
         {
             var stat = statBoost.stat;
             var boost = statBoost.boost;
 
+            string enemigo = "";
+            if (!isPlayerUnit) enemigo = " enemigo";
+
             StatBoosts[stat] = Mathf.Clamp(StatBoosts[stat] + boost, -6, 6);
 
-            Debug.Log($"{stat} se ha boosteado to {StatBoosts[stat]}");
+            if(boost > 0)
+                StatusChanges.Enqueue($"¡{stat} de {Base.Name}{enemigo} subió!");
+            else
+                StatusChanges.Enqueue($"¡{stat} de {Base.Name}{enemigo} bajó!");
+
+            Debug.Log($"{stat} se ha boosteado {StatBoosts[stat]}");
         }
     }
 
     public int Attack
     {
-        get { return GetStat(Stat.Attack); }
+        get { return GetStat(Stat.Ataque); }
     }
 
     public int Defense
     {
-        get { return GetStat(Stat.Defense); }
+        get { return GetStat(Stat.Defensa); }
     }
 
     public int SpAttack
     {
-        get { return GetStat(Stat.SpAttack); }
+        get { return GetStat(Stat.SpAtaque); }
     }
 
     public int SpDefense
     {
-        get { return GetStat(Stat.SpDefense); }
+        get { return GetStat(Stat.SpDefensa); }
     }
 
     public int Speed
     {
-        get { return GetStat(Stat.Speed); }
+        get { return GetStat(Stat.Velocidad); }
     }
 
     public int MaxHp { get; private set; }
@@ -140,19 +167,90 @@ public class Pokemon
 
         Debug.Log("daño: " + damage);
 
-        HP -= damage;
-        if (HP <= 0)
-        {
-            HP = 0;
-            damageDetails.Fainted = true;
-        }
+        UpdateHP(damage);
+        
         return damageDetails;
+    }
+
+    public void UpdateHP(int damage)
+    {
+        HP = Mathf.Clamp(HP - damage, 0, MaxHp);
+        HpChanged = true;
+    }
+
+    public void SetStatus(ConditionID conditionId, bool isPlayerUnit)
+    {
+        if (Status != null) return;
+        
+        string enemigo = "";
+        if (!isPlayerUnit) enemigo = " enemigo";
+
+        Status = ConditionsDB.Conditions[conditionId];
+        Status?.OnStart?.Invoke(this);
+        StatusChanges.Enqueue($"¡{Base.name}{enemigo} {Status.StartMessage}!");
+        OnStatusChanged?.Invoke();
+    }
+
+    public void CureStatus()
+    {
+        Status = null;
+        OnStatusChanged?.Invoke();
+    }
+
+    public void SetVolatileStatus(ConditionID conditionId, bool isPlayerUnit)
+    {
+        if (VolatileStatus != null) return;
+
+        string enemigo = "";
+        if (!isPlayerUnit) enemigo = " enemigo";
+
+        VolatileStatus = ConditionsDB.Conditions[conditionId];
+        VolatileStatus?.OnStart?.Invoke(this);
+        StatusChanges.Enqueue($"¡{Base.name}{enemigo} {VolatileStatus.StartMessage}!");
+    }
+
+    public void CureVolatileStatus()
+    {
+        VolatileStatus = null;
     }
 
     public Move GetRandomMove()
     {
-        int r = Random.Range(0, Moves.Count);
-        return Moves[r];
+        var movesWithPP = Moves.Where(x => x.PP > 0).ToList();
+
+        int r = Random.Range(0, movesWithPP.Count);
+        return movesWithPP[r];
+    }
+
+    public bool OnBeforeMove()
+    {
+        bool canPerformMove = true;
+
+        if(Status?.OnBeforeMove != null)
+        {
+            if(!Status.OnBeforeMove(this))
+                canPerformMove = false;
+        }
+
+        if (VolatileStatus?.OnBeforeMove != null)
+        {
+            if (!VolatileStatus.OnBeforeMove(this))
+                canPerformMove = false;
+        }
+
+        return canPerformMove;
+    }
+
+    public void OnAfterTurn()
+    {
+        Status?.OnAfterTurn?.Invoke(this);
+        VolatileStatus?.OnAfterTurn?.Invoke(this);
+    }
+
+    public void OnBattleOver()
+    {
+        VolatileStatus = null;
+        ResetStatBoost();
     }
 }
 

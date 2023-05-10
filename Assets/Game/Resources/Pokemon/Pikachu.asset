@@ -10,24 +10,24 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 55eb119118472dd42a727667cfd82ca1, type: 3}
-  m_Name: Bulbasaur
+  m_Name: Pikachu
   m_EditorClassIdentifier: 
-  name: Bulbasaur
+  name: Pikachu
   description: 
-  frontSprite: {fileID: 21300000, guid: 0f37bf3cf5680a64d863b5f155b2a597, type: 3}
-  backSprite: {fileID: 21300000, guid: aacaae602a38f884ab9e02e43de3736d, type: 3}
-  type1: 5
-  type2: 8
-  maxHp: 45
-  attack: 49
-  defense: 49
-  spAttack: 65
-  spDefense: 65
-  speed: 45
+  frontSprite: {fileID: 21300000, guid: 32eaebc3e62f31245b786d7de14a7970, type: 3}
+  backSprite: {fileID: 21300000, guid: 82f2a8c1958dae942b500e3b0a7fe1ed, type: 3}
+  type1: 4
+  type2: 0
+  maxHp: 35
+  attack: 55
+  defense: 40
+  spAttack: 50
+  spDefense: 50
+  speed: 90
   learnableMoves:
-  - moveBase: {fileID: 11400000, guid: 40dc725a5fb587e429cfe3e1ef20a9e4, type: 2}
+  - moveBase: {fileID: 11400000, guid: 846a1e2b1dd4bc940b370bde60c0bb85, type: 2}
     level: 1
   - moveBase: {fileID: 11400000, guid: 771624cfde7dc0d468cf8314cbbb5529, type: 2}
-    level: 4
-  - moveBase: {fileID: 11400000, guid: 0246891d697305d46a7fb964672e3aa1, type: 2}
-    level: 7
+    level: 1
+  - moveBase: {fileID: 11400000, guid: 59b83efa869329a44b0d60314a5ace87, type: 2}
+    level: 10

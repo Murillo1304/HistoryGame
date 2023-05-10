@@ -134,11 +134,15 @@ public enum PokemonType
 
 public enum Stat
 {
-    Attack,
-    Defense,
-    SpAttack,
-    SpDefense,
-    Speed,
+    Ataque,
+    Defensa,
+    SpAtaque,
+    SpDefensa,
+    Velocidad,
+
+    //No son stats, solo se utilizan para boostear el moveAccuracy
+    Precision,
+    Evasion
 }
 
 public class TypeChart
