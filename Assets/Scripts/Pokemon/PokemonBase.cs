@@ -54,15 +54,15 @@ public class PokemonBase : ScriptableObject
         else if (growthRate == GrowthRate.Erratic)
         {
             if (level < 50) return ((level * level * level) * (100 - level)) / 50;
-            else if (level >= 50 & level < 68) return ((level * level * level) * (150 - level)) / 100;
-            else if (level >= 68 & level < 98) return ((level* level * level) * ((1911 - 10 * level) / 3)) / 500;
-            else if (level >= 98 & level < 100) return ((level * level * level) * (160 - level)) / 100;
+            else if (level >= 50 && level < 68) return ((level * level * level) * (150 - level)) / 100;
+            else if (level >= 68 && level < 98) return ((level* level * level) * ((1911 - 10 * level) / 3)) / 500;
+            else if (level >= 98 && level < 100) return ((level * level * level) * (160 - level)) / 100;
         }
         else if (growthRate == GrowthRate.Fluctuating)
         {
             if (level < 15) return ((level * level * level) * ((level + 1) / 3 + 24)) / 50;
-            else if (level >= 15 & level < 36) return ((level * level * level) * (level + 14)) / 50;
-            else if (level >= 36 & level < 100) return ((level * level * level) * (level / 2 + 32)) / 50;
+            else if (level >= 15 && level < 36) return ((level * level * level) * (level + 14)) / 50;
+            else if (level >= 36 && level < 100) return ((level * level * level) * (level / 2 + 32)) / 50;
         }
 
         return -1;
