@@ -10,6 +10,14 @@ public class Pokemon
     [SerializeField] PokemonBase _base;
     [SerializeField] int level;
 
+    public Pokemon(PokemonBase pBase, int pLevel)
+    {
+        _base = pBase;
+        level = pLevel;
+
+        Init();
+    }
+
     public PokemonBase Base
     {
         get { return _base; }
@@ -18,6 +26,7 @@ public class Pokemon
     {
         get { return level; }
     }
+    public int Exp { get; set; }
     public int HP { get; set; }
     public List<Move> Moves { get; set; }
     public Move CurrentMove { get; set; }
@@ -27,7 +36,7 @@ public class Pokemon
     public int StatusTime { get; set; }
     public Condition VolatileStatus { get; set; }
     public int VolatileStatusTime { get; set; }
-    public Queue<string> StatusChanges { get; private set; } = new Queue<string>();
+    public Queue<string> StatusChanges { get; private set; }
     public bool HpChanged { get; set; }
     public event System.Action OnStatusChanged;
 
@@ -44,9 +53,12 @@ public class Pokemon
                 break;
         }
 
+        Exp = Base.GetExpForLevel(Level);
+
         CalculateStats();
         HP = MaxHp;
 
+        StatusChanges= new Queue<string>();
         ResetStatBoost();
         Status = null;
         VolatileStatus = null;
@@ -182,12 +194,12 @@ public class Pokemon
     {
         if (Status != null) return;
         
-        string enemigo = "";
-        if (!isPlayerUnit) enemigo = " enemigo";
+        string enemy = "";
+        if (!isPlayerUnit) enemy = " enemigo";
 
         Status = ConditionsDB.Conditions[conditionId];
         Status?.OnStart?.Invoke(this);
-        StatusChanges.Enqueue($"¡{Base.name}{enemigo} {Status.StartMessage}!");
+        StatusChanges.Enqueue($"¡{Base.name}{enemy} {Status.StartMessage}!");
         OnStatusChanged?.Invoke();
     }
 

@@ -239,7 +239,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Lvl
+  m_Text: 'Nv:'
 --- !u!1 &1160507647821662688
 GameObject:
   m_ObjectHideFlags: 0

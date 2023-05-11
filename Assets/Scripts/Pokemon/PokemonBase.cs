@@ -24,7 +24,47 @@ public class PokemonBase : ScriptableObject
     [SerializeField] int spDefense;
     [SerializeField] int speed;
 
+    [SerializeField] int expYield;
+    [SerializeField] GrowthRate growthRate;
+
+    [SerializeField] int catchRate = 255;
+
     [SerializeField] List<LearnableMove> learnableMoves;
+
+    public int GetExpForLevel(int level)
+    {
+        if (growthRate == GrowthRate.Fast)
+        {
+            return 4 * (level * level * level) / 5;
+        }
+        else if (growthRate == GrowthRate.MediumFast)
+        {
+            return level * level * level;
+        }
+        else if (growthRate == GrowthRate.MediumSlow)
+        {
+            return 6 * (level * level * level) / 5 - 15 * (level * level) + 100 * level - 140;
+        }
+        else if (growthRate == GrowthRate.Slow)
+        {
+            return 5 * (level * level * level) / 4;
+        }
+        else if (growthRate == GrowthRate.Erratic)
+        {
+            if (level < 50) return ((level * level * level) * (100 - level)) / 50;
+            else if (level >= 50 & level < 68) return ((level * level * level) * (150 - level)) / 100;
+            else if (level >= 68 & level < 98) return ((level* level * level) * ((1911 - 10 * level) / 3)) / 500;
+            else if (level >= 98 & level < 100) return ((level * level * level) * (160 - level)) / 100;
+        }
+        else if (growthRate == GrowthRate.Fluctuating)
+        {
+            if (level < 15) return ((level * level * level) * ((level + 1) / 3 + 24)) / 50;
+            else if (level >= 15 & level < 36) return ((level * level * level) * (level + 14)) / 50;
+            else if (level >= 36 & level < 100) return ((level * level * level) * (level / 2 + 32)) / 50;
+        }
+
+        return -1;
+    }
 
     public string Name
     {
@@ -90,6 +130,10 @@ public class PokemonBase : ScriptableObject
     {
         get { return learnableMoves; }
     }
+
+    public int CatchRate => catchRate;
+    public int ExpYield => expYield;
+    public GrowthRate GrowthRate => growthRate;
 }
 
 [System.Serializable]
@@ -131,6 +175,12 @@ public enum PokemonType
     Acero,
     Hada,
 }
+
+public enum GrowthRate
+{
+    Erratic, Fast, MediumFast, MediumSlow, Slow, Fluctuating
+}
+
 
 public enum Stat
 {

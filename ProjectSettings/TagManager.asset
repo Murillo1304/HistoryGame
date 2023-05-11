@@ -50,9 +50,6 @@ TagManager:
   - name: Player
     uniqueID: 1114440181
     locked: 0
-  - name: Canvas
+  - name: Battle
     uniqueID: 871775483
-    locked: 0
-  - name: Prueba
-    uniqueID: 994407541
     locked: 0
