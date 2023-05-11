@@ -10,9 +10,6 @@ public class PlayerController : MonoBehaviour
     [SerializeField] string name;
     [SerializeField] Sprite sprite;
 
-    public event Action OnEncountered;
-    public event Action<Collider2D> OnEnterTrainersView;
-
     private Vector2 input;
 
     private Character character;
@@ -60,29 +57,17 @@ public class PlayerController : MonoBehaviour
 
     private void OnMoveOver()
     {
-        CheckForEncounters();
-        CheckIfInTrainersViews();
-    }
+        var colliders = Physics2D.OverlapCircleAll(transform.position, 0.0f, GameLayers.i.TriggerableLayers);
 
-    private void CheckForEncounters()
-    {
-        if(Physics2D.OverlapCircle(transform.position, 0.0f, GameLayers.i.GrassLayer) != null)
+        foreach(var collider in colliders)
         {
-            if(UnityEngine.Random.Range(1, 101) <= 10)
+            var triggerable = collider.GetComponent<IPlayerTriggerable>();
+            if (triggerable != null)
             {
                 character.Animator.isMoving = false;
-                OnEncountered();
+                triggerable.OnPlayerTriggered(this);
+                break;
             }
-        }
-    }
-
-    private void CheckIfInTrainersViews()
-    {
-        var collider = Physics2D.OverlapCircle(transform.position, 0.0f, GameLayers.i.FovLayer);
-        if (collider != null)
-        {
-            character.Animator.isMoving = false;
-            OnEnterTrainersView?.Invoke(collider);
         }
     }
 
