@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityStandardAssets.CrossPlatformInput;
 
 public enum GameState {FreeRoam, Battle, Dialog, Menu, Cutscene, Paused}
 
@@ -122,10 +123,19 @@ public class GameController : MonoBehaviour
         {
             playerController.HangleUpdate();
 
-            if (Input.GetKeyDown(KeyCode.Return))
+            if ((Input.GetKeyDown(KeyCode.Return)) || CrossPlatformInputManager.GetButtonDown("ButtonMenu"))
             {
                 menuController.OpenMenu();
                 state = GameState.Menu;
+            }
+
+            if ((Input.GetKeyDown(KeyCode.X)) || CrossPlatformInputManager.GetButtonDown("ButtonB"))
+            {
+                playerController.Character.SpeedUp();
+            }
+            else if ((Input.GetKeyUp(KeyCode.X)) || CrossPlatformInputManager.GetButtonUp("ButtonB"))
+            {
+                playerController.Character.SpeedDown();
             }
         }
         else if(state == GameState.Battle)

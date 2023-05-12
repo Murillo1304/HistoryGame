@@ -39,6 +39,14 @@ public class CharacterAnimator : MonoBehaviour
         currentAnim = walkDownAnim;
     }
 
+    public void ModifySpeed(float speed)
+    {
+        walkDownAnim.speed = speed;
+        walkUpAnim.speed = speed;
+        walkRightAnim.speed = speed;
+        walkLeftAnim.speed = speed;
+    }
+
     private void Update()
     {
         var prevAnim = currentAnim;

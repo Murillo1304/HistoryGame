@@ -19,6 +19,18 @@ public class Character : MonoBehaviour
         SetPositionAndSnapToTile(transform.position);
     }
 
+    public void SpeedUp()
+    {
+        moveSpeed = 8;
+        animator.ModifySpeed(1.75f);
+    }
+
+    public void SpeedDown()
+    {
+        moveSpeed = 5;
+        animator.ModifySpeed(1f);
+    }
+
     public void SetPositionAndSnapToTile(Vector2 pos)
     {
         pos.x = Mathf.Floor(pos.x) + 0.5f;

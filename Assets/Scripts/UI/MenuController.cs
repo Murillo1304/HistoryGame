@@ -64,7 +64,7 @@ public class MenuController : MonoBehaviour
             onMenuSelected?.Invoke(selectedItem);
             CloseMenu();
         }
-        else if ((Input.GetKeyDown(KeyCode.X)) || CrossPlatformInputManager.GetButtonDown("ButtonB"))
+        else if ((Input.GetKeyDown(KeyCode.X)) || CrossPlatformInputManager.GetButtonDown("ButtonB") || CrossPlatformInputManager.GetButtonDown("ButtonMenu"))
         {
             onBack?.Invoke();
             CloseMenu();
