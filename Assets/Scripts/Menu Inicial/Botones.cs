@@ -8,12 +8,13 @@ public class Botones : MonoBehaviour
 
     public void Start()
     {
-        Application.targetFrameRate = 60;
+        Application.targetFrameRate = 90;
     }
 
     public void Jugar()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        Destroy(gameObject);
     }
 
     public void Salir()
