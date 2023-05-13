@@ -415,6 +415,7 @@ public class BattleSystem : MonoBehaviour
                         yield return new WaitUntil(() => state != BattleState.MoveToForget);
                         yield return new WaitForSeconds(2f);
                     }
+                    dialogBox.SetMovesNames(playerUnit.Pokemon.Moves);
                 }
 
                 yield return playerUnit.Hud.SetExpSmooth(true);
