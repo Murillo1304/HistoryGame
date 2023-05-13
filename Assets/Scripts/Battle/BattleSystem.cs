@@ -48,6 +48,9 @@ public class BattleSystem : MonoBehaviour
     {
         this.playerParty = playerParty;
         this.wildPokemon = wildPokemon;
+        currentAction = 0;
+        currentMove = 0;
+
         player = playerParty.GetComponent<PlayerController>();
         isTrainerBattle = false;
 
@@ -58,6 +61,8 @@ public class BattleSystem : MonoBehaviour
     {
         this.playerParty = playerParty;
         this.trainerParty = trainerParty;
+        currentAction = 0;
+        currentMove = 0;
 
         isTrainerBattle = true;
         player = playerParty.GetComponent<PlayerController>();
@@ -641,7 +646,7 @@ public class BattleSystem : MonoBehaviour
             }
             if (selectedMember == playerUnit.Pokemon)
             {
-                partyScreen.SetMessageText("No puedes cambiar con al mismo pokemon");
+                partyScreen.SetMessageText("No puedes cambiar al mismo pokemon");
                 return;
             }
 

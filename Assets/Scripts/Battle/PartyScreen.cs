@@ -30,8 +30,9 @@ public class PartyScreen : MonoBehaviour
     public void SetPartyData(List<Pokemon> pokemons)
     {
         this.pokemons = pokemons;
+        //selection = 0;
 
-        for(int i=0; i<memberSlots.Length; i++)
+        for (int i=0; i<memberSlots.Length; i++)
         {
             if (i < pokemons.Count)
             {

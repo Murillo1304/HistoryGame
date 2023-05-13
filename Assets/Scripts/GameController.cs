@@ -145,14 +145,17 @@ public class GameController : MonoBehaviour
         }
         else if(state == GameState.Battle)
         {
+            playerController.Character.SpeedDown();
             battleSystem.HandleUpdate();
         }
         else if (state == GameState.Dialog)
         {
+            playerController.Character.SpeedDown();
             DialogManager.Instance.HandleUpdate();
         }
         else if (state == GameState.Menu)
         {
+            playerController.Character.SpeedDown();
             menuController.HandleUpdate();
         }
         else if (state == GameState.PartyScreen)
@@ -167,7 +170,8 @@ public class GameController : MonoBehaviour
                 partyScreen.gameObject.SetActive(false);
                 state = GameState.FreeRoam;
             };
-            
+
+            playerController.Character.SpeedDown();
             partyScreen.HandleUpdate(onSelected, onBack);
         }
     }
