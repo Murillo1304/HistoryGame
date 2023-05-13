@@ -130,6 +130,7 @@ public class GameController : MonoBehaviour
             if ((Input.GetKeyDown(KeyCode.Return)) || CrossPlatformInputManager.GetButtonDown("ButtonMenu"))
             {
                 menuController.OpenMenu();
+                playerController.Character.Animator.isMoving = false;
                 state = GameState.Menu;
             }
 
