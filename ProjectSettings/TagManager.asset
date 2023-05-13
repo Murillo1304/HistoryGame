@@ -53,3 +53,6 @@ TagManager:
   - name: Battle
     uniqueID: 871775483
     locked: 0
+  - name: Tactil
+    uniqueID: 1948168007
+    locked: 0
