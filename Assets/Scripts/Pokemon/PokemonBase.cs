@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "Pokemon", menuName = "Pokemon/Create new pokemon")]
+[CreateAssetMenu(fileName = "Pokemon", menuName = "Pokemon/Crear un nuevo pokemon")]
 
 public class PokemonBase : ScriptableObject
 {

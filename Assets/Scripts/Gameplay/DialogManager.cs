@@ -29,6 +29,22 @@ public class DialogManager : MonoBehaviour
 
     public bool isShowing { get; private set; }
 
+
+    public IEnumerator ShowDialogText(string text, bool waitForInput=true)
+    {
+        isShowing = true;
+        dialogBox.SetActive(true);
+
+        yield return TypeDialog(text);
+        if (waitForInput)
+        {
+            yield return new WaitUntil(() => Input.GetKeyDown(KeyCode.Z) || CrossPlatformInputManager.GetButtonDown("ButtonA"));
+        }
+
+        dialogBox.SetActive(false);
+        isShowing = false;
+    }
+
     public IEnumerator ShowDialog(Dialog dialog, Action onFinished=null)
     {
 

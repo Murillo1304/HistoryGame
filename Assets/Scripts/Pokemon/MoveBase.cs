@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "Move", menuName = "Pokemon/Create new move")]
+[CreateAssetMenu(fileName = "Move", menuName = "Pokemon/Crear un nuevo movimiento")]
 
 public class MoveBase : ScriptableObject
 {

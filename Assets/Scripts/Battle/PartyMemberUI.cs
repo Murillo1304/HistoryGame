@@ -17,15 +17,22 @@ public class PartyMemberUI : MonoBehaviour
     Pokemon _pokemon;
     Image image;
 
-    public void SetData(Pokemon pokemon)
+    public void Init(Pokemon pokemon)
     {
         _pokemon = pokemon;
+        UpdateData();
+
+        _pokemon.OnHPChanged += UpdateData;
+    }
+
+    void UpdateData()
+    {
         image = GetComponent<Image>();
-        nameText.text = pokemon.Base.Name;
-        levelText.text = "Nv: " + pokemon.Level;
-        hpBar.SetHP((float)pokemon.HP / pokemon.MaxHp);
-        hpText.text = $"{pokemon.HP}/{pokemon.MaxHp}";
-        pokemonSprite.sprite = pokemon.Base.FrontSprite;
+        nameText.text = _pokemon.Base.Name;
+        levelText.text = "Nv: " + _pokemon.Level;
+        hpBar.SetHP((float)_pokemon.HP / _pokemon.MaxHp);
+        hpText.text = $"{_pokemon.HP}/{_pokemon.MaxHp}";
+        pokemonSprite.sprite = _pokemon.Base.FrontSprite;
     }
 
     public void SetSelected(bool selected)
