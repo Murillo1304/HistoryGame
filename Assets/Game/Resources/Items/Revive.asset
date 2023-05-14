@@ -14,6 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: Revivir
   description: Revive a un pokemon debilitado y recupera la mitad de su HP
+  message: "revivi\xF3"
   icon: {fileID: -2095385194, guid: f445ce768dde3ad429f442dbf9bb66b9, type: 3}
   price: 0
   isSellable: 0

@@ -14,6 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: "Ant\xEDdoto"
   description: Cura a un pokemon que ha sido envenenado
+  message: "ya no est\xE1 envenenado"
   icon: {fileID: -1631525462, guid: f445ce768dde3ad429f442dbf9bb66b9, type: 3}
   price: 250
   isSellable: 0

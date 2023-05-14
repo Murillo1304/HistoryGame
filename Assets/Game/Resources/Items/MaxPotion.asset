@@ -14,6 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: "Poci\xF3n m\xE1xima"
   description: Recupera el HP de un pokemon completamente
+  message: "bebi\xF3 la Poci\xF3n m\xE1xima"
   icon: {fileID: 1582691899, guid: f445ce768dde3ad429f442dbf9bb66b9, type: 3}
   price: 2500
   isSellable: 0
