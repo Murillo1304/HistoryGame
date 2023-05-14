@@ -169,7 +169,6 @@ public class BattleSystem : MonoBehaviour
         moveToLearn = newMove;
 
         state = BattleState.MoveToForget;
-
     }
 
     IEnumerator RunTurns(BattleAction playerAction)

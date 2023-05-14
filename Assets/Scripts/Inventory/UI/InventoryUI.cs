@@ -122,11 +122,13 @@ public class InventoryUI : MonoBehaviour
         var usedItem = inventory.UseItem(selectedItem, partyScreen.SelectedMember);
         if (usedItem != null)
         {
-            yield return DialogManager.Instance.ShowDialogText($"Has usado {usedItem.Name}");
+            //yield return DialogManager.Instance.ShowDialogText($"Has usado {usedItem.Name}");
+            yield return partyScreen.ShowDialogText($"¡{partyScreen.SelectedMember.Base.Name} {usedItem.Message}!");
         }
         else
         {
-            yield return DialogManager.Instance.ShowDialogText($"No tiene efecto");
+            //yield return DialogManager.Instance.ShowDialogText($"No tiene efecto");
+            yield return partyScreen.ShowDialogText($"¡No tiene ningún efecto!");
         }
 
         ClosePartyScreen();

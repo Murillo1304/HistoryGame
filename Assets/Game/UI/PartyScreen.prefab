@@ -206,6 +206,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   messageText: {fileID: 9079141889201724470}
+  letterPerSecond: 45
 --- !u!1 &9079141889201724468
 GameObject:
   m_ObjectHideFlags: 0

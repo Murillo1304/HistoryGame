@@ -8,6 +8,7 @@ using UnityStandardAssets.CrossPlatformInput;
 public class PartyScreen : MonoBehaviour
 {
     [SerializeField] Text messageText;
+    [SerializeField] int letterPerSecond;
 
     PartyMemberUI[] memberSlots;
     List<Pokemon> pokemons;
@@ -118,5 +119,27 @@ public class PartyScreen : MonoBehaviour
     public void SetMessageText(string message)
     {
         messageText.text = message;
+    }
+
+    public IEnumerator ShowDialogText(string text, bool waitForInput = true)
+    {
+        yield return TypeDialog(text);
+        if (waitForInput)
+        {
+            yield return new WaitUntil(() => Input.GetKeyDown(KeyCode.Z) || CrossPlatformInputManager.GetButtonDown("ButtonA"));
+            messageText.text = "Elije un Pokemon";
+        }
+    }
+
+    public IEnumerator TypeDialog(string dialog)
+    {
+        messageText.text = "";
+        foreach (var letter in dialog.ToCharArray())
+        {
+            messageText.text += letter;
+            yield return new WaitForSeconds(1f / letterPerSecond);
+        }
+
+        yield return new WaitForSeconds(1f / 3);
     }
 }

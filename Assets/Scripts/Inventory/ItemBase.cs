@@ -6,12 +6,14 @@ public class ItemBase : ScriptableObject
 {
     [SerializeField] string name;
     [SerializeField] string description;
+    [SerializeField] string message;
     [SerializeField] Sprite icon;
     [SerializeField] float price;
     [SerializeField] bool isSellable;
 
     public virtual string Name => name;
     public string Description => description;
+    public string Message => message;
     public Sprite Icon => icon;
 
     public float Price => price;
