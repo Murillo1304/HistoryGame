@@ -29,6 +29,11 @@ public class Move
         };
         return saveData;
     }
+
+    public void IncreasePP(int amout)
+    {
+        PP = Mathf.Clamp(PP + amout, 0, Base.PP);
+    }
 }
 
 [Serializable]

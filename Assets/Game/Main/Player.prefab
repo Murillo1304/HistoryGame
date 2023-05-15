@@ -265,8 +265,14 @@ MonoBehaviour:
     count: 2
   - item: {fileID: 11400000, guid: ed96f1e08b64acd44929b0c6dd42c22e, type: 2}
     count: 2
-  - item: {fileID: 11400000, guid: e7145e5c7aa834f409f23e15f447db1f, type: 2}
+  - item: {fileID: 11400000, guid: ca00656c9281b5b43af7f004c8d577cc, type: 2}
+    count: 1
+  pokeballSlots:
+  - item: {fileID: 11400000, guid: 767f8f0282802ec48a9e8cab6dbc52eb, type: 2}
+    count: 5
+  - item: {fileID: 11400000, guid: a9b1793ffb3326541b6fcc83ad5a7e2d, type: 2}
     count: 2
+  tmSlots: []
 --- !u!1 &6443007283910517241
 GameObject:
   m_ObjectHideFlags: 0

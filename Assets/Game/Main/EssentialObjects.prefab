@@ -7616,6 +7616,34 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1765609567440688123}
     m_Modifications:
+    - target: {fileID: 5298655680921386479, guid: 98bda0c7d017ce040b8e40a58f13f023, type: 3}
+      propertyPath: slots.Array.data[5].item
+      value: 
+      objectReference: {fileID: 11400000, guid: 2c2ff86f69a806745bce6c2d5d20ecf1, type: 2}
+    - target: {fileID: 5298655680921386479, guid: 98bda0c7d017ce040b8e40a58f13f023, type: 3}
+      propertyPath: slots.Array.data[6].item
+      value: 
+      objectReference: {fileID: 11400000, guid: 6a3edbc1e1026a24c83240f5d284e4cf, type: 2}
+    - target: {fileID: 5298655680921386479, guid: 98bda0c7d017ce040b8e40a58f13f023, type: 3}
+      propertyPath: slots.Array.data[7].item
+      value: 
+      objectReference: {fileID: 11400000, guid: ed96f1e08b64acd44929b0c6dd42c22e, type: 2}
+    - target: {fileID: 5298655680921386479, guid: 98bda0c7d017ce040b8e40a58f13f023, type: 3}
+      propertyPath: slots.Array.data[8].item
+      value: 
+      objectReference: {fileID: 11400000, guid: ca00656c9281b5b43af7f004c8d577cc, type: 2}
+    - target: {fileID: 5298655680921386479, guid: 98bda0c7d017ce040b8e40a58f13f023, type: 3}
+      propertyPath: slots.Array.data[9].item
+      value: 
+      objectReference: {fileID: 11400000, guid: 41213fce812934140a5c6b005551a117, type: 2}
+    - target: {fileID: 5298655680921386479, guid: 98bda0c7d017ce040b8e40a58f13f023, type: 3}
+      propertyPath: slots.Array.data[8].count
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5298655680921386479, guid: 98bda0c7d017ce040b8e40a58f13f023, type: 3}
+      propertyPath: slots.Array.data[9].count
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 6443007282709934674, guid: 98bda0c7d017ce040b8e40a58f13f023, type: 3}
       propertyPath: m_Name
       value: Player

@@ -10,12 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 088b69217fcd0814da0ce638a8e9d806, type: 3}
-  m_Name: Awakening
+  m_Name: MaxRevive
   m_EditorClassIdentifier: 
-  name: Despertar
-  description: "Despierta a un pokemon que est\xE1 dormido"
-  message: "se despert\xF3 del sue\xF1o"
-  icon: {fileID: -1651564051, guid: f445ce768dde3ad429f442dbf9bb66b9, type: 3}
+  name: "Revivir m\xE1ximo"
+  description: Revive a un pokemon debilitado y recupera el total de su HP
+  message: "revivi\xF3"
+  icon: {fileID: -2095385194, guid: f445ce768dde3ad429f442dbf9bb66b9, type: 3}
   price: 0
   isSellable: 0
   hpAmount: 0
@@ -25,4 +25,4 @@ MonoBehaviour:
   status: 0
   recoverAllStatus: 0
   revive: 0
-  maxRevive: 0
+  maxRevive: 1

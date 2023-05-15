@@ -10,18 +10,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 088b69217fcd0814da0ce638a8e9d806, type: 3}
-  m_Name: Ether
+  m_Name: MaxElixir
   m_EditorClassIdentifier: 
-  name: "\xC9ter"
-  description: Recupera 10 PP de un movimiento
-  message: "inhal\xF3 el aroma del \xE9ter"
-  icon: {fileID: 1269460847, guid: f445ce768dde3ad429f442dbf9bb66b9, type: 3}
+  name: "Elixir m\xE1ximo"
+  description: "Recupera los PP m\xE1ximo de todos los movimientos"
+  message: "bebi\xF3 el elixir m\xE1ximo"
+  icon: {fileID: -2060421043, guid: f445ce768dde3ad429f442dbf9bb66b9, type: 3}
   price: 0
   isSellable: 0
   hpAmount: 0
   restoreMaxHp: 0
-  ppAmount: 10
-  restoreMaxPP: 0
+  ppAmount: 0
+  restoreMaxPP: 1
   status: 0
   recoverAllStatus: 0
   revive: 0
