@@ -133,7 +133,7 @@ public class BattleSystem : MonoBehaviour
     void ActionSelection()
     {
         state = BattleState.ActionSelection;
-        dialogBox.SetDialog("Elije una acción");
+        dialogBox.SetDialog("Elige una acción");
         dialogBox.EnableActionSelector(true);
     }
 
@@ -665,17 +665,18 @@ public class BattleSystem : MonoBehaviour
             var selectedMember = partyScreen.SelectedMember;
             if (selectedMember.HP <= 0)
             {
-                partyScreen.SetMessageText("No puedes sacar un pokemon debilitado");
+                //partyScreen.SetMessageText($"No puedes sacar un pokemon debilitado");
+                StartCoroutine(partyScreen.SetMessageAndReset("No puedes sacar un pokemon debilitado"));
                 return;
             }
             if (selectedMember == playerUnit.Pokemon)
             {
-                partyScreen.SetMessageText("No puedes cambiar al mismo pokemon");
+                //partyScreen.SetMessageText($"No puedes cambiar al mismo pokemon");
+                StartCoroutine(partyScreen.SetMessageAndReset("No puedes cambiar al mismo pokemon"));
                 return;
             }
 
             partyScreen.gameObject.SetActive(false);
-            partyScreen.SetMessageText("Elije un Pokemon");
 
             if (partyScreen.CalledFrom == BattleState.ActionSelection)
             {
@@ -695,7 +696,8 @@ public class BattleSystem : MonoBehaviour
         {
             if (playerUnit.Pokemon.HP <= 0)
             {
-                partyScreen.SetMessageText("Debes elegir un pokemon para continuar");
+                //partyScreen.SetMessageText("Debes elegir un pokemon para continuar");
+                StartCoroutine(partyScreen.SetMessageAndReset("Debes elegir un pokemon para continuar"));
                 return;
             }
 

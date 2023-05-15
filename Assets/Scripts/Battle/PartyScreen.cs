@@ -52,7 +52,7 @@ public class PartyScreen : MonoBehaviour
 
         UpdateMemberSelection(selection);
 
-        messageText.text = "Elije un Pokemon";
+        messageText.text = "Elige un Pokemon";
     }
 
     public void HandleUpdate(Action onSelected, Action onBack)
@@ -121,13 +121,20 @@ public class PartyScreen : MonoBehaviour
         messageText.text = message;
     }
 
+    public IEnumerator SetMessageAndReset(string message)
+    {
+        messageText.text = message;
+        yield return new WaitForSeconds(1f);
+        messageText.text = "Elige un pokemon";
+    }
+
     public IEnumerator ShowDialogText(string text, bool waitForInput = true)
     {
         yield return TypeDialog(text);
         if (waitForInput)
         {
             yield return new WaitUntil(() => Input.GetKeyDown(KeyCode.Z) || CrossPlatformInputManager.GetButtonDown("ButtonA"));
-            messageText.text = "Elije un Pokemon";
+            messageText.text = "Elige un pokemon";
         }
     }
 
