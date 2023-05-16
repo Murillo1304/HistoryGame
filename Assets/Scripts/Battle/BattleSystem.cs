@@ -415,7 +415,7 @@ public class BattleSystem : MonoBehaviour
                 {
                     if (playerUnit.Pokemon.Moves.Count < PokemonBase.MaxNumOfMoves)
                     {
-                        playerUnit.Pokemon.LearnMove(newMove);
+                        playerUnit.Pokemon.LearnMove(newMove.Base);
                         yield return dialogBox.TypeDialog($"¡{playerUnit.Pokemon.Base.Name} aprendió {newMove.Base.Name}!");
                         dialogBox.SetMovesNames(playerUnit.Pokemon.Moves);
                     }
@@ -809,11 +809,11 @@ public class BattleSystem : MonoBehaviour
             yield break;
         }
 
-        yield return dialogBox.TypeDialog($"¡{player.Name} {pokeballItem.Message}!");
+        yield return dialogBox.TypeDialog($"¡{player.Name} usó {pokeballItem.Name}!");
 
         var pokeballObj = Instantiate(pokeballSrite, playerUnit.transform.position - new Vector3(2,-2), Quaternion.identity);
         var pokeball = pokeballObj.GetComponent<SpriteRenderer>();
-        pokeball.sprite = pokeballItem.Icon;
+        pokeball.sprite = pokeballItem.InGameSprite;
 
         //Animaciones
         yield return pokeball.transform.DOJump(enemyUnit.transform.position + new Vector3(0, 4.6f), 2f, 1, 1f).WaitForCompletion();

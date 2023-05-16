@@ -15,7 +15,7 @@ MonoBehaviour:
   name: Despertar
   description: "Despierta a un pokemon que est\xE1 dormido"
   message: "se despert\xF3 del sue\xF1o"
-  icon: {fileID: -1651564051, guid: f445ce768dde3ad429f442dbf9bb66b9, type: 3}
+  icon: {fileID: -1422237134, guid: ea9e4e5a03c30184895a038c50777800, type: 3}
   price: 250
   isSellable: 0
   hpAmount: 0

@@ -5,6 +5,8 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityStandardAssets.CrossPlatformInput;
 
+public enum MoveSelectionState { MoveSelection, Busy }
+
 public class MoveSelectionUI : MonoBehaviour
 {
     [SerializeField] List<Text> moveTexts;
@@ -13,6 +15,8 @@ public class MoveSelectionUI : MonoBehaviour
     int currentSelection = 0;
 
     bool presionadoVertical = false;
+
+    public MoveSelectionState state { get; set; } = MoveSelectionState.MoveSelection;
 
     public void SetMoveData(List<MoveBase> currentMoves, MoveBase newMove)
     {
@@ -26,26 +30,30 @@ public class MoveSelectionUI : MonoBehaviour
 
     public void HandleMoveSelection(Action<int> onSelected)
     {
-        if ((Input.GetKeyDown(KeyCode.DownArrow) || (SimpleInput.GetAxisRaw("Vertical") < 0)) && !presionadoVertical)
+        if (state == MoveSelectionState.MoveSelection)
         {
-            presionadoVertical = true;
-            ++currentSelection;
+
+            if ((Input.GetKeyDown(KeyCode.DownArrow) || (SimpleInput.GetAxisRaw("Vertical") < 0)) && !presionadoVertical)
+            {
+                presionadoVertical = true;
+                ++currentSelection;
+            }
+            else if ((Input.GetKeyDown(KeyCode.UpArrow) || (SimpleInput.GetAxisRaw("Vertical") > 0)) && !presionadoVertical)
+            {
+                presionadoVertical = true;
+                --currentSelection;
+            }
+
+            if (SimpleInput.GetAxisRaw("Vertical") == 0)
+                presionadoVertical = false;
+
+            currentSelection = Mathf.Clamp(currentSelection, 0, PokemonBase.MaxNumOfMoves);
+
+            UpdateMoveSelection(currentSelection);
+
+            if (Input.GetKeyDown(KeyCode.Z) || CrossPlatformInputManager.GetButtonDown("ButtonA"))
+                onSelected?.Invoke(currentSelection);
         }
-        else if ((Input.GetKeyDown(KeyCode.UpArrow) || (SimpleInput.GetAxisRaw("Vertical") > 0)) && !presionadoVertical)
-        {
-            presionadoVertical = true;
-            --currentSelection;
-        }
-
-        if (SimpleInput.GetAxisRaw("Vertical") == 0)
-            presionadoVertical = false;
-
-        currentSelection = Mathf.Clamp(currentSelection, 0, PokemonBase.MaxNumOfMoves);
-
-        UpdateMoveSelection(currentSelection);
-
-        if (Input.GetKeyDown(KeyCode.Z) || CrossPlatformInputManager.GetButtonDown("ButtonA"))
-            onSelected?.Invoke(currentSelection);
     }
 
     public void UpdateMoveSelection(int selection)

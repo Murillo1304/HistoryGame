@@ -15,7 +15,7 @@ MonoBehaviour:
   name: "Poci\xF3n"
   description: Recupera el HP de un pokemon en 20 puntos
   message: "bebi\xF3 la poci\xF3n"
-  icon: {fileID: 384610238, guid: f445ce768dde3ad429f442dbf9bb66b9, type: 3}
+  icon: {fileID: 2013539352, guid: ea9e4e5a03c30184895a038c50777800, type: 3}
   price: 300
   isSellable: 0
   hpAmount: 20

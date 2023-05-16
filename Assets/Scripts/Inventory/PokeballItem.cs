@@ -6,6 +6,9 @@ using UnityEngine;
 public class PokeballItem : ItemBase
 {
     [SerializeField] float catchRateModifier = 1;
+    [SerializeField] Sprite inGameSprite;
+
+    public Sprite InGameSprite => inGameSprite;
 
     public override bool Use(Pokemon pokemon)
     {

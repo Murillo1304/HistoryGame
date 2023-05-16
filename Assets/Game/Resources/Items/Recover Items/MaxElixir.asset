@@ -15,7 +15,7 @@ MonoBehaviour:
   name: "Elixir m\xE1ximo"
   description: "Recupera los PP m\xE1ximo de todos los movimientos"
   message: "bebi\xF3 el elixir m\xE1ximo"
-  icon: {fileID: -2060421043, guid: f445ce768dde3ad429f442dbf9bb66b9, type: 3}
+  icon: {fileID: -404103536, guid: ea9e4e5a03c30184895a038c50777800, type: 3}
   price: 0
   isSellable: 0
   hpAmount: 0

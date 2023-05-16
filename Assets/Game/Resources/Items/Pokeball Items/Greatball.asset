@@ -15,7 +15,8 @@ MonoBehaviour:
   name: Superball
   description: Una pokeball de mayor calidad para capturar pokemon salvajes
   message: "us\xF3 superball"
-  icon: {fileID: 716951779, guid: 8d0755be1b37d5d40b9e587fe8a0bea2, type: 3}
+  icon: {fileID: -1458229319, guid: ea9e4e5a03c30184895a038c50777800, type: 3}
   price: 0
   isSellable: 0
   catchRateModifier: 1.5
+  inGameSprite: {fileID: 716951779, guid: 8d0755be1b37d5d40b9e587fe8a0bea2, type: 3}

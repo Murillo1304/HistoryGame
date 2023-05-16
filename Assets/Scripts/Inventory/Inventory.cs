@@ -23,7 +23,7 @@ public class Inventory : MonoBehaviour
 
     public static List<string> ItemCategories { get; set; } = new List<string>()
     {
-        "ITEMS", "POKEBALLS", "Tms & HMs"
+        "ITEMS", "POKEBALLS", "Mts & MOs"
     };
 
     public List<ItemSlot> GetSlotsByCategory(int categoryIndex)
@@ -31,11 +31,15 @@ public class Inventory : MonoBehaviour
         return allSlots[categoryIndex];
     }
 
+    public ItemBase GetItem(int itemIndex, int categoryIndex)
+    {
+        var currSlots = GetSlotsByCategory(categoryIndex);
+        return currSlots[itemIndex].Item;
+    }
+
     public ItemBase UseItem(int itemIndex, Pokemon selectedPokemon, int selectedCategory)
     {
-        var currSlots = GetSlotsByCategory(selectedCategory);
-        
-        var item =  currSlots[itemIndex].Item;
+        var item = GetItem(itemIndex, selectedCategory);
         bool itemUsed = item.Use(selectedPokemon);
         if (itemUsed)
         {

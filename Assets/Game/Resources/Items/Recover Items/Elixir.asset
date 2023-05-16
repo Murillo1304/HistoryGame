@@ -15,7 +15,7 @@ MonoBehaviour:
   name: Elixir
   description: Recupera 10 PP de todos los movimientos
   message: "bebi\xF3 el elixir"
-  icon: {fileID: -2093289345, guid: f445ce768dde3ad429f442dbf9bb66b9, type: 3}
+  icon: {fileID: 2113879255, guid: ea9e4e5a03c30184895a038c50777800, type: 3}
   price: 0
   isSellable: 0
   hpAmount: 0
