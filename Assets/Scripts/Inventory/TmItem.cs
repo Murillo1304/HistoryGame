@@ -13,5 +13,7 @@ public class TmItem : ItemBase
         return pokemon.HasMove(move);
     }
 
+    public override bool CanUseInBattle => false;
+
     public MoveBase Move => move;
 }

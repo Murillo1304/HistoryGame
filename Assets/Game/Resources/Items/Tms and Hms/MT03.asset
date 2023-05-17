@@ -12,10 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b8266145b18a7d747a5b0b3a7d2b6f28, type: 3}
   m_Name: MT03
   m_EditorClassIdentifier: 
-  name: 
-  description: 
+  name: MT03
+  description: "Ense\xF1ar el movimiento Onda trueno a un pokemon"
   message: 
-  icon: {fileID: 0}
+  icon: {fileID: 1110732013, guid: ea9e4e5a03c30184895a038c50777800, type: 3}
   price: 0
   isSellable: 0
-  move: {fileID: 0}
+  move: {fileID: 11400000, guid: 59b83efa869329a44b0d60314a5ace87, type: 2}

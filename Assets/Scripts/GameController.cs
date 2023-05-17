@@ -13,6 +13,7 @@ public class GameController : MonoBehaviour
     [SerializeField] Camera worldCamera;
     [SerializeField] PartyScreen partyScreen;
     [SerializeField] InventoryUI inventoryUI;
+    [SerializeField] GameObject buttonMenu;
     GameState state;
 
     GameState stateBeforePause;
@@ -79,6 +80,7 @@ public class GameController : MonoBehaviour
     public void StartBattle()
     {
         state = GameState.Battle;
+        buttonMenu.SetActive(false);
         battleSystem.gameObject.SetActive(true);
         worldCamera.gameObject.SetActive(false);
 
@@ -95,6 +97,7 @@ public class GameController : MonoBehaviour
     public void StartTrainerBattle(TrainerController trainer)
     {
         state = GameState.Battle;
+        buttonMenu.SetActive(false);
         battleSystem.gameObject.SetActive(true);
         worldCamera.gameObject.SetActive(false);
 
@@ -120,6 +123,7 @@ public class GameController : MonoBehaviour
         }
         
         state = GameState.FreeRoam;
+        buttonMenu.SetActive(true);
         battleSystem.gameObject.SetActive(false);
         worldCamera.gameObject.SetActive(true);
     }

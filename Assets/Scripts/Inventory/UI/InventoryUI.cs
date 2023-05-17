@@ -77,7 +77,7 @@ public class InventoryUI : MonoBehaviour
     public void HandleUpdate(Action onBack, Action<ItemBase> onItemUsed=null)
     {
         this.onItemUsed= onItemUsed;
-        
+
         if (state == InventoryUIState.ItemSelection)
         {
             int prevSelection = selectedItem;
@@ -100,7 +100,7 @@ public class InventoryUI : MonoBehaviour
             }
             else if ((Input.GetKeyDown(KeyCode.LeftArrow) || (SimpleInput.GetAxisRaw("Horizontal") < 0)) && !presionadoHorizontal)
             {
-                presionadoHorizontal= true;
+                presionadoHorizontal = true;
                 --selectedCategory;
             }
 
@@ -119,7 +119,11 @@ public class InventoryUI : MonoBehaviour
             else if (selectedCategory < 0)
                 selectedCategory = Inventory.ItemCategories.Count - 1;
 
-            selectedItem = Mathf.Clamp(selectedItem, 0, inventory.GetSlotsByCategory(selectedCategory).Count - 1);
+            var countItems = inventory.GetSlotsByCategory(selectedCategory).Count;
+            if (countItems > 0)
+                selectedItem = Mathf.Clamp(selectedItem, 0, countItems - 1);
+            else
+                selectedItem = -1;
 
             if(prevCategory != selectedCategory)
             {
@@ -133,8 +137,10 @@ public class InventoryUI : MonoBehaviour
             }
 
             if ((Input.GetKeyDown(KeyCode.Z)) || CrossPlatformInputManager.GetButtonDown("ButtonA"))
-                ItemSelected();
-
+            {
+                if (selectedItem > -1)
+                    StartCoroutine(ItemSelected());
+            }
             else if ((Input.GetKeyDown(KeyCode.X)) || CrossPlatformInputManager.GetButtonDown("ButtonB"))
                 onBack?.Invoke();
         }
@@ -166,8 +172,33 @@ public class InventoryUI : MonoBehaviour
         }
     }
 
-    void ItemSelected()
+    IEnumerator ItemSelected()
     {
+        state = InventoryUIState.Busy;
+
+        var item = inventory.GetItem(selectedItem, selectedCategory);
+        
+        if(GameController.Instance.State == GameState.Battle)
+        {
+            //En batalla
+            if (!item.CanUseInBattle)
+            {
+                yield return DialogManager.Instance.ShowDialogText($"No puedes usar esto en batalla");
+                state = InventoryUIState.ItemSelection;
+                yield break;
+            }
+        }
+        else
+        {
+            //Fuera de batalla
+            if (!item.CanUseOutsideBattle)
+            {
+                yield return DialogManager.Instance.ShowDialogText($"No puedes usar esto fuera de una batalla");
+                state = InventoryUIState.ItemSelection;
+                yield break;
+            }
+        }
+        
         if (selectedCategory == (int)ItemCategory.Pokeballs)
         {
             StartCoroutine(UseItem());
