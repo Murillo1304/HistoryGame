@@ -39,10 +39,10 @@ public class PlayerController : MonoBehaviour, ISavable
         character.HandleUpdate();
 
         if((CrossPlatformInputManager.GetButtonDown("ButtonA")) || (Input.GetKeyDown(KeyCode.Z)))
-            Interact();
+            StartCoroutine(Interact());
     }
 
-    void Interact()
+    IEnumerator Interact()
     {
         var faceDir = new Vector3(character.Animator.MoveX, character.Animator.MoveY);
         var interacPos = transform.position + faceDir;
@@ -50,8 +50,7 @@ public class PlayerController : MonoBehaviour, ISavable
         var collider = Physics2D.OverlapCircle(interacPos, 0.3f, GameLayers.i.InteractableLayer);
         if(collider != null)
         {
-            collider.GetComponent<Interactable>()?.Interact(transform);
-
+            yield return collider.GetComponent<Interactable>()?.Interact(transform);
         }
     }
 

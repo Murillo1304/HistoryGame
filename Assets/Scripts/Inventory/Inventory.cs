@@ -52,6 +52,28 @@ public class Inventory : MonoBehaviour
         return null;
     }
 
+    public void AddItem(ItemBase item, int count = 1)
+    {
+        int category = (int)GetCategoryFromItem(item);
+        var currSlots = GetSlotsByCategory(category);
+
+        var itemSlot = currSlots.FirstOrDefault(slot => slot.Item == item);
+        if (itemSlot != null)
+        {
+            itemSlot.Count += count;
+        }
+        else
+        {
+            currSlots.Add(new ItemSlot()
+            {
+                Item = item,
+                Count = count
+            });
+        }
+
+        OnUpdated?.Invoke();
+    }
+
     public void RemoveItem(ItemBase item, int category)
     {
         var currSlots = GetSlotsByCategory(category);
@@ -62,6 +84,16 @@ public class Inventory : MonoBehaviour
             currSlots.Remove(itemSlot);
 
         OnUpdated?.Invoke();
+    }
+
+    ItemCategory GetCategoryFromItem(ItemBase item)
+    {
+        if (item is RecoveryItem)
+            return ItemCategory.Items;
+        else if (item is PokeballItem)
+            return ItemCategory.Pokeballs;
+        else
+            return ItemCategory.Tms;
     }
 
     public static Inventory GetInventory()

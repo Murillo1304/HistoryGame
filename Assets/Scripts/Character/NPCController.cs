@@ -13,23 +13,32 @@ public class NPCController : MonoBehaviour, Interactable
     int currentPatter = 0;
 
     Character character;
+    ItemGiver itemGiver;
 
     private void Awake()
     {
         character = GetComponent<Character>();
+        itemGiver = GetComponent<ItemGiver>();
     }
 
-    public void Interact(Transform initiator)
+    public IEnumerator Interact(Transform initiator)
     {
         if(state == NPCState.idle)
         {
             state = NPCState.dialog;
             character.lookTowards(initiator.position);
 
-            StartCoroutine(DialogManager.Instance.ShowDialog(dialog, () => {
-                idleTimer = 0f;
-                state = NPCState.idle;
-            }));
+            if(itemGiver != null && itemGiver.CanBeGiven())
+            {
+                yield return itemGiver.GiveItem(initiator.GetComponent<PlayerController>());
+            }
+            else
+            {
+                yield return DialogManager.Instance.ShowDialog(dialog);
+            }
+
+            idleTimer = 0f;
+            state = NPCState.idle;
         }
     }
 

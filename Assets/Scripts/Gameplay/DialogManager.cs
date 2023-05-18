@@ -13,7 +13,7 @@ public class DialogManager : MonoBehaviour
     [SerializeField] int letterPerSecond;
 
     public event Action OnShowDialog;
-    public event Action OnCloseDialog;
+    public event Action OnDialogFinished;
 
     public static DialogManager Instance { get; private set; }
     private void Awake()
@@ -21,18 +21,13 @@ public class DialogManager : MonoBehaviour
         Instance = this;
     }
 
-    Dialog dialog;
-    Action onDialogFinished;
-
-    int currentLine = 0;
-    bool isTyping;
-
-    public bool isShowing { get; private set; }
+    public bool IsShowing { get; private set; }
 
 
     public IEnumerator ShowDialogText(string text, bool waitForInput=true, bool autoClose=true)
     {
-        isShowing = true;
+        OnShowDialog?.Invoke();
+        IsShowing = true;
         dialogBox.SetActive(true);
 
         yield return TypeDialog(text);
@@ -45,60 +40,47 @@ public class DialogManager : MonoBehaviour
         {
             CloseDialog();
         }
+        OnDialogFinished?.Invoke();
     }
 
     public void CloseDialog()
     {
         dialogBox.SetActive(false);
-        isShowing = false;
+        IsShowing = false;
     }
 
-    public IEnumerator ShowDialog(Dialog dialog, Action onFinished=null)
+    public IEnumerator ShowDialog(Dialog dialog)
     {
 
         yield return new WaitForEndOfFrame();
 
         OnShowDialog?.Invoke();
-
-        isShowing = true;
-        this.dialog = dialog;
-        onDialogFinished = onFinished;
-
+        IsShowing = true;
         dialogBox.SetActive(true);
-        StartCoroutine(TypeDialog(dialog.Lines[0]));
+
+        foreach (var line in dialog.Lines)
+        {
+            yield return TypeDialog(line);
+            yield return new WaitUntil(() => Input.GetKeyDown(KeyCode.Z) || CrossPlatformInputManager.GetButtonDown("ButtonA"));
+        }
+
+        dialogBox.SetActive(false);
+        IsShowing = false;
+        OnDialogFinished?.Invoke();
     }
 
     public void HandleUpdate()
     {
-        if (((CrossPlatformInputManager.GetButtonDown("ButtonA")) || (Input.GetKeyDown(KeyCode.Z))) && !isTyping)
-        {
-            ++currentLine;
-            if(currentLine < dialog.Lines.Count)
-            {
-                StartCoroutine(TypeDialog(dialog.Lines[currentLine]));
-            }
-            else
-            {
-                currentLine = 0;
-                isShowing = false;
-                dialogBox.SetActive(false);
-                onDialogFinished?.Invoke();
-                OnCloseDialog?.Invoke();
-            }
-        }
+
     }
 
     public IEnumerator TypeDialog(string line)
     {
-        isTyping = true;
-
         dialogText.text = "";
         foreach(var letter in line.ToCharArray())
         {
             dialogText.text += letter;
             yield return new WaitForSeconds(1f / letterPerSecond);
         }
-
-        isTyping = false;
     }
 }

@@ -214,7 +214,6 @@ public class InventoryUI : MonoBehaviour
 
     IEnumerator UseItem()
     {
-        var prevState = state;
         state = InventoryUIState.Busy;
 
         yield return HandleTmItems();
@@ -228,7 +227,7 @@ public class InventoryUI : MonoBehaviour
         }
         else
         {
-            if (usedItem is RecoveryItem)
+            if (selectedCategory == (int)ItemCategory.Items)
                 yield return partyScreen.ShowDialogText($"¡No tiene ningún efecto!");
         }
 
