@@ -1540,6 +1540,7 @@ GameObject:
   - component: {fileID: 1765609568362444569}
   - component: {fileID: 407562488416075733}
   - component: {fileID: 6379017445429488644}
+  - component: {fileID: 4914166775060118050}
   m_Layer: 0
   m_Name: GameController
   m_TagString: Untagged
@@ -1654,6 +1655,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   highlightedColor: {r: 0.20558919, g: 0.3588981, b: 0.7924528, a: 1}
+--- !u!114 &4914166775060118050
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1765609568362444573}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 85fd96b06dbfc6441a7aad64a168669a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  evolutionUI: {fileID: 3456777494131898274}
+  pokemonImage: {fileID: 4496855748312332412}
 --- !u!1 &1765609568442694067
 GameObject:
   m_ObjectHideFlags: 0
@@ -5480,6 +5495,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3971067866319779651, guid: 0f3c15a35d364404cbdeb33a15751a3e, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3984253787216871113, guid: 0f3c15a35d364404cbdeb33a15751a3e, type: 3}
       propertyPath: m_AnchorMax.y
       value: 1
@@ -6587,6 +6606,22 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 4136944845239874155, guid: 0f3c15a35d364404cbdeb33a15751a3e, type: 3}
   m_PrefabInstance: {fileID: 1793807039680381153}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &3456777494131898274 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3971067866319779651, guid: 0f3c15a35d364404cbdeb33a15751a3e, type: 3}
+  m_PrefabInstance: {fileID: 1793807039680381153}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &4496855748312332412 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2777854030669084829, guid: 0f3c15a35d364404cbdeb33a15751a3e, type: 3}
+  m_PrefabInstance: {fileID: 1793807039680381153}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &5766349055932109969 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 5251986707640783984, guid: 0f3c15a35d364404cbdeb33a15751a3e, type: 3}
@@ -6781,6 +6816,10 @@ PrefabInstance:
     - target: {fileID: 6443007282709934681, guid: 98bda0c7d017ce040b8e40a58f13f023, type: 3}
       propertyPath: moveSpeed
       value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6443007282709934682, guid: 98bda0c7d017ce040b8e40a58f13f023, type: 3}
+      propertyPath: pokemons.Array.data[0].level
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 6443007282709934687, guid: 98bda0c7d017ce040b8e40a58f13f023, type: 3}
       propertyPath: m_RootOrder

@@ -250,7 +250,7 @@ MonoBehaviour:
   slots:
   - item: {fileID: 11400000, guid: 6a3edbc1e1026a24c83240f5d284e4cf, type: 2}
     count: 1
-  - item: {fileID: 11400000, guid: 3a132894790a19b43b52a8bbb5c8f237, type: 2}
+  - item: {fileID: 11400000, guid: b4985e2e72fc5b24eaed24f6f6e4963a, type: 2}
     count: 1
   - item: {fileID: 11400000, guid: ed96f1e08b64acd44929b0c6dd42c22e, type: 2}
     count: 1
