@@ -13,6 +13,7 @@ public class PartyMemberUI : MonoBehaviour
     [SerializeField] Image pokemonSprite;
     [SerializeField] Sprite memberNoSelect;
     [SerializeField] Sprite memberSelect;
+    [SerializeField] Text messageText;
 
     Pokemon _pokemon;
     Image image;
@@ -21,6 +22,7 @@ public class PartyMemberUI : MonoBehaviour
     {
         _pokemon = pokemon;
         UpdateData();
+        SetMessage("");
 
         _pokemon.OnHPChanged += UpdateData;
     }
@@ -50,5 +52,10 @@ public class PartyMemberUI : MonoBehaviour
             //levelText.color = Color.white;
             image.sprite = memberNoSelect;
         }
+    }
+
+    public void SetMessage(string message)
+    {
+        messageText.text = message;
     }
 }

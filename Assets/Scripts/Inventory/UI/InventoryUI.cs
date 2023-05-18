@@ -206,6 +206,9 @@ public class InventoryUI : MonoBehaviour
         else
         {
             OpenPartyScreen();
+
+            if(item is TmItem)
+                partyScreen.ShowIfTmIsUsable(item as TmItem);
         }
     }
 
@@ -225,10 +228,8 @@ public class InventoryUI : MonoBehaviour
         }
         else
         {
-            if (prevState == InventoryUIState.PartySelection)
+            if (usedItem is RecoveryItem)
                 yield return partyScreen.ShowDialogText($"¡No tiene ningún efecto!");
-            else
-                yield return DialogManager.Instance.ShowDialogText($"No es momento de usar eso");
         }
 
         ClosePartyScreen();
@@ -241,6 +242,19 @@ public class InventoryUI : MonoBehaviour
            yield break;
 
         var pokemon = partyScreen.SelectedMember;
+
+        if (pokemon.HasMove(tmItem.Move))
+        {
+            yield return partyScreen.ShowDialogText($"¡{pokemon.Base.Name} ya sabe {tmItem.Move.Name}!");
+            yield break;
+        }
+
+        if (!tmItem.CanBeTaught(pokemon))
+        {
+            yield return partyScreen.ShowDialogText($"¡{pokemon.Base.Name} no puede aprender {tmItem.Move.Name}!");
+            yield break;
+        }
+
         if (pokemon.Moves.Count < PokemonBase.MaxNumOfMoves)
         {
             pokemon.LearnMove(tmItem.Move);
@@ -324,6 +338,8 @@ public class InventoryUI : MonoBehaviour
     void ClosePartyScreen()
     {
         state = InventoryUIState.ItemSelection;
+
+        partyScreen.ClearMemberSlotMessages();
         partyScreen.gameObject.SetActive(false);
     }
 

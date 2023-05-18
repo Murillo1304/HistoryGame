@@ -6716,6 +6716,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 1765609567440688123}
     m_Modifications:
     - target: {fileID: 5298655680921386479, guid: 98bda0c7d017ce040b8e40a58f13f023, type: 3}
+      propertyPath: tmSlots.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5298655680921386479, guid: 98bda0c7d017ce040b8e40a58f13f023, type: 3}
       propertyPath: slots.Array.data[5].item
       value: 
       objectReference: {fileID: 11400000, guid: 2c2ff86f69a806745bce6c2d5d20ecf1, type: 2}
@@ -6742,6 +6746,14 @@ PrefabInstance:
     - target: {fileID: 5298655680921386479, guid: 98bda0c7d017ce040b8e40a58f13f023, type: 3}
       propertyPath: slots.Array.data[9].count
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5298655680921386479, guid: 98bda0c7d017ce040b8e40a58f13f023, type: 3}
+      propertyPath: tmSlots.Array.data[2].item
+      value: 
+      objectReference: {fileID: 11400000, guid: 50a7d64a25b71df48be243ab2e321081, type: 2}
+    - target: {fileID: 5298655680921386479, guid: 98bda0c7d017ce040b8e40a58f13f023, type: 3}
+      propertyPath: tmSlots.Array.data[2].count
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6443007282709934674, guid: 98bda0c7d017ce040b8e40a58f13f023, type: 3}
       propertyPath: m_Name
