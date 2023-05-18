@@ -71,3 +71,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5a397d4618056d5439452d205282101f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  connectedScenes: []

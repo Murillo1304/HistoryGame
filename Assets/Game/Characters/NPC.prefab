@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: 1175979326573501968}
   - component: {fileID: 1175979326573501971}
   - component: {fileID: 7820641569176041609}
+  - component: {fileID: 7729422151200573869}
   m_Layer: 10
   m_Name: NPC
   m_TagString: Untagged
@@ -153,11 +154,8 @@ MonoBehaviour:
     lines:
     - "Hola como est\xE1s"
     - Yo muy bien
-  movementPatter:
-  - {x: 2, y: 0}
-  - {x: 0, y: -2}
-  - {x: -2, y: 0}
-  - {x: 0, y: 2}
+  questToStart: {fileID: 0}
+  movementPatter: []
   timeBetweenPatter: 1
 --- !u!114 &1175979326573501968
 MonoBehaviour:
@@ -218,5 +216,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   item: {fileID: 0}
+  count: 1
   dialog:
     lines: []
+--- !u!114 &7729422151200573869
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1175979326573501977}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4881f89f8b930e34489bbb86116ccd4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  uniqueId: 

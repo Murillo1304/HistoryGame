@@ -1625,6 +1625,9 @@ MonoBehaviour:
   portalLayer:
     serializedVersion: 2
     m_Bits: 8192
+  triggerLayers:
+    serializedVersion: 2
+    m_Bits: 16384
 --- !u!114 &407562488416075733
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6717,12 +6720,16 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 5298655680921386479, guid: 98bda0c7d017ce040b8e40a58f13f023, type: 3}
       propertyPath: tmSlots.Array.size
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 5298655680921386479, guid: 98bda0c7d017ce040b8e40a58f13f023, type: 3}
+      propertyPath: slots.Array.data[2].item
+      value: 
+      objectReference: {fileID: 11400000, guid: 997c6859f4036e84d9d5f278eee5bd83, type: 2}
     - target: {fileID: 5298655680921386479, guid: 98bda0c7d017ce040b8e40a58f13f023, type: 3}
       propertyPath: slots.Array.data[5].item
       value: 
-      objectReference: {fileID: 11400000, guid: 2c2ff86f69a806745bce6c2d5d20ecf1, type: 2}
+      objectReference: {fileID: 11400000, guid: 9404ab7733bcb814b9ff5e48965705d3, type: 2}
     - target: {fileID: 5298655680921386479, guid: 98bda0c7d017ce040b8e40a58f13f023, type: 3}
       propertyPath: slots.Array.data[6].item
       value: 
@@ -6758,6 +6765,14 @@ PrefabInstance:
     - target: {fileID: 6443007282709934674, guid: 98bda0c7d017ce040b8e40a58f13f023, type: 3}
       propertyPath: m_Name
       value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 6443007282709934680, guid: 98bda0c7d017ce040b8e40a58f13f023, type: 3}
+      propertyPath: m_Size.y
+      value: 0.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 6443007282709934680, guid: 98bda0c7d017ce040b8e40a58f13f023, type: 3}
+      propertyPath: m_Offset.y
+      value: -0.3
       objectReference: {fileID: 0}
     - target: {fileID: 6443007282709934681, guid: 98bda0c7d017ce040b8e40a58f13f023, type: 3}
       propertyPath: runSpeed
