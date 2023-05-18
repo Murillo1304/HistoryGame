@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ScrictableObjectDB<T> : MonoBehaviour where T : ScriptableObject
+public class ScriptableObjectDB<T> : MonoBehaviour where T : ScriptableObject
 {
     static Dictionary<string, T> objects;
 
