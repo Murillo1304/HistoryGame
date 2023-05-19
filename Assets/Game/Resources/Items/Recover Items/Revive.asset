@@ -16,8 +16,8 @@ MonoBehaviour:
   description: Revive a un pokemon debilitado y recupera la mitad de su HP
   message: "revivi\xF3"
   icon: {fileID: -1204783906, guid: ea9e4e5a03c30184895a038c50777800, type: 3}
-  price: 0
-  isSellable: 0
+  price: 200
+  isSellable: 1
   hpAmount: 0
   restoreMaxHp: 0
   ppAmount: 0

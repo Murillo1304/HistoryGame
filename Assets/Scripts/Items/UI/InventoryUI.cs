@@ -177,6 +177,13 @@ public class InventoryUI : MonoBehaviour
         state = InventoryUIState.Busy;
 
         var item = inventory.GetItem(selectedItem, selectedCategory);
+
+        if (GameController.Instance.State == GameState.Shop)
+        {
+            onItemUsed?.Invoke(item);
+            state = InventoryUIState.ItemSelection;
+            yield break;
+        }
         
         if(GameController.Instance.State == GameState.Battle)
         {

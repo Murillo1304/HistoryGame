@@ -17,7 +17,7 @@ MonoBehaviour:
   message: "bebi\xF3 la poci\xF3n"
   icon: {fileID: 2013539352, guid: ea9e4e5a03c30184895a038c50777800, type: 3}
   price: 300
-  isSellable: 0
+  isSellable: 1
   hpAmount: 20
   restoreMaxHp: 0
   ppAmount: 0

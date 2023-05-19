@@ -291,6 +291,100 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
+--- !u!1001 &633311206
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1175979326573501970, guid: 5573b881b175cc04dbc7669dc038c0a9, type: 3}
+      propertyPath: questToComplete
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 1175979326573501970, guid: 5573b881b175cc04dbc7669dc038c0a9, type: 3}
+      propertyPath: dialog.lines.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1175979326573501970, guid: 5573b881b175cc04dbc7669dc038c0a9, type: 3}
+      propertyPath: movementPatter.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1175979326573501970, guid: 5573b881b175cc04dbc7669dc038c0a9, type: 3}
+      propertyPath: dialog.lines.Array.data[0]
+      value: Luces cansado. Tomate un descanso.
+      objectReference: {fileID: 0}
+    - target: {fileID: 1175979326573501977, guid: 5573b881b175cc04dbc7669dc038c0a9, type: 3}
+      propertyPath: m_Name
+      value: Healer
+      objectReference: {fileID: 0}
+    - target: {fileID: 1175979326573501981, guid: 5573b881b175cc04dbc7669dc038c0a9, type: 3}
+      propertyPath: m_RootOrder
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 1175979326573501981, guid: 5573b881b175cc04dbc7669dc038c0a9, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -35.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1175979326573501981, guid: 5573b881b175cc04dbc7669dc038c0a9, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -1.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1175979326573501981, guid: 5573b881b175cc04dbc7669dc038c0a9, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1175979326573501981, guid: 5573b881b175cc04dbc7669dc038c0a9, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1175979326573501981, guid: 5573b881b175cc04dbc7669dc038c0a9, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1175979326573501981, guid: 5573b881b175cc04dbc7669dc038c0a9, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1175979326573501981, guid: 5573b881b175cc04dbc7669dc038c0a9, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1175979326573501981, guid: 5573b881b175cc04dbc7669dc038c0a9, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1175979326573501981, guid: 5573b881b175cc04dbc7669dc038c0a9, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1175979326573501981, guid: 5573b881b175cc04dbc7669dc038c0a9, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7729422151200573869, guid: 5573b881b175cc04dbc7669dc038c0a9, type: 3}
+      propertyPath: uniqueId
+      value: ddc6b8b7-57df-4fed-b375-2202a9dc923c
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 5573b881b175cc04dbc7669dc038c0a9, type: 3}
+--- !u!1 &633311207 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1175979326573501977, guid: 5573b881b175cc04dbc7669dc038c0a9, type: 3}
+  m_PrefabInstance: {fileID: 633311206}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &633311208
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 633311207}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d9ea2cf8d8cca704681e70956f03bcde, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &888046717 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1175979326573501977, guid: 5573b881b175cc04dbc7669dc038c0a9, type: 3}
@@ -315,6 +409,113 @@ MonoBehaviour:
     lines:
     - "Es peligroso ir por ah\xED sin un Pokemon"
     - Puedes tener este Charmander
+--- !u!1001 &1192614063
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1175979326573501970, guid: 5573b881b175cc04dbc7669dc038c0a9, type: 3}
+      propertyPath: questToComplete
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 1175979326573501970, guid: 5573b881b175cc04dbc7669dc038c0a9, type: 3}
+      propertyPath: dialog.lines.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1175979326573501970, guid: 5573b881b175cc04dbc7669dc038c0a9, type: 3}
+      propertyPath: movementPatter.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1175979326573501970, guid: 5573b881b175cc04dbc7669dc038c0a9, type: 3}
+      propertyPath: dialog.lines.Array.data[0]
+      value: Luces cansado. Tomate un descanso.
+      objectReference: {fileID: 0}
+    - target: {fileID: 1175979326573501977, guid: 5573b881b175cc04dbc7669dc038c0a9, type: 3}
+      propertyPath: m_Name
+      value: Merchant
+      objectReference: {fileID: 0}
+    - target: {fileID: 1175979326573501981, guid: 5573b881b175cc04dbc7669dc038c0a9, type: 3}
+      propertyPath: m_RootOrder
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1175979326573501981, guid: 5573b881b175cc04dbc7669dc038c0a9, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -35.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1175979326573501981, guid: 5573b881b175cc04dbc7669dc038c0a9, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -4.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1175979326573501981, guid: 5573b881b175cc04dbc7669dc038c0a9, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1175979326573501981, guid: 5573b881b175cc04dbc7669dc038c0a9, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1175979326573501981, guid: 5573b881b175cc04dbc7669dc038c0a9, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1175979326573501981, guid: 5573b881b175cc04dbc7669dc038c0a9, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1175979326573501981, guid: 5573b881b175cc04dbc7669dc038c0a9, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1175979326573501981, guid: 5573b881b175cc04dbc7669dc038c0a9, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1175979326573501981, guid: 5573b881b175cc04dbc7669dc038c0a9, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1175979326573501981, guid: 5573b881b175cc04dbc7669dc038c0a9, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7729422151200573869, guid: 5573b881b175cc04dbc7669dc038c0a9, type: 3}
+      propertyPath: uniqueId
+      value: aa989329-f02f-4c6d-aaf9-3d5c42512157
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 5573b881b175cc04dbc7669dc038c0a9, type: 3}
+--- !u!1 &1192614064 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1175979326573501977, guid: 5573b881b175cc04dbc7669dc038c0a9, type: 3}
+  m_PrefabInstance: {fileID: 1192614063}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1192614065
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1192614064}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c5962df38ec248c4b99297960704f507, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  availableItems:
+  - {fileID: 11400000, guid: 3a132894790a19b43b52a8bbb5c8f237, type: 2}
+  - {fileID: 11400000, guid: 997c6859f4036e84d9d5f278eee5bd83, type: 2}
+  - {fileID: 11400000, guid: 9404ab7733bcb814b9ff5e48965705d3, type: 2}
+  - {fileID: 11400000, guid: d308ae59b50a4134094de573b57ba186, type: 2}
+  - {fileID: 11400000, guid: 41213fce812934140a5c6b005551a117, type: 2}
+  - {fileID: 11400000, guid: 2c2ff86f69a806745bce6c2d5d20ecf1, type: 2}
+  - {fileID: 11400000, guid: 6a3edbc1e1026a24c83240f5d284e4cf, type: 2}
+  - {fileID: 11400000, guid: e7145e5c7aa834f409f23e15f447db1f, type: 2}
+  - {fileID: 11400000, guid: ed96f1e08b64acd44929b0c6dd42c22e, type: 2}
+  - {fileID: 11400000, guid: ca00656c9281b5b43af7f004c8d577cc, type: 2}
+  - {fileID: 11400000, guid: 767f8f0282802ec48a9e8cab6dbc52eb, type: 2}
+  - {fileID: 11400000, guid: a9b1793ffb3326541b6fcc83ad5a7e2d, type: 2}
 --- !u!1001 &1211318955
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3172,7 +3373,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1175979326573501977, guid: 5573b881b175cc04dbc7669dc038c0a9, type: 3}
       propertyPath: m_Name
-      value: NPC
+      value: Professor
       objectReference: {fileID: 0}
     - target: {fileID: 1175979326573501981, guid: 5573b881b175cc04dbc7669dc038c0a9, type: 3}
       propertyPath: m_RootOrder

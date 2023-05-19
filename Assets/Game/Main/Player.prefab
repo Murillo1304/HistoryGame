@@ -19,6 +19,7 @@ GameObject:
   - component: {fileID: 7190119837958335041}
   - component: {fileID: 5298655680921386479}
   - component: {fileID: 4930053434862273819}
+  - component: {fileID: 8491036616750931527}
   m_Layer: 11
   m_Name: Player
   m_TagString: Player
@@ -249,13 +250,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   slots:
   - item: {fileID: 11400000, guid: 6a3edbc1e1026a24c83240f5d284e4cf, type: 2}
-    count: 1
+    count: 5
   - item: {fileID: 11400000, guid: b4985e2e72fc5b24eaed24f6f6e4963a, type: 2}
-    count: 1
+    count: 2
   - item: {fileID: 11400000, guid: ed96f1e08b64acd44929b0c6dd42c22e, type: 2}
-    count: 1
+    count: 4
   - item: {fileID: 11400000, guid: 41213fce812934140a5c6b005551a117, type: 2}
-    count: 1
+    count: 2
   - item: {fileID: 11400000, guid: e7145e5c7aa834f409f23e15f447db1f, type: 2}
     count: 1
   - item: {fileID: 11400000, guid: d308ae59b50a4134094de573b57ba186, type: 2}
@@ -282,6 +283,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 56141491974cbd94491c123a5b9ca6a2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &8491036616750931527
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6443007282709934674}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c4311fa6664241742ae50d554b7ab2c8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  money: 1000
 --- !u!1 &6443007283910517241
 GameObject:
   m_ObjectHideFlags: 0

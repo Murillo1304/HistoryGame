@@ -16,7 +16,7 @@ MonoBehaviour:
   description: "Una pokeball b\xE1sica para capturar pokemon salvajes"
   message: "us\xF3 pokeball"
   icon: {fileID: -654383833, guid: ea9e4e5a03c30184895a038c50777800, type: 3}
-  price: 0
+  price: 200
   isSellable: 0
   catchRateModifier: 1
   inGameSprite: {fileID: 122444820, guid: 8d0755be1b37d5d40b9e587fe8a0bea2, type: 3}
