@@ -131,6 +131,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 2824720002597633553, guid: b006790aac12f9444b3a6a5d7b49ad00, type: 3}
+      propertyPath: sceneMusic
+      value: 
+      objectReference: {fileID: 8300000, guid: 210953ea5950d3d4f8bdf2c680f42e19, type: 3}
+    - target: {fileID: 2824720002597633553, guid: b006790aac12f9444b3a6a5d7b49ad00, type: 3}
       propertyPath: connectedScenes.Array.size
       value: 2
       objectReference: {fileID: 0}
@@ -2179,6 +2183,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4606257829639503636, guid: b35a3070eeddb4544a9021f47fd7103b, type: 3}
+      propertyPath: sfxList.Array.data[0].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 3a82488d8e554cf4f88d51682fca92fc, type: 3}
     - target: {fileID: 4669123508293488792, guid: b35a3070eeddb4544a9021f47fd7103b, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -3817,6 +3825,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 2824720002597633553, guid: b006790aac12f9444b3a6a5d7b49ad00, type: 3}
+      propertyPath: sceneMusic
+      value: 
+      objectReference: {fileID: 8300000, guid: c08ccb049380bc24d9d818496b0772ab, type: 3}
+    - target: {fileID: 2824720002597633553, guid: b006790aac12f9444b3a6a5d7b49ad00, type: 3}
       propertyPath: connectedScenes.Array.size
       value: 1
       objectReference: {fileID: 0}
@@ -3907,6 +3919,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2824720002597633553, guid: b006790aac12f9444b3a6a5d7b49ad00, type: 3}
+      propertyPath: sceneMusic
+      value: 
+      objectReference: {fileID: 8300000, guid: ba1bf5d22cedf8f499728c82e5eec840, type: 3}
     - target: {fileID: 2824720002597633553, guid: b006790aac12f9444b3a6a5d7b49ad00, type: 3}
       propertyPath: connectedScenes.Array.size
       value: 2

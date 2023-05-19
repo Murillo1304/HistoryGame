@@ -208,6 +208,7 @@ MonoBehaviour:
     - "\xA1Entraner\xE9 para vencerte alg\xFAn d\xEDa!"
   exclamation: {fileID: 2690925322843195921}
   fov: {fileID: 2690925322835745229}
+  trainerAppearsClip: {fileID: 8300000, guid: 6d36d0be0c5df7241bfa660b67477ca2, type: 3}
 --- !u!114 &2690925321196277508
 MonoBehaviour:
   m_ObjectHideFlags: 0
