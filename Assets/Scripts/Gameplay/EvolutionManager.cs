@@ -1,6 +1,8 @@
+using DG.Tweening;
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -27,7 +29,23 @@ public class EvolutionManager : MonoBehaviour
         var oldPokemon = pokemon.Base;
         pokemon.Evolve(evolution);
 
-        pokemonImage.sprite = pokemon.Base.FrontSprite;
+        //Efecto evolucion
+        var fadeSequence = DOTween.Sequence();
+        fadeSequence.Append(pokemonImage.DOColor(Color.black, 0.7f));
+        for (int i = 0;i < 6; i++)
+        {
+            fadeSequence.AppendCallback(() => pokemonImage.sprite = pokemon.Base.FrontSprite);
+            fadeSequence.AppendInterval(0.2f);
+            fadeSequence.AppendCallback(() => pokemonImage.sprite = oldPokemon.FrontSprite);
+            fadeSequence.AppendInterval(0.2f);
+        }
+
+        fadeSequence.AppendCallback(() => pokemonImage.sprite = pokemon.Base.FrontSprite);
+        fadeSequence.Append(pokemonImage.DOColor(Color.white, 0.7f));
+
+        yield return fadeSequence.WaitForCompletion();
+
+        //pokemonImage.sprite = pokemon.Base.FrontSprite;
         yield return DialogManager.Instance.ShowDialogText($"¡{oldPokemon.Name} evolucionó en {pokemon.Base.Name}!");
 
         evolutionUI.SetActive(false);
