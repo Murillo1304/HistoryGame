@@ -34,7 +34,7 @@ public class TrainerController : MonoBehaviour, Interactable, ISavable
 
     public IEnumerator Interact(Transform initiator)
     {
-        character.lookTowards(initiator.position);
+        character.LookTowards(initiator.position);
 
         if (!battleLost)
         {

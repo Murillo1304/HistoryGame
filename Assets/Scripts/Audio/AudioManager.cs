@@ -15,6 +15,7 @@ public class AudioManager : MonoBehaviour
 
     AudioClip currMusic;
     float originalMusicVol;
+    float originalSfxVol;
     Dictionary<AudioId, AudioData> sfxLookup;
 
     public static AudioManager i { get; private set; }
@@ -27,6 +28,7 @@ public class AudioManager : MonoBehaviour
     private void Start()
     {
         originalMusicVol = musicPlayer.volume;
+        originalSfxVol = sfxPlayer.volume;
 
         sfxLookup = sfxList.ToDictionary(x => x.id);
     }

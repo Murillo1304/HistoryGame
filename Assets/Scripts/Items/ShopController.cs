@@ -183,6 +183,7 @@ public class ShopController : MonoBehaviour
 
     IEnumerator OnBackFromBuying()
     {
+        state = ShopState.Busy;
         yield return GameController.Instance.MoveCamera(-shopCameraOffset);
         shopUI.Close();
         walletUI.Close();

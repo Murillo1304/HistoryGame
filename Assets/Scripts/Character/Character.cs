@@ -48,7 +48,14 @@ public class Character : MonoBehaviour
         targetPos.x += moveVec.x;
         targetPos.y += moveVec.y;
 
-        if (!isPathClear(targetPos))
+        var ledge = CheckForLedge(targetPos);
+        if (ledge != null)
+        {
+            if (ledge.TryToJump(this, moveVec))
+                yield break;
+        }
+
+        if (!IsPathClear(targetPos))
             yield break;
 
         isMoving = true;
@@ -67,10 +74,10 @@ public class Character : MonoBehaviour
 
     public void HandleUpdate()
     {
-        animator.isMoving = isMoving;
+        animator.IsMoving = isMoving;
     }
 
-    private bool isPathClear(Vector3 targetPos)
+    private bool IsPathClear(Vector3 targetPos)
     {
         var diff = targetPos - transform.position;
         var dir = diff.normalized;
@@ -81,7 +88,7 @@ public class Character : MonoBehaviour
         return true;
     }
 
-    private bool isWalkable(Vector3 targetPos)
+    private bool IsWalkable(Vector3 targetPos)
     {
         if (Physics2D.OverlapCircle(targetPos, 0.2f, GameLayers.i.SolidLayer | GameLayers.i.InteractableLayer) != null)
         {
@@ -90,7 +97,13 @@ public class Character : MonoBehaviour
         return true;
     }
 
-    public void lookTowards(Vector3 targetPos)
+    Ledge CheckForLedge(Vector3 targetPos)
+    {
+        var collider = Physics2D.OverlapCircle(targetPos, 0.15f, GameLayers.i.LedgeLayer);
+        return collider?.GetComponent<Ledge>();
+    }
+
+    public void LookTowards(Vector3 targetPos)
     {
         var xdiff = Mathf.Floor(targetPos.x) - Mathf.Floor(transform.position.x);
         var ydiff = Mathf.Floor(targetPos.y) - Mathf.Floor(transform.position.y);

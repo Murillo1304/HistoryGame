@@ -307,6 +307,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 307556515131479845, guid: b35a3070eeddb4544a9021f47fd7103b, type: 3}
+      propertyPath: m_Volume
+      value: 0.25
+      objectReference: {fileID: 0}
     - target: {fileID: 323673277674980578, guid: b35a3070eeddb4544a9021f47fd7103b, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
@@ -2186,7 +2190,15 @@ PrefabInstance:
     - target: {fileID: 4606257829639503636, guid: b35a3070eeddb4544a9021f47fd7103b, type: 3}
       propertyPath: sfxList.Array.data[0].clip
       value: 
-      objectReference: {fileID: 8300000, guid: 3a82488d8e554cf4f88d51682fca92fc, type: 3}
+      objectReference: {fileID: 8300000, guid: af5dbd785e27e4448a00188d44a874a4, type: 3}
+    - target: {fileID: 4606257829639503636, guid: b35a3070eeddb4544a9021f47fd7103b, type: 3}
+      propertyPath: sfxList.Array.data[2].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 937f8c8ae11ee4c4a99ebafc3a7668d5, type: 3}
+    - target: {fileID: 4606257829639503636, guid: b35a3070eeddb4544a9021f47fd7103b, type: 3}
+      propertyPath: sfxList.Array.data[3].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 97bf38ccf02885a4986de330b72c2a33, type: 3}
     - target: {fileID: 4669123508293488792, guid: b35a3070eeddb4544a9021f47fd7103b, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0

@@ -13,7 +13,8 @@ public class CharacterAnimator : MonoBehaviour
     //Parameters
     public float MoveX { get; set; }
     public float MoveY { get; set; }
-    public bool isMoving { get; set; }
+    public bool IsMoving { get; set; }
+    public bool IsJumping { get; set; }
 
     //States
     SpriteAnimator walkDownAnim;
@@ -60,15 +61,17 @@ public class CharacterAnimator : MonoBehaviour
         else if (MoveY == -1)
             currentAnim = walkDownAnim;
 
-        if (currentAnim != prevAnim || isMoving != wasPrevioslyMoving)
+        if (currentAnim != prevAnim || IsMoving != wasPrevioslyMoving)
             currentAnim.Start();
 
-        if (isMoving)
+        if (IsJumping)
+            spriteRenderer.sprite = currentAnim.Frames[currentAnim.Frames.Count-1];
+        else if (IsMoving)
             currentAnim.HandleUpdate();
         else
             spriteRenderer.sprite = currentAnim.Frames[0];
 
-        wasPrevioslyMoving = isMoving;
+        wasPrevioslyMoving = IsMoving;
     }
 
     public void SetFacingDirection(FacingDirection dir)

@@ -169,11 +169,11 @@ public class GameController : MonoBehaviour
             if ((Input.GetKeyDown(KeyCode.Return)) || CrossPlatformInputManager.GetButtonDown("ButtonMenu"))
             {
                 menuController.OpenMenu();
-                playerController.Character.Animator.isMoving = false;
+                playerController.Character.Animator.IsMoving = false;
                 state = GameState.Menu;
             }
 
-            if ((Input.GetKeyDown(KeyCode.X)) || CrossPlatformInputManager.GetButtonDown("ButtonB"))
+            if ((Input.GetKeyDown(KeyCode.X)) || CrossPlatformInputManager.GetButtonDown("ButtonB") || Input.GetKey(KeyCode.X))
             {
                 playerController.Character.SpeedUp();
             }
