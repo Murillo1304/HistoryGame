@@ -173,7 +173,7 @@ public class GameController : MonoBehaviour
                 state = GameState.Menu;
             }
 
-            if ((Input.GetKeyDown(KeyCode.X)) || CrossPlatformInputManager.GetButtonDown("ButtonB") || Input.GetKey(KeyCode.X))
+            if ((Input.GetKeyDown(KeyCode.X)) || CrossPlatformInputManager.GetButtonDown("ButtonB"))
             {
                 playerController.Character.SpeedUp();
             }

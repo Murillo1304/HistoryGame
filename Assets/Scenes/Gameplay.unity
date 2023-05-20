@@ -3632,8 +3632,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   wildPokemons:
-  - _base: {fileID: 11400000, guid: 484379c5482602043a90120019a86dad, type: 2}
-    level: 4
+  - pokemon: {fileID: 11400000, guid: 11d1108e38affdf489897d6ae77ae7dc, type: 2}
+    levelRange: {x: 2, y: 4}
+    chancePercentage: 70
+  - pokemon: {fileID: 11400000, guid: d759c60d298ea784ca316176a74d6296, type: 2}
+    levelRange: {x: 2, y: 5}
+    chancePercentage: 20
+  - pokemon: {fileID: 11400000, guid: 484379c5482602043a90120019a86dad, type: 2}
+    levelRange: {x: 2, y: 4}
+    chancePercentage: 10
+  totalChance: 100
 --- !u!1 &1049437691 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1765609568362444573, guid: b35a3070eeddb4544a9021f47fd7103b, type: 3}
@@ -3719,8 +3727,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   wildPokemons:
-  - _base: {fileID: 11400000, guid: 484379c5482602043a90120019a86dad, type: 2}
-    level: 10
+  - pokemon: {fileID: 11400000, guid: b9537721dafeb9b4896e5b5801e503a9, type: 2}
+    levelRange: {x: 8, y: 10}
+    chancePercentage: 100
+  totalChance: 100
 --- !u!1 &1321866988 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2824720002597633558, guid: b006790aac12f9444b3a6a5d7b49ad00, type: 3}
@@ -3826,9 +3836,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 448b49549c7477b498442454e4353e50, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  wildPokemons:
-  - _base: {fileID: 11400000, guid: 484379c5482602043a90120019a86dad, type: 2}
-    level: 4
+  wildPokemons: []
+  totalChance: 0
 --- !u!1001 &1736165552
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3922,8 +3931,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   wildPokemons:
-  - _base: {fileID: 11400000, guid: b9537721dafeb9b4896e5b5801e503a9, type: 2}
-    level: 10
+  - pokemon: {fileID: 11400000, guid: 88efef507d8eb3e4b95d9f8e071e2918, type: 2}
+    levelRange: {x: 10, y: 12}
+    chancePercentage: 100
+  totalChance: 100
 --- !u!1001 &2824720002847321469
 PrefabInstance:
   m_ObjectHideFlags: 0

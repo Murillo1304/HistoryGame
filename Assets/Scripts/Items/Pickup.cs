@@ -34,7 +34,6 @@ public class Pickup : MonoBehaviour, Interactable, ISavable
     public void RestoreState(object state)
     {
         Used = (bool)state;
-
         if (Used)
         {
             GetComponent<SpriteRenderer>().enabled = false;

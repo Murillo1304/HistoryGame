@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -57,7 +58,7 @@ public class SceneDetails : MonoBehaviour
 
             operation.completed += (AsyncOperation op) =>
             {
-                savableEntities = GetSavableEntitiesInScene();
+                savableEntities = GetSavableEntitiesInSceneInactive();
                 SavingSystem.i.RestoreEntityStates(savableEntities);
             };
         }
@@ -78,6 +79,27 @@ public class SceneDetails : MonoBehaviour
     {
         var currScene = SceneManager.GetSceneByName(gameObject.name);
         var savableEntities = FindObjectsOfType<SavableEntity>().Where(x => x.gameObject.scene == currScene).ToList();
+
+        for (int i = 0; i < savableEntities.Count; i++)
+        {
+            Debug.Log("Entidad: " + savableEntities[i].name + " En escena: " + currScene.name);
+        }
+
+        return savableEntities;
+    }
+
+    List<SavableEntity> GetSavableEntitiesInSceneInactive()
+    {
+        var currScene = SceneManager.GetSceneByName(gameObject.name);
+        var savableEntities = new List<SavableEntity>();
+        var allObjects = Resources.FindObjectsOfTypeAll<SavableEntity>().ToList();
+        foreach (var entity in allObjects)
+        {
+            if (entity.gameObject.scene == currScene)
+            {
+                savableEntities.Add(entity);
+            }
+        }
         return savableEntities;
     }
 
