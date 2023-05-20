@@ -141,6 +141,11 @@ MonoBehaviour:
   - {fileID: 2690600881683387669, guid: 3111f23cd57d2be48b2ee6bac4a23588, type: 3}
   - {fileID: 6634202828824015816, guid: 3111f23cd57d2be48b2ee6bac4a23588, type: 3}
   - {fileID: -5008138227279614530, guid: 3111f23cd57d2be48b2ee6bac4a23588, type: 3}
+  surfSprites:
+  - {fileID: -4465137455631916842, guid: 14ced2238d82c7149b8f5a0481222249, type: 3}
+  - {fileID: 548946438817077065, guid: 14ced2238d82c7149b8f5a0481222249, type: 3}
+  - {fileID: 4472088847651303106, guid: 14ced2238d82c7149b8f5a0481222249, type: 3}
+  - {fileID: 6356773947664160301, guid: 14ced2238d82c7149b8f5a0481222249, type: 3}
   defauldDirection: 1
 --- !u!114 &6443007282709934681
 MonoBehaviour:
@@ -189,7 +194,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.01789081, y: -0.3}
+  m_Offset: {x: 0, y: -0.3}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -221,8 +226,8 @@ MonoBehaviour:
     level: 2
   - _base: {fileID: 11400000, guid: d759c60d298ea784ca316176a74d6296, type: 2}
     level: 2
-  - _base: {fileID: 11400000, guid: 484379c5482602043a90120019a86dad, type: 2}
-    level: 2
+  - _base: {fileID: 11400000, guid: a1561e584dfd6604fa9230af3907f26a, type: 2}
+    level: 10
 --- !u!114 &7190119837958335041
 MonoBehaviour:
   m_ObjectHideFlags: 0

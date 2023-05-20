@@ -927,6 +927,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: -11
       objectReference: {fileID: 0}
+    - target: {fileID: 1765609568362444569, guid: b35a3070eeddb4544a9021f47fd7103b, type: 3}
+      propertyPath: waterLayer.m_Bits
+      value: 16
+      objectReference: {fileID: 0}
     - target: {fileID: 1765609568362444574, guid: b35a3070eeddb4544a9021f47fd7103b, type: 3}
       propertyPath: partyScreen
       value: 
