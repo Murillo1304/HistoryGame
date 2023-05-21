@@ -14,10 +14,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: Squirtle
   description: 
-  frontSprite: {fileID: 21300000, guid: 0f37bf3cf5680a64d863b5f155b2a597, type: 3}
-  backSprite: {fileID: 21300000, guid: aacaae602a38f884ab9e02e43de3736d, type: 3}
-  type1: 5
-  type2: 8
+  frontSprite: {fileID: 21300000, guid: 818cf159951cf9a4e8e810b2bbab4096, type: 3}
+  backSprite: {fileID: 21300000, guid: 18fc6e8e3f72b154fba88f358748be28, type: 3}
+  type1: 3
+  type2: 0
   maxHp: 45
   attack: 49
   defense: 49
@@ -30,13 +30,11 @@ MonoBehaviour:
   learnableMoves:
   - moveBase: {fileID: 11400000, guid: 846a1e2b1dd4bc940b370bde60c0bb85, type: 2}
     level: 1
-  - moveBase: {fileID: 11400000, guid: 771624cfde7dc0d468cf8314cbbb5529, type: 2}
+  - moveBase: {fileID: 11400000, guid: 619ed9f8afda98e418dc34af477bd178, type: 2}
     level: 4
-  - moveBase: {fileID: 11400000, guid: 0246891d697305d46a7fb964672e3aa1, type: 2}
-    level: 7
   learnableByItems:
   - {fileID: 11400000, guid: f02b44bd2c5a9c142b493fb9ea755562, type: 2}
   - {fileID: 11400000, guid: 846a1e2b1dd4bc940b370bde60c0bb85, type: 2}
   - {fileID: 11400000, guid: 7ebd50933d8fb0a4b9d12623d828945c, type: 2}
-  - {fileID: 11400000, guid: 0246891d697305d46a7fb964672e3aa1, type: 2}
+  - {fileID: 11400000, guid: 619ed9f8afda98e418dc34af477bd178, type: 2}
   evolutions: []

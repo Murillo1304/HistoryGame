@@ -4,9 +4,11 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 
-public class SurfableWater : MonoBehaviour, Interactable
+public class SurfableWater : MonoBehaviour, Interactable, IPlayerTriggerable
 {
     bool isJumpingToWater = false;
+
+    public bool TriggerRepeatedly => true;
 
     public IEnumerator Interact(Transform initiator)
     {
@@ -39,6 +41,14 @@ public class SurfableWater : MonoBehaviour, Interactable
 
                 animator.IsSurfing = true;
             }
+        }
+    }
+
+    public void OnPlayerTriggered(PlayerController player)
+    {
+        if (UnityEngine.Random.Range(1, 101) <= 10)
+        {
+            GameController.Instance.StartBattle(BattleTrigger.Water);
         }
     }
 }

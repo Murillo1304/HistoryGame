@@ -57,6 +57,6 @@ public class GameLayers : MonoBehaviour
 
     public LayerMask TriggerableLayers
     {
-        get => grassLayer | fovLayer | portalLayer | triggerLayers;
+        get => grassLayer | fovLayer | portalLayer | triggerLayers | waterLayer;
     }
 }

@@ -3645,7 +3645,9 @@ MonoBehaviour:
   - pokemon: {fileID: 11400000, guid: 484379c5482602043a90120019a86dad, type: 2}
     levelRange: {x: 2, y: 4}
     chancePercentage: 10
+  wildPokemonsInWater: []
   totalChance: 100
+  totalChanceWater: 0
 --- !u!1 &1049437691 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1765609568362444573, guid: b35a3070eeddb4544a9021f47fd7103b, type: 3}
@@ -3734,7 +3736,12 @@ MonoBehaviour:
   - pokemon: {fileID: 11400000, guid: b9537721dafeb9b4896e5b5801e503a9, type: 2}
     levelRange: {x: 8, y: 10}
     chancePercentage: 100
+  wildPokemonsInWater:
+  - pokemon: {fileID: 11400000, guid: a1561e584dfd6604fa9230af3907f26a, type: 2}
+    levelRange: {x: 4, y: 6}
+    chancePercentage: 100
   totalChance: 100
+  totalChanceWater: 100
 --- !u!1 &1321866988 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2824720002597633558, guid: b006790aac12f9444b3a6a5d7b49ad00, type: 3}
@@ -3841,7 +3848,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   wildPokemons: []
+  wildPokemonsInWater: []
   totalChance: 0
+  totalChanceWater: 0
 --- !u!1001 &1736165552
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3938,7 +3947,9 @@ MonoBehaviour:
   - pokemon: {fileID: 11400000, guid: 88efef507d8eb3e4b95d9f8e071e2918, type: 2}
     levelRange: {x: 10, y: 12}
     chancePercentage: 100
+  wildPokemonsInWater: []
   totalChance: 100
+  totalChanceWater: 0
 --- !u!1001 &2824720002847321469
 PrefabInstance:
   m_ObjectHideFlags: 0
