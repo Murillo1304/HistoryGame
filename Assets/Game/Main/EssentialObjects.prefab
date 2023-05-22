@@ -715,7 +715,7 @@ Canvas:
   m_SortingBucketNormalizedSize: 0
   m_AdditionalShaderChannelsFlag: 25
   m_SortingLayerID: 1948168007
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_TargetDisplay: 0
 --- !u!114 &1765609567506195354
 MonoBehaviour:
@@ -1603,7 +1603,7 @@ MonoBehaviour:
   dialogBox: {fileID: 1765609568504658790}
   choiceBox: {fileID: 3823722740037913903}
   dialogText: {fileID: 1765609568620207711}
-  letterPerSecond: 45
+  letterPerSecond: 60
 --- !u!114 &1765609568362444569
 MonoBehaviour:
   m_ObjectHideFlags: 0
