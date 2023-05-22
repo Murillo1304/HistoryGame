@@ -3647,7 +3647,7 @@ MonoBehaviour:
     chancePercentage: 10
   wildPokemonsInWater: []
   totalChance: 100
-  totalChanceWater: 0
+  totalChanceWater: -1
 --- !u!1 &1049437691 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1765609568362444573, guid: b35a3070eeddb4544a9021f47fd7103b, type: 3}
@@ -3849,8 +3849,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   wildPokemons: []
   wildPokemonsInWater: []
-  totalChance: 0
-  totalChanceWater: 0
+  totalChance: -1
+  totalChanceWater: -1
 --- !u!1001 &1736165552
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3949,7 +3949,7 @@ MonoBehaviour:
     chancePercentage: 100
   wildPokemonsInWater: []
   totalChance: 100
-  totalChanceWater: 0
+  totalChanceWater: -1
 --- !u!1001 &2824720002847321469
 PrefabInstance:
   m_ObjectHideFlags: 0

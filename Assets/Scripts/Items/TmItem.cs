@@ -1,7 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using static UnityEditor.Progress;
 
 [CreateAssetMenu(menuName = "Objetos/Crear un nuevo TM o HM")]
 public class TmItem : ItemBase

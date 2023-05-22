@@ -98,6 +98,16 @@ public class GameController : MonoBehaviour
         }
     }
 
+    public void StartCutsceneState()
+    {
+        state = GameState.Cutscene;
+    }
+
+    public void StartFreeRoamState()
+    {
+        state = GameState.FreeRoam;
+    }
+
     public void StartBattle(BattleTrigger trigger)
     {
         state = GameState.Battle;
@@ -181,6 +191,10 @@ public class GameController : MonoBehaviour
             {
                 playerController.Character.SpeedDown();
             }
+        }
+        else if (state == GameState.Cutscene)
+        {
+            playerController.Character.HandleUpdate();
         }
         else if(state == GameState.Battle)
         {
