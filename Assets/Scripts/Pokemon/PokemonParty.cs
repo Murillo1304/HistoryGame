@@ -47,6 +47,15 @@ public class PokemonParty : MonoBehaviour
         }
     }
 
+    public void SwitchOrder(int posOrig, int posChange)
+    {
+        Pokemon temp = pokemons[posOrig];
+
+        pokemons[posOrig] = pokemons[posChange];
+        pokemons[posChange] = temp;
+        OnUpdated?.Invoke();
+    }
+
     public bool CheckForEvolutions()
     {
         return pokemons.Any(p => p.CheckForEvolution() != null);

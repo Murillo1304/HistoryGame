@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityStandardAssets.CrossPlatformInput;
 
-public enum GameState {FreeRoam, Battle, Dialog, Menu, PartyScreen, Bag, Cutscene, Paused, Evolution, Shop}
+public enum GameState {FreeRoam, Battle, Dialog, Menu, PartyScreen, ChangeOrder, Bag, Cutscene, Paused, Evolution, Shop}
 
 public class GameController : MonoBehaviour
 {
@@ -83,6 +83,9 @@ public class GameController : MonoBehaviour
 
         ShopController.i.OnStart += () => state = GameState.Shop;
         ShopController.i.OnFinish += () => state = GameState.FreeRoam;
+
+        partyScreen.OnChangePokemon += () => state = GameState.ChangeOrder;
+        partyScreen.OnChangePokemonFinish += () => state = GameState.PartyScreen;
     }
 
     public void PauseGame(bool pause)
@@ -215,13 +218,31 @@ public class GameController : MonoBehaviour
         {
             Action onSelected = () =>
             {
-                //Mostrar información de pokemon
+                //Mostrar Eleccion de accion
+                StartCoroutine(partyScreen.SelectPokemon());
             };
 
             Action onBack = () =>
             {
                 partyScreen.gameObject.SetActive(false);
                 state = GameState.FreeRoam;
+            };
+
+            partyScreen.HandleUpdate(onSelected, onBack);
+        }
+        else if (state == GameState.ChangeOrder)
+        {
+            Action onSelected = () =>
+            {
+                //Mostrar Pokemon Seleccionado
+                partyScreen.SwitchPokemon();
+                state = GameState.PartyScreen;
+            };
+
+            Action onBack = () =>
+            {
+                partyScreen.SetMessageText("Elige un pokemon");
+                state = GameState.PartyScreen;
             };
 
             partyScreen.HandleUpdate(onSelected, onBack);
