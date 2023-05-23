@@ -86,6 +86,13 @@ public class GameController : MonoBehaviour
 
         partyScreen.OnChangePokemon += () => state = GameState.ChangeOrder;
         partyScreen.OnChangePokemonFinish += () => state = GameState.PartyScreen;
+
+        if (GlobalSettings.i.SaveSlotName != null)
+        {
+            //Cargar
+            SavingSystem.i.Load(GlobalSettings.i.SaveSlotName);
+            state = GameState.FreeRoam;
+        }
     }
 
     public void PauseGame(bool pause)

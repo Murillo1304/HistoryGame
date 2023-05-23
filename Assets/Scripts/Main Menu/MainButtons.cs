@@ -5,18 +5,29 @@ using UnityEngine.SceneManagement;
 
 public class MainButtons : MonoBehaviour
 {
+    string[] slots;
+    
     public void Start()
     {
-        Application.targetFrameRate = 120;
+        if (Application.platform == RuntimePlatform.Android)
+            Application.targetFrameRate = 120;
+        slots = OptionsUI.i.GetSaveSlotsNames();
     }
 
-    public void Jugar()
-    {
+    public void Play()
+    {     
         Loader.Load(Scene.Gameplay);
         Destroy(gameObject);
     }
 
-    public void Salir()
+    public void LoadGame()
+    {
+        GlobalSettings.i.SaveSlotName = slots[0];
+        Loader.Load(Scene.Gameplay);
+        Destroy(gameObject);
+    }
+
+    public void Exit()
     {
         Debug.Log("Salir...");
         Application.Quit();
