@@ -60,12 +60,17 @@ public class BattleSystem : MonoBehaviour
 
     BattleTrigger battleTrigger;
 
+    List<Pokemon> pokemonShareExp;
+    Pokemon pokemonForgetMove;
+
     public void StartBattle(PokemonParty playerParty, Pokemon wildPokemon, BattleTrigger trigger = BattleTrigger.LongGrass)
     {
         this.playerParty = playerParty;
         this.wildPokemon = wildPokemon;
         currentAction = 0;
         currentMove = 0;
+        pokemonShareExp = new List<Pokemon>();
+        pokemonForgetMove = null;
 
         player = playerParty.GetComponent<PlayerController>();
         isTrainerBattle = false;
@@ -83,6 +88,8 @@ public class BattleSystem : MonoBehaviour
         this.trainerParty = trainerParty;
         currentAction = 0;
         currentMove = 0;
+        pokemonShareExp = new List<Pokemon>();
+        pokemonForgetMove = null;
 
         isTrainerBattle = true;
         player = playerParty.GetComponent<PlayerController>();
@@ -142,6 +149,7 @@ public class BattleSystem : MonoBehaviour
             dialogBox.SetMovesNames(playerUnit.Pokemon.Moves);
         }
 
+        pokemonShareExp.Add(playerUnit.Pokemon);
         escapeAttempts = 0;
         partyScreen.Init();
         ActionSelection();
@@ -433,8 +441,48 @@ public class BattleSystem : MonoBehaviour
             float trainerBonus = (isTrainerBattle) ? 1.5f : 1f;
 
             int expGain = Mathf.FloorToInt((expYield * enemyLevel * trainerBonus) / 7);
-            playerUnit.Pokemon.Exp += expGain;
-            yield return dialogBox.TypeDialog($"{playerUnit.Pokemon.Base.Name} ganó {expGain} de Exp.");
+            Debug.Log("Experiencia total: " + expGain);
+
+            //Repartir Experiencia
+            int expGainShare = Mathf.FloorToInt(expGain / pokemonShareExp.Count);
+            Debug.Log("Pokemon Total Repartir: " + pokemonShareExp.Count);
+            foreach (var pokemon in pokemonShareExp)
+            {
+                if (pokemon == playerUnit.Pokemon)
+                    continue;
+
+                pokemon.Exp += expGainShare;
+                yield return dialogBox.TypeDialog($"{pokemon.Base.Name} ganó {expGainShare} de Exp.");
+
+                while (pokemon.CheckForLevelUp())
+                {
+                    yield return dialogBox.TypeDialog($"¡{pokemon.Base.Name} subió al nivel {pokemon.Level}!");
+
+                    //Aprender un nuevo ataque
+                    var newMove = pokemon.GetLearnableMoveAtCurrLevel();
+                    if (newMove != null)
+                    {
+                        if (pokemon.Moves.Count < PokemonBase.MaxNumOfMoves)
+                        {
+                            pokemon.LearnMove(newMove.Base);
+                            yield return dialogBox.TypeDialog($"¡{pokemon.Base.Name} aprendió {newMove.Base.Name}!");
+                        }
+                        else
+                        {
+                            //Olvidar movimiento
+                            pokemonForgetMove = pokemon;
+                            yield return dialogBox.TypeDialog($"{pokemon.Base.Name} intenta aprender {newMove.Base.Name}.");
+                            yield return dialogBox.TypeDialog($"Pero {pokemon.Base.Name} no puede aprender más de {PokemonBase.MaxNumOfMoves} movimientos.");
+                            yield return ChooseMoveToForget(pokemon, newMove.Base);
+                            yield return new WaitUntil(() => state != BattleState.MoveToForget);
+                            yield return new WaitForSeconds(2f);
+                        }
+                    }
+                }
+            }
+
+            playerUnit.Pokemon.Exp += expGainShare;
+            yield return dialogBox.TypeDialog($"{playerUnit.Pokemon.Base.Name} ganó {expGainShare} de Exp.");
             yield return playerUnit.Hud.SetExpSmooth();
 
             //Subir de nivel
@@ -456,6 +504,7 @@ public class BattleSystem : MonoBehaviour
                     else
                     {
                         //Olvidar movimiento
+                        pokemonForgetMove = playerUnit.Pokemon;
                         yield return dialogBox.TypeDialog($"{playerUnit.Pokemon.Base.Name} intenta aprender {newMove.Base.Name}.");
                         yield return dialogBox.TypeDialog($"Pero {playerUnit.Pokemon.Base.Name} no puede aprender más de {PokemonBase.MaxNumOfMoves} movimientos.");
                         yield return ChooseMoveToForget(playerUnit.Pokemon, newMove.Base);
@@ -479,6 +528,7 @@ public class BattleSystem : MonoBehaviour
         if (faintedUnit.IsPlayerUnit)
         {
             //Muere un pokemon del jugador
+            pokemonShareExp.Remove(faintedUnit.Pokemon);
             var nextPokemon = playerParty.GetHealthyPokemon();
             if (nextPokemon != null)
                 OpenPartyScreen();
@@ -556,15 +606,15 @@ public class BattleSystem : MonoBehaviour
                 if(moveIndex == PokemonBase.MaxNumOfMoves)
                 {
                     //No aprender nuevo movimiento
-                    StartCoroutine(dialogBox.TypeDialog($"{playerUnit.Pokemon.Base.Name} no aprendió {moveToLearn.Name}."));
+                    StartCoroutine(dialogBox.TypeDialog($"{pokemonForgetMove.Base.Name} no aprendió {moveToLearn.Name}."));
                 }
                 else
                 {
                     //Olvidar el movimiento y aprender el nuevo
-                    var selectedMove = playerUnit.Pokemon.Moves[moveIndex].Base;
-                    StartCoroutine(dialogBox.TypeDialog($"{playerUnit.Pokemon.Base.Name} olvidó {selectedMove.Name} y aprendió {moveToLearn.Name}."));
+                    var selectedMove = pokemonForgetMove.Moves[moveIndex].Base;
+                    StartCoroutine(dialogBox.TypeDialog($"{pokemonForgetMove.Base.Name} olvidó {selectedMove.Name} y aprendió {moveToLearn.Name}."));
 
-                    playerUnit.Pokemon.Moves[moveIndex] = new Move(moveToLearn);
+                    pokemonForgetMove.Moves[moveIndex] = new Move(moveToLearn);
                 }
 
                 moveToLearn = null;
@@ -798,6 +848,7 @@ public class BattleSystem : MonoBehaviour
         }
 
         playerUnit.Setup(newPokemon);
+        if (!pokemonShareExp.Contains(newPokemon)) pokemonShareExp.Add(newPokemon);
         dialogBox.SetMovesNames(newPokemon.Moves);
         yield return dialogBox.TypeDialog($"¡Vamos {newPokemon.Base.Name}!");
 
