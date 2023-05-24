@@ -21,7 +21,7 @@ TagManager:
   - Portal
   - Triggers
   - Ledges
-  - 
+  - Borders
   - 
   - 
   - 
@@ -49,6 +49,9 @@ TagManager:
     locked: 0
   - name: Objects
     uniqueID: 1114440181
+    locked: 0
+  - name: Borders
+    uniqueID: 3766307185
     locked: 0
   - name: Battle
     uniqueID: 871775483

@@ -170,13 +170,33 @@ public class GameController : MonoBehaviour
         battleSystem.gameObject.SetActive(false);
         worldCamera.gameObject.SetActive(true);
 
-        var playerParty = playerController.GetComponent<PokemonParty>();
-        bool hasEvolutions = playerParty.CheckForEvolutions();
+        if (won == true)
+        {
+            var playerParty = playerController.GetComponent<PokemonParty>();
+            bool hasEvolutions = playerParty.CheckForEvolutions();
 
-        if (hasEvolutions)
-            StartCoroutine(playerParty.RunEvolutions());
+            if (hasEvolutions)
+                StartCoroutine(playerParty.RunEvolutions());
+            else
+                AudioManager.i.PlayMusic(CurrentScene.SceneMusic, fade: true);
+        }
         else
-            AudioManager.i.PlayMusic(CurrentScene.SceneMusic, fade: true);
+        {
+            StartCoroutine(Defeat());
+        }
+    }
+
+    private IEnumerator Defeat()
+    {
+        yield return Fader.i.FadeIn(0.5f);
+        playerController.transform.position = playerController.positionHealer;
+        playerController.Character.Animator.SetFacingDirection(FacingDirection.Down);
+        AudioManager.i.PlayMusic(CurrentScene.SceneMusic, fade: true);
+        var playerParty = playerController.GetComponent<PokemonParty>();
+        playerParty.Pokemons.ForEach(p => p.Heal());
+        playerParty.PartyUpdated();
+        yield return Fader.i.FadeOut(0.5f);
+        yield return DialogManager.Instance.ShowDialogText($"¡Tus pokemon se han recuperado!");
     }
 
     // Update is called once per frame

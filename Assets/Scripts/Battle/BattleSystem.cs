@@ -533,7 +533,9 @@ public class BattleSystem : MonoBehaviour
             if (nextPokemon != null)
                 OpenPartyScreen();
             else
+            {
                 BattleOver(false);
+            }
         }
         else
         {

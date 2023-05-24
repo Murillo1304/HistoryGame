@@ -1641,7 +1641,10 @@ MonoBehaviour:
     m_Bits: 32768
   waterLayer:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 16
+  fillLayer:
+    serializedVersion: 2
+    m_Bits: 65536
 --- !u!114 &407562488416075733
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7985,7 +7988,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6443007282709934680, guid: 98bda0c7d017ce040b8e40a58f13f023, type: 3}
       propertyPath: m_Size.y
-      value: 0.7
+      value: 0.6
       objectReference: {fileID: 0}
     - target: {fileID: 6443007282709934680, guid: 98bda0c7d017ce040b8e40a58f13f023, type: 3}
       propertyPath: m_Offset.y

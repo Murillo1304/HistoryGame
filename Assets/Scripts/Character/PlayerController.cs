@@ -16,10 +16,17 @@ public class PlayerController : MonoBehaviour, ISavable
     public static PlayerController i { get; private set; }
     private Character character;
 
+    public Vector3 positionHealer { get; set; }
+
     private void Awake()
     {
         i = this;
         character = GetComponent<Character>();
+    }
+
+    private void Start()
+    {
+        positionHealer = transform.position;
     }
 
     public void HangleUpdate()
@@ -86,7 +93,8 @@ public class PlayerController : MonoBehaviour, ISavable
         var saveData = new PlayerSaveData()
         {
             position = new float[] { transform.position.x, transform.position.y },
-            pokemons = GetComponent<PokemonParty>().Pokemons.Select(p => p.GetSaveData()).ToList()
+            pokemons = GetComponent<PokemonParty>().Pokemons.Select(p => p.GetSaveData()).ToList(),
+            positionHealer = new float[] { positionHealer.x, positionHealer.y}
         };
 
         return saveData;
@@ -102,6 +110,10 @@ public class PlayerController : MonoBehaviour, ISavable
 
         // Restaurar party
         GetComponent<PokemonParty>().Pokemons = saveData.pokemons.Select(s => new Pokemon(s)).ToList();
+
+        //Restaurar posicion healer
+        var posHealer = saveData.positionHealer;
+        positionHealer = new Vector3(posHealer[0], posHealer[1]);
     }
 
     public string Name
@@ -122,4 +134,5 @@ public class PlayerSaveData
 {
     public float[] position;
     public List<PokemonSaveData> pokemons;
+    public float[] positionHealer;
 }

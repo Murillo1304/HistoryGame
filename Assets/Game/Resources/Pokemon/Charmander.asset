@@ -40,7 +40,7 @@ MonoBehaviour:
     level: 13
   learnableByItems:
   - {fileID: 11400000, guid: f02b44bd2c5a9c142b493fb9ea755562, type: 2}
-  - {fileID: 11400000, guid: 4e6a0cc106c62234f94fad9d00ff4f23, type: 2}
+  - {fileID: 11400000, guid: 7ebd50933d8fb0a4b9d12623d828945c, type: 2}
   evolutions:
   - evolvesInto: {fileID: 11400000, guid: 4a43f04ef87dde54b970db3c8cabda03, type: 2}
     requiredLevel: 16

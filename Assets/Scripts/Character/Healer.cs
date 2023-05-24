@@ -31,4 +31,10 @@ public class Healer : MonoBehaviour
             yield return DialogManager.Instance.ShowDialogText($"¡Esta bien! ¡Vuelve si cambias de opinion!");
         }
     }
+
+    public void SetPositionHealer(PlayerController player)
+    {
+        player.positionHealer = player.transform.position;
+        Debug.Log("Posicion guardada x: " + player.positionHealer.x + " posicion guardada y:" + player.positionHealer.y);
+    }
 }

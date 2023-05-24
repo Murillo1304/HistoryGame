@@ -84,7 +84,7 @@ SpriteRenderer:
   m_SortingLayerID: 1114440181
   m_SortingLayer: 3
   m_SortingOrder: 0
-  m_Sprite: {fileID: 7152930139536384079, guid: 3111f23cd57d2be48b2ee6bac4a23588, type: 3}
+  m_Sprite: {fileID: 640978972, guid: a74e74ecf8a70e342a65db97357f5c9b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -122,25 +122,25 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   walkDownSprites:
-  - {fileID: 7152930139536384079, guid: 3111f23cd57d2be48b2ee6bac4a23588, type: 3}
-  - {fileID: -5725962078152895296, guid: 3111f23cd57d2be48b2ee6bac4a23588, type: 3}
-  - {fileID: -8401692288953904933, guid: 3111f23cd57d2be48b2ee6bac4a23588, type: 3}
-  - {fileID: 7888922196035610388, guid: 3111f23cd57d2be48b2ee6bac4a23588, type: 3}
+  - {fileID: -1787040369, guid: f30a799d3fda1634b9e5fd5dcb3216df, type: 3}
+  - {fileID: -931432279, guid: f30a799d3fda1634b9e5fd5dcb3216df, type: 3}
+  - {fileID: -1787040369, guid: f30a799d3fda1634b9e5fd5dcb3216df, type: 3}
+  - {fileID: -634972835, guid: f30a799d3fda1634b9e5fd5dcb3216df, type: 3}
   walkUpSprites:
-  - {fileID: -4445699719359273135, guid: 3111f23cd57d2be48b2ee6bac4a23588, type: 3}
-  - {fileID: 1892806461834874077, guid: 3111f23cd57d2be48b2ee6bac4a23588, type: 3}
-  - {fileID: -8627026541424588849, guid: 3111f23cd57d2be48b2ee6bac4a23588, type: 3}
-  - {fileID: -6780520195603233165, guid: 3111f23cd57d2be48b2ee6bac4a23588, type: 3}
+  - {fileID: -579575591, guid: f30a799d3fda1634b9e5fd5dcb3216df, type: 3}
+  - {fileID: 258721404, guid: f30a799d3fda1634b9e5fd5dcb3216df, type: 3}
+  - {fileID: -579575591, guid: f30a799d3fda1634b9e5fd5dcb3216df, type: 3}
+  - {fileID: -115070541, guid: f30a799d3fda1634b9e5fd5dcb3216df, type: 3}
   walkRightSprites:
-  - {fileID: -3303779423006393323, guid: 3111f23cd57d2be48b2ee6bac4a23588, type: 3}
-  - {fileID: -790699523677361007, guid: 3111f23cd57d2be48b2ee6bac4a23588, type: 3}
-  - {fileID: 8470420716495695676, guid: 3111f23cd57d2be48b2ee6bac4a23588, type: 3}
-  - {fileID: 6167071470516247665, guid: 3111f23cd57d2be48b2ee6bac4a23588, type: 3}
+  - {fileID: -1121677187, guid: f30a799d3fda1634b9e5fd5dcb3216df, type: 3}
+  - {fileID: -1256060929, guid: f30a799d3fda1634b9e5fd5dcb3216df, type: 3}
+  - {fileID: -1121677187, guid: f30a799d3fda1634b9e5fd5dcb3216df, type: 3}
+  - {fileID: 641533506, guid: f30a799d3fda1634b9e5fd5dcb3216df, type: 3}
   walkLeftSprites:
-  - {fileID: -1038918931832879880, guid: 3111f23cd57d2be48b2ee6bac4a23588, type: 3}
-  - {fileID: 2690600881683387669, guid: 3111f23cd57d2be48b2ee6bac4a23588, type: 3}
-  - {fileID: 6634202828824015816, guid: 3111f23cd57d2be48b2ee6bac4a23588, type: 3}
-  - {fileID: -5008138227279614530, guid: 3111f23cd57d2be48b2ee6bac4a23588, type: 3}
+  - {fileID: -1116518637, guid: f30a799d3fda1634b9e5fd5dcb3216df, type: 3}
+  - {fileID: -2059224358, guid: f30a799d3fda1634b9e5fd5dcb3216df, type: 3}
+  - {fileID: -1116518637, guid: f30a799d3fda1634b9e5fd5dcb3216df, type: 3}
+  - {fileID: -2063224478, guid: f30a799d3fda1634b9e5fd5dcb3216df, type: 3}
   surfSprites:
   - {fileID: -4465137455631916842, guid: 14ced2238d82c7149b8f5a0481222249, type: 3}
   - {fileID: 548946438817077065, guid: 14ced2238d82c7149b8f5a0481222249, type: 3}
@@ -198,14 +198,14 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 2}
+    oldSize: {x: 0.9, y: 1.35}
     newSize: {x: 1, y: 2}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.7853107, y: 0.5}
+  m_Size: {x: 0.7853107, y: 0.6}
   m_EdgeRadius: 0
 --- !u!114 &6443007282709934682
 MonoBehaviour:
@@ -221,13 +221,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pokemons:
   - _base: {fileID: 11400000, guid: 88efef507d8eb3e4b95d9f8e071e2918, type: 2}
-    level: 12
-  - _base: {fileID: 11400000, guid: 11d1108e38affdf489897d6ae77ae7dc, type: 2}
     level: 2
-  - _base: {fileID: 11400000, guid: d759c60d298ea784ca316176a74d6296, type: 2}
-    level: 2
-  - _base: {fileID: 11400000, guid: a1561e584dfd6604fa9230af3907f26a, type: 2}
-    level: 10
 --- !u!114 &7190119837958335041
 MonoBehaviour:
   m_ObjectHideFlags: 0

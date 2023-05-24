@@ -84,6 +84,7 @@ public class NPCController : MonoBehaviour, Interactable, ISavable
             }
             else if (healer != null)
             {
+                healer.SetPositionHealer(initiator.GetComponent<PlayerController>());
                 yield return healer.Heal(initiator, dialog);
             }
             else if (merchant != null)

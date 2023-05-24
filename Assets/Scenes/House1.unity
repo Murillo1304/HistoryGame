@@ -324,11 +324,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1175979326573501981, guid: 5573b881b175cc04dbc7669dc038c0a9, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -35.5
+      value: -49
       objectReference: {fileID: 0}
     - target: {fileID: 1175979326573501981, guid: 5573b881b175cc04dbc7669dc038c0a9, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.8
+      value: -4.8
       objectReference: {fileID: 0}
     - target: {fileID: 1175979326573501981, guid: 5573b881b175cc04dbc7669dc038c0a9, type: 3}
       propertyPath: m_LocalPosition.z
@@ -442,11 +442,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1175979326573501981, guid: 5573b881b175cc04dbc7669dc038c0a9, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -35.5
+      value: -49
       objectReference: {fileID: 0}
     - target: {fileID: 1175979326573501981, guid: 5573b881b175cc04dbc7669dc038c0a9, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -4.8
+      value: -8.8
       objectReference: {fileID: 0}
     - target: {fileID: 1175979326573501981, guid: 5573b881b175cc04dbc7669dc038c0a9, type: 3}
       propertyPath: m_LocalPosition.z
@@ -533,11 +533,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7195074730452091210, guid: 39725c8392b8f534b8b9b3384212dec5, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: -53
       objectReference: {fileID: 0}
     - target: {fileID: 7195074730452091210, guid: 39725c8392b8f534b8b9b3384212dec5, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -7
       objectReference: {fileID: 0}
     - target: {fileID: 7195074730452091210, guid: 39725c8392b8f534b8b9b3384212dec5, type: 3}
       propertyPath: m_LocalPosition.z
@@ -3381,11 +3381,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1175979326573501981, guid: 5573b881b175cc04dbc7669dc038c0a9, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -41.5
+      value: -55.5
       objectReference: {fileID: 0}
     - target: {fileID: 1175979326573501981, guid: 5573b881b175cc04dbc7669dc038c0a9, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.8
+      value: -4.8
       objectReference: {fileID: 0}
     - target: {fileID: 1175979326573501981, guid: 5573b881b175cc04dbc7669dc038c0a9, type: 3}
       propertyPath: m_LocalPosition.z
@@ -3438,11 +3438,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1056058198129604288, guid: 6fee2c852ffb2d74485c77cb4470f6c3, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -40
+      value: -53
       objectReference: {fileID: 0}
     - target: {fileID: 1056058198129604288, guid: 6fee2c852ffb2d74485c77cb4470f6c3, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -9
+      value: -12.5
       objectReference: {fileID: 0}
     - target: {fileID: 1056058198129604288, guid: 6fee2c852ffb2d74485c77cb4470f6c3, type: 3}
       propertyPath: m_LocalPosition.z
@@ -3629,10 +3629,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   wildPokemons:
-  - _base: {fileID: 11400000, guid: b9537721dafeb9b4896e5b5801e503a9, type: 2}
-    level: 10
-  - _base: {fileID: 11400000, guid: b9537721dafeb9b4896e5b5801e503a9, type: 2}
-    level: 15
+  - pokemon: {fileID: 0}
+    levelRange: {x: 0, y: 0}
+    chancePercentage: 0
+  - pokemon: {fileID: 0}
+    levelRange: {x: 0, y: 0}
+    chancePercentage: 0
+  wildPokemonsInWater: []
+  totalChance: 0
+  totalChanceWater: -1
 --- !u!1 &1372592109997248813
 GameObject:
   m_ObjectHideFlags: 0
@@ -6386,7 +6391,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1737536215364365511}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -40, y: -3, z: 0}
+  m_LocalPosition: {x: -53, y: -7, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:

@@ -22,7 +22,7 @@ public class Character : MonoBehaviour
     public void SpeedUp()
     {
         moveSpeed = 8;
-        animator.ModifySpeed(1.75f);
+        animator.ModifySpeed(1.45f);
     }
 
     public void SpeedDown()
@@ -85,7 +85,7 @@ public class Character : MonoBehaviour
         var diff = targetPos - transform.position;
         var dir = diff.normalized;
 
-        var collisionLayer = GameLayers.i.SolidLayer | GameLayers.i.InteractableLayer | GameLayers.i.PlayerLayer;
+        var collisionLayer = GameLayers.i.SolidLayer | GameLayers.i.InteractableLayer | GameLayers.i.PlayerLayer | GameLayers.i.FillLayer;
         if (!animator.IsSurfing)
             collisionLayer = collisionLayer | GameLayers.i.WaterLayer;
 
