@@ -31,7 +31,7 @@ public class PlayerController : MonoBehaviour, ISavable
 
     public void HangleUpdate()
     {
-        if (! character.isMoving)
+        if (!character.isMoving)
         {
             input.x = SimpleInput.GetAxisRaw("Horizontal");
             input.y = SimpleInput.GetAxisRaw("Vertical");
@@ -65,7 +65,7 @@ public class PlayerController : MonoBehaviour, ISavable
 
     IPlayerTriggerable currentlyInTrigger;
 
-    private void OnMoveOver()
+    public void OnMoveOver()
     {
         var colliders = Physics2D.OverlapCircleAll(transform.position - new Vector3(0, character.OffsetY), 0.2f, GameLayers.i.TriggerableLayers);
 

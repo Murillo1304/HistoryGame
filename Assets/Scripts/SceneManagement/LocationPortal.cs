@@ -35,6 +35,8 @@ public class LocationPortal : MonoBehaviour, IPlayerTriggerable
 
         yield return fader.FadeOut(0.5f);
         GameController.Instance.PauseGame(false);
+        //Chequear colisiones
+        PlayerController.i.OnMoveOver();
     }
 
     public Transform SpawnPoint => spawnPoint;
