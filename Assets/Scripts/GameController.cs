@@ -97,7 +97,7 @@ public class GameController : MonoBehaviour
         ShopController.i.OnFinish += () => state = GameState.FreeRoam;
 
         partyScreen.OnChangePokemon += () => state = GameState.ChangeOrder;
-        partyScreen.OnChangePokemonFinish += () => state = GameState.PartyScreen;
+        //partyScreen.OnChangePokemonFinish += () => state = GameState.PartyScreen;
 
 
 
@@ -236,6 +236,17 @@ public class GameController : MonoBehaviour
                 playerController.Character.SpeedDown();
             }
         }
+        else if (state == GameState.Paused)
+        {
+            if ((Input.GetKeyDown(KeyCode.X)) || CrossPlatformInputManager.GetButtonDown("ButtonB"))
+            {
+                playerController.Character.SpeedUp();
+            }
+            else if ((Input.GetKeyUp(KeyCode.X)) || CrossPlatformInputManager.GetButtonUp("ButtonB"))
+            {
+                playerController.Character.SpeedDown();
+            }
+        }
         else if (state == GameState.Cutscene)
         {
             playerController.Character.HandleUpdate();
@@ -337,8 +348,17 @@ public class GameController : MonoBehaviour
         if (selectItem == 0)
         {
             //Pokemon
-            partyScreen.gameObject.SetActive(true);
-            state = GameState.PartyScreen;
+            var playerParty = playerController.GetComponent<PokemonParty>();
+            if (playerParty.Pokemons.Count > 0)
+            {
+                partyScreen.gameObject.SetActive(true);
+                state = GameState.PartyScreen;
+            }
+            else
+            {
+                StartCoroutine(DialogManager.Instance.ShowDialogText($"¡No tienes ningún pokemon!"));
+                state = GameState.FreeRoam;
+            }
         }
         else if (selectItem == 1)
         {

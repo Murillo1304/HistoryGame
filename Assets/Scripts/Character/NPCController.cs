@@ -42,6 +42,7 @@ public class NPCController : MonoBehaviour, Interactable, ISavable
         {
             state = NPCState.dialog;
             character.LookTowards(initiator.position);
+            var party = initiator.GetComponent<PokemonParty>();
 
             if (questToComplete!= null)
             {
@@ -84,7 +85,7 @@ public class NPCController : MonoBehaviour, Interactable, ISavable
                     yield return DialogManager.Instance.ShowDialog(activeQuest.Base.InProgressDialogue);
                 }
             }
-            else if (healer != null)
+            else if (healer != null && party.Pokemons.Count > 0)
             {
                 healer.SetPositionHealer(initiator.GetComponent<PlayerController>());
                 yield return healer.Heal(initiator, dialog);

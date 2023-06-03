@@ -26,7 +26,7 @@ public class PartyScreen : MonoBehaviour
     bool presionadoVertical = false;
 
     public event Action OnChangePokemon;
-    public event Action OnChangePokemonFinish;
+    //public event Action OnChangePokemonFinish;
 
     //PartyScreen puede ser llamado por diferentes estados como ActionSelection, RunningTurn, AboutToUse
     public BattleState? CalledFrom { get; set; }

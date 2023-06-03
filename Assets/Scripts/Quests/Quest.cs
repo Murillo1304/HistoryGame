@@ -40,7 +40,7 @@ public class Quest
         questList.AddQuest(this);
     }
 
-    public IEnumerator CompleteQuest(Transform player)
+    public IEnumerator CompleteQuest(Transform player = null)
     {
         Status = QuestStatus.Completed;
 

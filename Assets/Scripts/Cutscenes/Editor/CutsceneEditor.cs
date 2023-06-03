@@ -38,6 +38,8 @@ public class CutsceneEditor : Editor
                 cutscene.AddAction(new FadeInAction());
             else if (GUILayout.Button("Fade Out"))
                 cutscene.AddAction(new FadeOutAction());
+            else if (GUILayout.Button("Complete Quest"))
+                cutscene.AddAction(new CompleteQuestAction());
         }
 
         base.OnInspectorGUI();
