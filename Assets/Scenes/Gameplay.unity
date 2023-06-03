@@ -3962,6 +3962,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   highlightedColor: {r: 0.11053756, g: 0.30245823, b: 0.8679245, a: 1}
+  answerBoxColor: {r: 0.25490198, g: 0.25490198, b: 0.25490198, a: 1}
 --- !u!114 &1049437703
 MonoBehaviour:
   m_ObjectHideFlags: 0

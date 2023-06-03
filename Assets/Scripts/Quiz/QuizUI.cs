@@ -20,6 +20,7 @@ public class QuizUI : MonoBehaviour
 
     public void ShowQuiz(List<QuestionsAndAnswers> quiz)
     {
+        score= 0;
         QnA = quiz;
         totalQuestions = QnA.Count;
         GenerateQuestion();
@@ -82,7 +83,6 @@ public class QuizUI : MonoBehaviour
         }
         else
         {
-            Debug.Log("Sin preguntas");
             StartCoroutine(GameOver());
         }
     }
