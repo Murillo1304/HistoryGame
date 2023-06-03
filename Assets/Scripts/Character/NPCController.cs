@@ -24,6 +24,7 @@ public class NPCController : MonoBehaviour, Interactable, ISavable
     PokemonGiver pokemonGiver;
     Healer healer;
     Merchant merchant;
+    QuizGiver quizGiver;
 
     private void Awake()
     {
@@ -32,6 +33,7 @@ public class NPCController : MonoBehaviour, Interactable, ISavable
         pokemonGiver = GetComponent<PokemonGiver>();
         healer = GetComponent<Healer>();
         merchant = GetComponent<Merchant>();
+        quizGiver = GetComponent<QuizGiver>();
     }
 
     public IEnumerator Interact(Transform initiator)
@@ -90,6 +92,10 @@ public class NPCController : MonoBehaviour, Interactable, ISavable
             else if (merchant != null)
             {
                 yield return merchant.Trade();
+            }
+            else if (quizGiver != null && quizGiver.CanBeQuiz())
+            {
+                yield return quizGiver.GiveQuiz();
             }
             else
             {

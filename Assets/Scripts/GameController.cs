@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityStandardAssets.CrossPlatformInput;
 
-public enum GameState {FreeRoam, Battle, Dialog, Menu, PartyScreen, ChangeOrder, Bag, Cutscene, Paused, Evolution, Shop}
+public enum GameState {FreeRoam, Battle, Dialog, Menu, PartyScreen, ChangeOrder, Bag, Cutscene, Paused, Evolution, Shop , Quiz}
 
 public class GameController : MonoBehaviour
 {
@@ -14,6 +14,9 @@ public class GameController : MonoBehaviour
     [SerializeField] PartyScreen partyScreen;
     [SerializeField] InventoryUI inventoryUI;
     [SerializeField] GameObject buttonMenu;
+    [SerializeField] GameObject buttonA;
+    [SerializeField] GameObject buttonB;
+    [SerializeField] GameObject buttonDpad;
     
     GameState state;
     GameState prevState;
@@ -23,6 +26,7 @@ public class GameController : MonoBehaviour
     public SceneDetails PrevScene { get; private set; }
 
     MenuController menuController;
+    QuizManager quizManager;
 
     public static GameController Instance { get; private set; }
 
@@ -31,6 +35,7 @@ public class GameController : MonoBehaviour
         Instance = this;
 
         menuController = GetComponent<MenuController>();
+        quizManager = GetComponent<QuizManager>();
 
         //Cursor.lockState = CursorLockMode.Locked;
         //Cursor.visible = false;
@@ -67,6 +72,13 @@ public class GameController : MonoBehaviour
 
         menuController.onMenuSelected += OnMenuSelected;
 
+        quizManager.quizStart += () => state = GameState.Quiz;
+        quizManager.quizEnd += () =>
+        {
+            ActivateButtons();
+            state = GameState.FreeRoam;
+        };
+
         EvolutionManager.i.OnStartEvolution += () =>
         {
             stateBeforeEvolution = state;
@@ -86,6 +98,8 @@ public class GameController : MonoBehaviour
 
         partyScreen.OnChangePokemon += () => state = GameState.ChangeOrder;
         partyScreen.OnChangePokemonFinish += () => state = GameState.PartyScreen;
+
+
 
         if (GlobalSettings.i.SaveSlotName != null)
         {
@@ -288,6 +302,28 @@ public class GameController : MonoBehaviour
         {
             ShopController.i.HandleUpdate();
         }
+        else if (state == GameState.Quiz)
+        {
+            DeactivateButtons();
+        }
+    }
+
+    public void DeactivateButtons()
+    {
+        buttonMenu.SetActive(false);
+        buttonA.SetActive(false);
+        buttonB.SetActive(false);
+        buttonDpad.SetActive(false);
+        Fader.i.gameObject.SetActive(false);
+    }
+
+    public void ActivateButtons()
+    {
+        buttonMenu.SetActive(true);
+        buttonA.SetActive(true);
+        buttonB.SetActive(true);
+        buttonDpad.SetActive(true);
+        Fader.i.gameObject.SetActive(true);
     }
 
     public void SetCurrentScene(SceneDetails currScene)
