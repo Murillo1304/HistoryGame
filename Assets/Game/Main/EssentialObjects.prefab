@@ -1547,6 +1547,7 @@ GameObject:
   - component: {fileID: 1765609568362444569}
   - component: {fileID: 407562488416075733}
   - component: {fileID: 4914166775060118050}
+  - component: {fileID: 6115951749702643949}
   m_Layer: 0
   m_Name: GameController
   m_TagString: Untagged
@@ -1676,6 +1677,20 @@ MonoBehaviour:
   evolutionUI: {fileID: 3456777494131898274}
   pokemonImage: {fileID: 4496855748312332412}
   evolutionMusic: {fileID: 8300000, guid: d0fe7e8fd092fa343b20c5dd134dd3a9, type: 3}
+--- !u!114 &6115951749702643949
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1765609568362444573}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1abbf40e49ea1474a85a49dc08b17725, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  starterUI: {fileID: 9216883003613348833}
+  pokemonImage: {fileID: 7328223003187176055}
 --- !u!1 &1765609568442694067
 GameObject:
   m_ObjectHideFlags: 0
@@ -7520,6 +7535,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: -37.5
       objectReference: {fileID: 0}
+    - target: {fileID: 7425331590597378816, guid: 0f3c15a35d364404cbdeb33a15751a3e, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7488742454405312982, guid: 0f3c15a35d364404cbdeb33a15751a3e, type: 3}
       propertyPath: m_AnchorMax.y
       value: 1
@@ -8017,6 +8036,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 34983af220c27f8499c8202f6f6c15cb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &7328223003187176055 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 9031953663965258390, guid: 0f3c15a35d364404cbdeb33a15751a3e, type: 3}
+  m_PrefabInstance: {fileID: 1793807039680381153}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!1 &9216883003613348833 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7425331590597378816, guid: 0f3c15a35d364404cbdeb33a15751a3e, type: 3}
+  m_PrefabInstance: {fileID: 1793807039680381153}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &3415578016542732090
 PrefabInstance:
   m_ObjectHideFlags: 0
