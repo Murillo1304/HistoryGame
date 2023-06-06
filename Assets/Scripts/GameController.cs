@@ -147,7 +147,8 @@ public class GameController : MonoBehaviour
         battleSystem.StartBattle(playerParty, wildPokemonCopy, trigger);
     }
 
-    TrainerController trainer;
+    public TrainerController trainer { get; set; }
+    public bool battleCanLose { get; set; } = false;
 
     public void StartTrainerBattle(TrainerController trainer)
     {
@@ -171,11 +172,11 @@ public class GameController : MonoBehaviour
 
     void EndBattle(bool won)
     {
-        if(trainer != null && won == true)
+        if(trainer != null && (won == true || battleCanLose == true))
         {
             trainer.BattleLost();
-            trainer = null;
         }
+        trainer = null;
 
         partyScreen.SetPartyData();
         
@@ -196,7 +197,16 @@ public class GameController : MonoBehaviour
         }
         else
         {
-            StartCoroutine(Defeat());
+            if (!battleCanLose)
+                StartCoroutine(Defeat());
+            else
+            {
+                //Si la batalla se puede perder, solo cura a los pokemon (ej:primera batalla)
+                var playerParty = playerController.GetComponent<PokemonParty>();
+                playerParty.Pokemons.ForEach(p => p.Heal());
+                playerParty.PartyUpdated();
+                battleCanLose = false;
+            }
         }
     }
 

@@ -49,6 +49,16 @@ public class TrainerController : MonoBehaviour, Interactable, ISavable
         }
     }
 
+    public IEnumerator CutsceneBattle()
+    {
+        if (!battleLost)
+        {
+            AudioManager.i.PlayMusic(trainerAppearsClip);
+
+            yield return DialogManager.Instance.ShowDialog(dialog);
+            GameController.Instance.StartTrainerBattle(this);
+        }
+    }
 
     public IEnumerator TriggerTrainerBattle(PlayerController player)
     {

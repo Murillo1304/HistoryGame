@@ -38,8 +38,18 @@ public class CutsceneEditor : Editor
                 cutscene.AddAction(new FadeInAction());
             else if (GUILayout.Button("Fade Out"))
                 cutscene.AddAction(new FadeOutAction());
-            else if (GUILayout.Button("Complete Quest"))
+        }
+
+        using (var scope = new GUILayout.HorizontalScope())
+        {
+            if (GUILayout.Button("Complete Quest"))
                 cutscene.AddAction(new CompleteQuestAction());
+            else if (GUILayout.Button("Trainer Battle"))
+                cutscene.AddAction(new TrainerBattleAction());
+            else if (GUILayout.Button("Delay Seconds"))
+                cutscene.AddAction(new DelayAction());
+            else if (GUILayout.Button("Teleport Player"))
+                cutscene.AddAction(new TeleportPlayerAction());
         }
 
         base.OnInspectorGUI();

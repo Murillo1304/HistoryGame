@@ -1413,9 +1413,18 @@ MonoBehaviour:
   actions:
   - rid: 5464443152182542338
   - rid: 5464443152182542340
+  - rid: 5464443197396615168
+  - rid: 5464443197396615177
   - rid: 5464443152182542339
   - rid: 5464443123976896518
-  - rid: 5464443152182542337
+  - rid: 5464443197396615170
+  - rid: 5464443197396615178
+  - rid: 5464443197396615173
+  - rid: 5464443197396615176
+  - rid: 5464443197396615175
+  - rid: 5464443197396615179
+  - rid: 5464443197396615180
+  - rid: 5464443197396615174
   references:
     version: 2
     RefIds:
@@ -1428,12 +1437,6 @@ MonoBehaviour:
           lines:
           - "\xA1Muy bien!"
           - "\xA1Ahora podr\xE1s comenzar tu aventura!"
-    - rid: 5464443152182542337
-      type: {class: CompleteQuestAction, ns: , asm: Assembly-CSharp}
-      data:
-        name: CompleteQuestAction
-        waitForCompletion: 0
-        questToComplete: {fileID: 11400000, guid: 2241964b3ea5b73439f0042a623ad989, type: 2}
     - rid: 5464443152182542338
       type: {class: FadeInAction, ns: , asm: Assembly-CSharp}
       data:
@@ -1452,6 +1455,80 @@ MonoBehaviour:
         name: DisableObjectAction
         waitForCompletion: 1
         go: {fileID: 1667290276}
+    - rid: 5464443197396615168
+      type: {class: EnableObjectAction, ns: , asm: Assembly-CSharp}
+      data:
+        name: EnableObjectAction
+        waitForCompletion: 1
+        go: {fileID: 1507684779}
+    - rid: 5464443197396615170
+      type: {class: MoveActorAction, ns: , asm: Assembly-CSharp}
+      data:
+        name: MoveActorAction
+        waitForCompletion: 1
+        actor:
+          isPlayer: 0
+          character: {fileID: 1507684781}
+        movePatterns:
+        - {x: 0, y: 6}
+    - rid: 5464443197396615173
+      type: {class: TrainerBattleAction, ns: , asm: Assembly-CSharp}
+      data:
+        name: TrainerBattleAction
+        waitForCompletion: 1
+        trainer: {fileID: 1507684780}
+        CanLoseBattle: 1
+    - rid: 5464443197396615174
+      type: {class: CompleteQuestAction, ns: , asm: Assembly-CSharp}
+      data:
+        name: CompleteQuestAction
+        waitForCompletion: 0
+        questToComplete: {fileID: 11400000, guid: 2241964b3ea5b73439f0042a623ad989, type: 2}
+    - rid: 5464443197396615175
+      type: {class: DialogueAction, ns: , asm: Assembly-CSharp}
+      data:
+        name: DialogueAction
+        waitForCompletion: 1
+        dialog:
+          lines:
+          - "\xA1Nos volveremos a encontrar!"
+    - rid: 5464443197396615176
+      type: {class: DelayAction, ns: , asm: Assembly-CSharp}
+      data:
+        name: DelayAction
+        waitForCompletion: 1
+        seconds: 0.5
+    - rid: 5464443197396615177
+      type: {class: TeleportPlayerAction, ns: , asm: Assembly-CSharp}
+      data:
+        name: TeleportPlayerAction
+        waitForCompletion: 1
+        position: {x: 100.5, y: -41.2}
+    - rid: 5464443197396615178
+      type: {class: TurnActorAction, ns: , asm: Assembly-CSharp}
+      data:
+        name: TurnActorAction
+        waitForCompletion: 1
+        actor:
+          isPlayer: 1
+          character: {fileID: 0}
+        direction: 1
+    - rid: 5464443197396615179
+      type: {class: MoveActorAction, ns: , asm: Assembly-CSharp}
+      data:
+        name: MoveActorAction
+        waitForCompletion: 1
+        actor:
+          isPlayer: 0
+          character: {fileID: 1507684781}
+        movePatterns:
+        - {x: 0, y: -7}
+    - rid: 5464443197396615180
+      type: {class: DisableObjectAction, ns: , asm: Assembly-CSharp}
+      data:
+        name: DisableObjectAction
+        waitForCompletion: 1
+        go: {fileID: 1507684779}
 --- !u!1001 &1058617555
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1693,6 +1770,126 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4334862749916771846, guid: a89680ebd6fbf5f428fe3537020df211, type: 3}
   m_PrefabInstance: {fileID: 1302798473}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &1507684778
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 2690925321196277508, guid: 0c1de0791173a944e9b1909b1f9e80e3, type: 3}
+      propertyPath: pokemons.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2690925321196277508, guid: 0c1de0791173a944e9b1909b1f9e80e3, type: 3}
+      propertyPath: pokemons.Array.data[0].level
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 2690925321196277511, guid: 0c1de0791173a944e9b1909b1f9e80e3, type: 3}
+      propertyPath: m_RootOrder
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 2690925321196277511, guid: 0c1de0791173a944e9b1909b1f9e80e3, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 100.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2690925321196277511, guid: 0c1de0791173a944e9b1909b1f9e80e3, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -49.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2690925321196277511, guid: 0c1de0791173a944e9b1909b1f9e80e3, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2690925321196277511, guid: 0c1de0791173a944e9b1909b1f9e80e3, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2690925321196277511, guid: 0c1de0791173a944e9b1909b1f9e80e3, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2690925321196277511, guid: 0c1de0791173a944e9b1909b1f9e80e3, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2690925321196277511, guid: 0c1de0791173a944e9b1909b1f9e80e3, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2690925321196277511, guid: 0c1de0791173a944e9b1909b1f9e80e3, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2690925321196277511, guid: 0c1de0791173a944e9b1909b1f9e80e3, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2690925321196277511, guid: 0c1de0791173a944e9b1909b1f9e80e3, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2690925321196277514, guid: 0c1de0791173a944e9b1909b1f9e80e3, type: 3}
+      propertyPath: defauldDirection
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2690925321196277516, guid: 0c1de0791173a944e9b1909b1f9e80e3, type: 3}
+      propertyPath: m_Name
+      value: Rival
+      objectReference: {fileID: 0}
+    - target: {fileID: 2690925321196277516, guid: 0c1de0791173a944e9b1909b1f9e80e3, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2690925321196277517, guid: 0c1de0791173a944e9b1909b1f9e80e3, type: 3}
+      propertyPath: dialog.lines.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2690925321196277517, guid: 0c1de0791173a944e9b1909b1f9e80e3, type: 3}
+      propertyPath: dialog.lines.Array.data[0]
+      value: "\xA1Hey, as\xED que ya tienes tu primer pokemon!"
+      objectReference: {fileID: 0}
+    - target: {fileID: 2690925321196277517, guid: 0c1de0791173a944e9b1909b1f9e80e3, type: 3}
+      propertyPath: dialog.lines.Array.data[1]
+      value: "\xA1Veamos si puede contra el mio!"
+      objectReference: {fileID: 0}
+    - target: {fileID: 2690925321196277517, guid: 0c1de0791173a944e9b1909b1f9e80e3, type: 3}
+      propertyPath: dialogAfterBattle.lines.Array.data[0]
+      value: "\xA1Entranar\xE9 para vencerte alg\xFAn d\xEDa!"
+      objectReference: {fileID: 0}
+    - target: {fileID: 6794144833844784958, guid: 0c1de0791173a944e9b1909b1f9e80e3, type: 3}
+      propertyPath: uniqueId
+      value: e94dd42d-e789-46a0-8fa1-1721543937e1
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 0c1de0791173a944e9b1909b1f9e80e3, type: 3}
+--- !u!1 &1507684779 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2690925321196277516, guid: 0c1de0791173a944e9b1909b1f9e80e3, type: 3}
+  m_PrefabInstance: {fileID: 1507684778}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1507684780 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2690925321196277517, guid: 0c1de0791173a944e9b1909b1f9e80e3, type: 3}
+  m_PrefabInstance: {fileID: 1507684778}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1507684779}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fb024bf1555bf4b49988d14715ee6fe6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1507684781 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2690925321196277515, guid: 0c1de0791173a944e9b1909b1f9e80e3, type: 3}
+  m_PrefabInstance: {fileID: 1507684778}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1507684779}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e79f366c5d0fbac42af8bb76bb7e1e83, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1512164650
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3869,7 +4066,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1175979326573501970, guid: 5573b881b175cc04dbc7669dc038c0a9, type: 3}
       propertyPath: dialog.lines.Array.data[0]
-      value: "\xA1Apura, el profesor te espera en el laboratorio!"
+      value: "\xA1No vemos en la otra ciudad!"
       objectReference: {fileID: 0}
     - target: {fileID: 1175979326573501970, guid: 5573b881b175cc04dbc7669dc038c0a9, type: 3}
       propertyPath: movementPatter.Array.data[0].x
@@ -4045,23 +4242,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5573b881b175cc04dbc7669dc038c0a9, type: 3}
---- !u!1 &1924649148 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1175979326573501977, guid: 5573b881b175cc04dbc7669dc038c0a9, type: 3}
-  m_PrefabInstance: {fileID: 1924649146}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1924649149
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1924649148}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d9ea2cf8d8cca704681e70956f03bcde, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!483693784 &133883577579993243
 TilemapRenderer:
   m_ObjectHideFlags: 0
