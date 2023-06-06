@@ -205,6 +205,7 @@ public class GameController : MonoBehaviour
                 var playerParty = playerController.GetComponent<PokemonParty>();
                 playerParty.Pokemons.ForEach(p => p.Heal());
                 playerParty.PartyUpdated();
+                AudioManager.i.PlayMusic(CurrentScene.SceneMusic, fade: true);
                 battleCanLose = false;
             }
         }
