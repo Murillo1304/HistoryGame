@@ -33,6 +33,12 @@ EditorBuildSettings:
     path: Assets/Scenes/Route1.unity
     guid: 61b7dc060337fbf40a729ee33abaefb4
   - enabled: 1
-    path: Assets/Scenes/Town2.unity
-    guid: 373dce9d054b13d43b12f5bad7aed1e4
+    path: Assets/Scenes/Town1.unity
+    guid: 11eaf9663b9bf6843a81b49d95ff407b
+  - enabled: 1
+    path: Assets/Scenes/T1-PokemonCenter.unity
+    guid: 7af4401449b29304c8bc809dc1ccdb1d
+  - enabled: 1
+    path: Assets/Scenes/T1-ShopCenter.unity
+    guid: f7ac6b8107bf3d549bb2895986137d57
   m_configObjects: {}

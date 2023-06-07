@@ -4,11 +4,13 @@ using UnityEngine;
 
 public class Healer : MonoBehaviour
 {
+    [SerializeField] string Dialog = "¡Luces cansado! ¿Te gustaría tomarte un descanso?";
+
     public IEnumerator Heal(Transform player, Dialog dialog)
     {
         int selectedChoice = 0;
         
-        yield return DialogManager.Instance.ShowDialogText("¡Luces cansado! ¿Te gustaría tomarte un descanso?", 
+        yield return DialogManager.Instance.ShowDialogText(Dialog, 
             choices: new List<string>() { "Sí", "No"},
             onChoiceSelected: (choiceIndex) => selectedChoice = choiceIndex);
 
