@@ -1891,3 +1891,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   highlightedColor: {r: 0.04045032, g: 0.32067835, b: 0.9528302, a: 1}
+  answerBoxColor: {r: 0.25490198, g: 0.25490198, b: 0.25490198, a: 0}
