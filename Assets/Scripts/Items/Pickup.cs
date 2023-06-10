@@ -5,6 +5,7 @@ using UnityEngine;
 public class Pickup : MonoBehaviour, Interactable, ISavable
 {
     [SerializeField] ItemBase item;
+    [SerializeField] CollectItems collect;
 
     public bool Used { get; set; } = false;
 
@@ -23,6 +24,9 @@ public class Pickup : MonoBehaviour, Interactable, ISavable
 
             AudioManager.i.PlaySfx(AudioId.ItemObtained, pauseMusic: true);
             yield return DialogManager.Instance.ShowDialogText($"¡{playerName} encontró {item.Name}!");
+
+            if (collect != null)
+                collect.checkCompleteItems();
         }
     }
 

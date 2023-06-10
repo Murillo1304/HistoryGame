@@ -53,8 +53,18 @@ public class QuizUI : MonoBehaviour
 
     IEnumerator WaitForNext()
     {
+        SetRunningCoroutine(true);
         yield return new WaitForSeconds(1);
         GenerateQuestion();
+        SetRunningCoroutine(false);
+    }
+
+    void SetRunningCoroutine(bool running)
+    {
+        for (int i = 0; i < options.Length; i++)
+        {
+            options[i].GetComponent<AnswerScript>().coroutineRunning = running;
+        }
     }
 
     void SetAnswer()

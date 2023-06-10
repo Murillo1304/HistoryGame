@@ -170,6 +170,12 @@ public class GameController : MonoBehaviour
         StartCoroutine(trainer.TriggerTrainerBattle(playerController));
     }
 
+    public void OnEnterQuestionerView(QuestionerController questioner)
+    {
+        state = GameState.Cutscene;
+        StartCoroutine(questioner.TriggerQuiz(playerController));
+    }
+
     void EndBattle(bool won)
     {
         if(trainer != null && (won == true || battleCanLose == true))
