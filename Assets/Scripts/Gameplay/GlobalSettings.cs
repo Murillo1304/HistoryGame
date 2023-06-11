@@ -6,9 +6,11 @@ public class GlobalSettings : MonoBehaviour
 {
     [SerializeField] Color highlightedColor;
     [SerializeField] Color answerBoxColor;
-    string saveSlotName;
+
+    public bool UseInternet { get; set; } = false;
 
     public string SaveSlotName { get; set; } = null;
+    public string Username { get; set; } = null;
 
     public Color HighlightedColor => highlightedColor;
 

@@ -2616,7 +2616,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 3DS - Pokemon Omega Ruby Alpha Sapphire - Items_119
+      name: pase-1
       rect:
         serializedVersion: 2
         x: 480
@@ -2637,11 +2637,11 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 3DS - Pokemon Omega Ruby Alpha Sapphire - Items_120
+      name: pase-2
       rect:
         serializedVersion: 2
-        x: 512
-        y: 640
+        x: 511
+        y: 641
         width: 32
         height: 32
       alignment: 0
@@ -2658,7 +2658,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 3DS - Pokemon Omega Ruby Alpha Sapphire - Items_121
+      name: pase-3
       rect:
         serializedVersion: 2
         x: 544
@@ -2679,7 +2679,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 3DS - Pokemon Omega Ruby Alpha Sapphire - Items_122
+      name: pase-4
       rect:
         serializedVersion: 2
         x: 576
@@ -2700,7 +2700,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 3DS - Pokemon Omega Ruby Alpha Sapphire - Items_123
+      name: pase-5
       rect:
         serializedVersion: 2
         x: 608
@@ -2721,11 +2721,11 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 3DS - Pokemon Omega Ruby Alpha Sapphire - Items_124
+      name: pase-6
       rect:
         serializedVersion: 2
         x: 640
-        y: 640
+        y: 641
         width: 32
         height: 32
       alignment: 0
@@ -2742,7 +2742,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 3DS - Pokemon Omega Ruby Alpha Sapphire - Items_125
+      name: pase-7
       rect:
         serializedVersion: 2
         x: 672
@@ -2763,7 +2763,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 3DS - Pokemon Omega Ruby Alpha Sapphire - Items_126
+      name: pase-8
       rect:
         serializedVersion: 2
         x: 704
@@ -2784,11 +2784,11 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 3DS - Pokemon Omega Ruby Alpha Sapphire - Items_127
+      name: pase-9
       rect:
         serializedVersion: 2
         x: 736
-        y: 640
+        y: 641
         width: 32
         height: 32
       alignment: 0
@@ -2805,7 +2805,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 3DS - Pokemon Omega Ruby Alpha Sapphire - Items_128
+      name: pase-10
       rect:
         serializedVersion: 2
         x: 768
@@ -2826,7 +2826,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 3DS - Pokemon Omega Ruby Alpha Sapphire - Items_129
+      name: pase-11
       rect:
         serializedVersion: 2
         x: 800
@@ -2847,7 +2847,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 3DS - Pokemon Omega Ruby Alpha Sapphire - Items_130
+      name: pase-12
       rect:
         serializedVersion: 2
         x: 0
@@ -13415,10 +13415,11 @@ TextureImporter:
       3DS - Pokemon Omega Ruby Alpha Sapphire - Items_336: 94797426
       3DS - Pokemon Omega Ruby Alpha Sapphire - Items_403: -701728940
       3DS - Pokemon Omega Ruby Alpha Sapphire - Items_536: 130966395
+      pase-6: 1586603637
       3DS - Pokemon Omega Ruby Alpha Sapphire - Items_135: 127647173
-      3DS - Pokemon Omega Ruby Alpha Sapphire - Items_128: -493867995
-      3DS - Pokemon Omega Ruby Alpha Sapphire - Items_453: -14097791
       3DS - Pokemon Omega Ruby Alpha Sapphire - Items_619: 1793393496
+      3DS - Pokemon Omega Ruby Alpha Sapphire - Items_453: -14097791
+      pase-3: 1852296194
       3DS - Pokemon Omega Ruby Alpha Sapphire - Items_400: 1391800763
       3DS - Pokemon Omega Ruby Alpha Sapphire - Items_91: -864793002
       3DS - Pokemon Omega Ruby Alpha Sapphire - Items_442: 1246762898
@@ -13450,20 +13451,21 @@ TextureImporter:
       antidoto: 936587087
       3DS - Pokemon Omega Ruby Alpha Sapphire - Items_394: -811395768
       3DS - Pokemon Omega Ruby Alpha Sapphire - Items_203: 2045951809
-      3DS - Pokemon Omega Ruby Alpha Sapphire - Items_122: 1803574645
+      3DS - Pokemon Omega Ruby Alpha Sapphire - Items_458: -1208729293
       3DS - Pokemon Omega Ruby Alpha Sapphire - Items_66: 1630178108
       3DS - Pokemon Omega Ruby Alpha Sapphire - Items_440: 659871809
       3DS - Pokemon Omega Ruby Alpha Sapphire - Items_9: -1680002214
       3DS - Pokemon Omega Ruby Alpha Sapphire - Items_629: -1109003134
-      3DS - Pokemon Omega Ruby Alpha Sapphire - Items_458: -1208729293
       3DS - Pokemon Omega Ruby Alpha Sapphire - Items_620: 85888533
-      3DS - Pokemon Omega Ruby Alpha Sapphire - Items_527: 545482773
       masterball: 1275849847
+      pase-10: -493867995
+      3DS - Pokemon Omega Ruby Alpha Sapphire - Items_527: 545482773
       3DS - Pokemon Omega Ruby Alpha Sapphire - Items_512: -701929670
       3DS - Pokemon Omega Ruby Alpha Sapphire - Items_87: -1455320214
       3DS - Pokemon Omega Ruby Alpha Sapphire - Items_287: 968102958
       3DS - Pokemon Omega Ruby Alpha Sapphire - Items_140: -628608017
       3DS - Pokemon Omega Ruby Alpha Sapphire - Items_236: 1024614939
+      pase-12: -512203144
       3DS - Pokemon Omega Ruby Alpha Sapphire - Items_529: 193340638
       3DS - Pokemon Omega Ruby Alpha Sapphire - Items_525: 713503445
       3DS - Pokemon Omega Ruby Alpha Sapphire - Items_441: -806690809
@@ -13478,6 +13480,7 @@ TextureImporter:
       3DS - Pokemon Omega Ruby Alpha Sapphire - Items_594: -1089745344
       3DS - Pokemon Omega Ruby Alpha Sapphire - Items_198: 1591311296
       3DS - Pokemon Omega Ruby Alpha Sapphire - Items_623: -946754200
+      pase-2: -1806833246
       3DS - Pokemon Omega Ruby Alpha Sapphire - Items_569: 623855548
       mo-16: -1301722831
       3DS - Pokemon Omega Ruby Alpha Sapphire - Items_480: -525335995
@@ -13508,7 +13511,6 @@ TextureImporter:
       3DS - Pokemon Omega Ruby Alpha Sapphire - Items_175: -596411072
       3DS - Pokemon Omega Ruby Alpha Sapphire - Items_412: -842990650
       3DS - Pokemon Omega Ruby Alpha Sapphire - Items_502: 421453823
-      3DS - Pokemon Omega Ruby Alpha Sapphire - Items_129: -86169439
       3DS - Pokemon Omega Ruby Alpha Sapphire - Items_378: -824328070
       3DS - Pokemon Omega Ruby Alpha Sapphire - Items_74: 864291603
       3DS - Pokemon Omega Ruby Alpha Sapphire - Items_136: 1262586812
@@ -13544,6 +13546,7 @@ TextureImporter:
       piedra dia: 936255594
       3DS - Pokemon Omega Ruby Alpha Sapphire - Items_584: 21206128
       3DS - Pokemon Omega Ruby Alpha Sapphire - Items_346: -1388660611
+      pase-9: -1610677649
       3DS - Pokemon Omega Ruby Alpha Sapphire - Items_226: -770791627
       3DS - Pokemon Omega Ruby Alpha Sapphire - Items_365: 241213327
       restaurar todo: -683659605
@@ -13559,13 +13562,12 @@ TextureImporter:
       3DS - Pokemon Omega Ruby Alpha Sapphire - Items_460: 446085387
       3DS - Pokemon Omega Ruby Alpha Sapphire - Items_377: 1092410209
       3DS - Pokemon Omega Ruby Alpha Sapphire - Items_259: 63398500
-      3DS - Pokemon Omega Ruby Alpha Sapphire - Items_121: 1852296194
+      mo-7: 963612389
       3DS - Pokemon Omega Ruby Alpha Sapphire - Items_500: -94449694
       3DS - Pokemon Omega Ruby Alpha Sapphire - Items_534: -1409566317
       3DS - Pokemon Omega Ruby Alpha Sapphire - Items_207: -37070963
       3DS - Pokemon Omega Ruby Alpha Sapphire - Items_349: 1229344931
       3DS - Pokemon Omega Ruby Alpha Sapphire - Items_540: 2026634505
-      mo-7: 963612389
       mo-15: 1298763191
       3DS - Pokemon Omega Ruby Alpha Sapphire - Items_268: -911458006
       3DS - Pokemon Omega Ruby Alpha Sapphire - Items_245: -1688511120
@@ -13575,13 +13577,13 @@ TextureImporter:
       3DS - Pokemon Omega Ruby Alpha Sapphire - Items_292: -1869264266
       3DS - Pokemon Omega Ruby Alpha Sapphire - Items_516: -1830517295
       3DS - Pokemon Omega Ruby Alpha Sapphire - Items_485: 1571815225
+      pase-1: 1328702268
       3DS - Pokemon Omega Ruby Alpha Sapphire - Items_474: 1520682037
       3DS - Pokemon Omega Ruby Alpha Sapphire - Items_285: -85255114
       3DS - Pokemon Omega Ruby Alpha Sapphire - Items_301: 1811798746
       3DS - Pokemon Omega Ruby Alpha Sapphire - Items_352: -169757268
       3DS - Pokemon Omega Ruby Alpha Sapphire - Items_423: 740534371
       3DS - Pokemon Omega Ruby Alpha Sapphire - Items_112: -2118150374
-      3DS - Pokemon Omega Ruby Alpha Sapphire - Items_120: -1806833246
       3DS - Pokemon Omega Ruby Alpha Sapphire - Items_338: 1792793606
       3DS - Pokemon Omega Ruby Alpha Sapphire - Items_491: -402505849
       3DS - Pokemon Omega Ruby Alpha Sapphire - Items_228: -1509775773
@@ -13604,7 +13606,6 @@ TextureImporter:
       3DS - Pokemon Omega Ruby Alpha Sapphire - Items_347: 1418372906
       3DS - Pokemon Omega Ruby Alpha Sapphire - Items_33: 113965981
       3DS - Pokemon Omega Ruby Alpha Sapphire - Items_155: -45647045
-      3DS - Pokemon Omega Ruby Alpha Sapphire - Items_124: 1586603637
       antiparalizador: 354022270
       3DS - Pokemon Omega Ruby Alpha Sapphire - Items_219: 268512012
       3DS - Pokemon Omega Ruby Alpha Sapphire - Items_77: -802137757
@@ -13662,6 +13663,7 @@ TextureImporter:
       3DS - Pokemon Omega Ruby Alpha Sapphire - Items_51: 1484422914
       revivir maximo: -1116226535
       3DS - Pokemon Omega Ruby Alpha Sapphire - Items_557: 197150601
+      pase-4: 1803574645
       3DS - Pokemon Omega Ruby Alpha Sapphire - Items_604: 1438075678
       3DS - Pokemon Omega Ruby Alpha Sapphire - Items_559: 1988561089
       3DS - Pokemon Omega Ruby Alpha Sapphire - Items_113: 1984325923
@@ -13687,10 +13689,12 @@ TextureImporter:
       3DS - Pokemon Omega Ruby Alpha Sapphire - Items_496: -254126091
       3DS - Pokemon Omega Ruby Alpha Sapphire - Items_191: 1747704576
       3DS - Pokemon Omega Ruby Alpha Sapphire - Items_408: -1030541471
+      pase-11: -86169439
       3DS - Pokemon Omega Ruby Alpha Sapphire - Items_586: -807739381
       mo-6: 1228716386
       3DS - Pokemon Omega Ruby Alpha Sapphire - Items_5: -1951870384
       3DS - Pokemon Omega Ruby Alpha Sapphire - Items_47: 1952073160
+      pase-7: 1411370766
       3DS - Pokemon Omega Ruby Alpha Sapphire - Items_193: -966548774
       3DS - Pokemon Omega Ruby Alpha Sapphire - Items_398: -712958848
       3DS - Pokemon Omega Ruby Alpha Sapphire - Items_482: -855293530
@@ -13772,7 +13776,6 @@ TextureImporter:
       3DS - Pokemon Omega Ruby Alpha Sapphire - Items_161: 1713490228
       3DS - Pokemon Omega Ruby Alpha Sapphire - Items_550: 2056217946
       3DS - Pokemon Omega Ruby Alpha Sapphire - Items_178: -2133467337
-      3DS - Pokemon Omega Ruby Alpha Sapphire - Items_127: -1610677649
       mo-3: 1184451058
       3DS - Pokemon Omega Ruby Alpha Sapphire - Items_463: -965049079
       3DS - Pokemon Omega Ruby Alpha Sapphire - Items_497: 1630165485
@@ -13787,10 +13790,12 @@ TextureImporter:
       eter maximo: -1568827369
       3DS - Pokemon Omega Ruby Alpha Sapphire - Items_614: -1100610427
       pokeball: -654383833
+      pase-8: -917194781
       3DS - Pokemon Omega Ruby Alpha Sapphire - Items_552: -1222810832
       3DS - Pokemon Omega Ruby Alpha Sapphire - Items_171: -321928449
       3DS - Pokemon Omega Ruby Alpha Sapphire - Items_225: -1138435556
       3DS - Pokemon Omega Ruby Alpha Sapphire - Items_421: -903040201
+      pase-5: 1441183214
       3DS - Pokemon Omega Ruby Alpha Sapphire - Items_563: 1675507872
       3DS - Pokemon Omega Ruby Alpha Sapphire - Items_105: -1788585371
       3DS - Pokemon Omega Ruby Alpha Sapphire - Items_250: -1052419353
@@ -13799,10 +13804,9 @@ TextureImporter:
       3DS - Pokemon Omega Ruby Alpha Sapphire - Items_339: -480351913
       3DS - Pokemon Omega Ruby Alpha Sapphire - Items_305: -79375631
       3DS - Pokemon Omega Ruby Alpha Sapphire - Items_335: -2110613106
-      3DS - Pokemon Omega Ruby Alpha Sapphire - Items_126: -917194781
+      3DS - Pokemon Omega Ruby Alpha Sapphire - Items_332: 1874434795
       3DS - Pokemon Omega Ruby Alpha Sapphire - Items_518: 1243287797
       3DS - Pokemon Omega Ruby Alpha Sapphire - Items_71: 967473622
-      3DS - Pokemon Omega Ruby Alpha Sapphire - Items_332: 1874434795
       3DS - Pokemon Omega Ruby Alpha Sapphire - Items_448: 416401445
       3DS - Pokemon Omega Ruby Alpha Sapphire - Items_451: -663514448
       3DS - Pokemon Omega Ruby Alpha Sapphire - Items_151: -1959575561
@@ -13811,11 +13815,9 @@ TextureImporter:
       3DS - Pokemon Omega Ruby Alpha Sapphire - Items_62: 703482982
       3DS - Pokemon Omega Ruby Alpha Sapphire - Items_331: -2090000037
       3DS - Pokemon Omega Ruby Alpha Sapphire - Items_444: -167634725
-      3DS - Pokemon Omega Ruby Alpha Sapphire - Items_123: 1441183214
       3DS - Pokemon Omega Ruby Alpha Sapphire - Items_208: -1574251184
       3DS - Pokemon Omega Ruby Alpha Sapphire - Items_573: 315457110
       3DS - Pokemon Omega Ruby Alpha Sapphire - Items_59: -2129538032
-      3DS - Pokemon Omega Ruby Alpha Sapphire - Items_130: -512203144
       3DS - Pokemon Omega Ruby Alpha Sapphire - Items_543: -1923767140
       3DS - Pokemon Omega Ruby Alpha Sapphire - Items_238: -1624397417
       3DS - Pokemon Omega Ruby Alpha Sapphire - Items_286: -1710472253
@@ -13848,7 +13850,6 @@ TextureImporter:
       3DS - Pokemon Omega Ruby Alpha Sapphire - Items_199: -471325867
       3DS - Pokemon Omega Ruby Alpha Sapphire - Items_274: -99120541
       3DS - Pokemon Omega Ruby Alpha Sapphire - Items_566: 1005907581
-      3DS - Pokemon Omega Ruby Alpha Sapphire - Items_119: 1328702268
       3DS - Pokemon Omega Ruby Alpha Sapphire - Items_255: 764883475
       3DS - Pokemon Omega Ruby Alpha Sapphire - Items_447: 52493560
       3DS - Pokemon Omega Ruby Alpha Sapphire - Items_588: 946051916
@@ -13970,7 +13971,7 @@ TextureImporter:
       3DS - Pokemon Omega Ruby Alpha Sapphire - Items_443: 1751998375
       3DS - Pokemon Omega Ruby Alpha Sapphire - Items_385: 678075553
       3DS - Pokemon Omega Ruby Alpha Sapphire - Items_173: 804070881
-      3DS - Pokemon Omega Ruby Alpha Sapphire - Items_125: 1411370766
+      3DS - Pokemon Omega Ruby Alpha Sapphire - Items_478: -856141331
       3DS - Pokemon Omega Ruby Alpha Sapphire - Items_249: -777109682
       3DS - Pokemon Omega Ruby Alpha Sapphire - Items_30: 2122453740
       3DS - Pokemon Omega Ruby Alpha Sapphire - Items_44: 1840555255
@@ -13979,7 +13980,6 @@ TextureImporter:
       3DS - Pokemon Omega Ruby Alpha Sapphire - Items_222: 1722376632
       3DS - Pokemon Omega Ruby Alpha Sapphire - Items_515: -1462387339
       3DS - Pokemon Omega Ruby Alpha Sapphire - Items_407: -1473196521
-      3DS - Pokemon Omega Ruby Alpha Sapphire - Items_478: -856141331
       3DS - Pokemon Omega Ruby Alpha Sapphire - Items_54: 1130567113
       3DS - Pokemon Omega Ruby Alpha Sapphire - Items_68: -1653194031
       3DS - Pokemon Omega Ruby Alpha Sapphire - Items_61: 208886835

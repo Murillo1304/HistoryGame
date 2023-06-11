@@ -1559,6 +1559,8 @@ MonoBehaviour:
   upArrow: {fileID: 1868935555431838048}
   downArrow: {fileID: 6898532240926916069}
   partyScreen: {fileID: 0}
+  moveSelectionUI: {fileID: 0}
+  noItemColor: {r: 0.53333336, g: 0.8470589, b: 0.8470589, a: 1}
 --- !u!1001 &8715701529030685492
 PrefabInstance:
   m_ObjectHideFlags: 0

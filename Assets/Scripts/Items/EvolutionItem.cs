@@ -9,4 +9,6 @@ public class EvolutionItem : ItemBase
     {
         return true;
     }
+
+    public override bool CanUseInBattle => false;
 }

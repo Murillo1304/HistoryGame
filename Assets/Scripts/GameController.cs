@@ -107,6 +107,12 @@ public class GameController : MonoBehaviour
             SavingSystem.i.Load(GlobalSettings.i.SaveSlotName);
             state = GameState.FreeRoam;
         }
+
+        if (GlobalSettings.i.UseInternet)
+        {
+            //Hacer GET y decodificar
+
+        }
     }
 
     public void PauseGame(bool pause)

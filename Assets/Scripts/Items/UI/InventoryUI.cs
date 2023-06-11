@@ -24,6 +24,7 @@ public class InventoryUI : MonoBehaviour
 
     [SerializeField] PartyScreen partyScreen;
     [SerializeField] MoveSelectionUI moveSelectionUI;
+    [SerializeField] Color noItemColor;
 
     Action<ItemBase> onItemUsed;
 
@@ -212,10 +213,19 @@ public class InventoryUI : MonoBehaviour
         }
         else
         {
-            OpenPartyScreen();
+            var playerParty = PlayerController.i.GetComponent<PokemonParty>();
+            if (playerParty.Pokemons.Count > 0)
+            {
+                OpenPartyScreen();
 
-            if(item is TmItem)
-                partyScreen.ShowIfTmIsUsable(item as TmItem);
+                if (item is TmItem)
+                    partyScreen.ShowIfTmIsUsable(item as TmItem);
+            }
+            else
+            {
+                StartCoroutine(DialogManager.Instance.ShowDialogText($"¡No tienes ningún pokemon!"));
+                state = InventoryUIState.ItemSelection;
+            }
         }
     }
 
@@ -321,9 +331,14 @@ public class InventoryUI : MonoBehaviour
 
         if (slots.Count > 0)
         {
+            itemIcon.color = Color.white;
             var item = slots[selectedItem].Item;
             itemIcon.sprite = item.Icon;
             itemDescription.text = item.Description;
+        }
+        else
+        {
+            itemIcon.color = noItemColor;
         }
 
         HandleScrolling();

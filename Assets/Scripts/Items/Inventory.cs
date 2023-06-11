@@ -4,13 +4,14 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 
-public enum ItemCategory { Items, Pokeballs, Tms}
+public enum ItemCategory { Items, Pokeballs, Tms, Key}
 
 public class Inventory : MonoBehaviour, ISavable
 {
     [SerializeField] List<ItemSlot> slots;
     [SerializeField] List<ItemSlot> pokeballSlots;
     [SerializeField] List<ItemSlot> tmSlots;
+    [SerializeField] List<ItemSlot> keySlots;
 
     List<List<ItemSlot>> allSlots;
 
@@ -18,12 +19,12 @@ public class Inventory : MonoBehaviour, ISavable
 
     private void Awake()
     {
-        allSlots = new List<List<ItemSlot>>() { slots, pokeballSlots, tmSlots };
+        allSlots = new List<List<ItemSlot>>() { slots, pokeballSlots, tmSlots, keySlots };
     }
 
     public static List<string> ItemCategories { get; set; } = new List<string>()
     {
-        "ITEMS", "POKEBALLS", "Mts & MOs"
+        "ITEMS", "POKEBALLS", "Mts & MOs", "OBJ. CLAVE"
     };
 
     public List<ItemSlot> GetSlotsByCategory(int categoryIndex)
@@ -114,8 +115,10 @@ public class Inventory : MonoBehaviour, ISavable
             return ItemCategory.Items;
         else if (item is PokeballItem)
             return ItemCategory.Pokeballs;
-        else
+        else if (item is TmItem)
             return ItemCategory.Tms;
+        else
+            return ItemCategory.Key;
     }
 
     public static Inventory GetInventory()
