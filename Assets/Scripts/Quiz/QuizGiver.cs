@@ -7,6 +7,7 @@ public class QuizGiver : MonoBehaviour, ISavable
 {
     [SerializeField] List<QuestionsAndAnswers> QnA;
     [SerializeField] Dialog dialog;
+    [SerializeField] Taxonomia taxonomy;
 
     bool used = false;
 

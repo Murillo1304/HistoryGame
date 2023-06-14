@@ -1,5 +1,7 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting.Antlr3.Runtime.Misc;
 using UnityEngine;
 
 public class QuestionerController : MonoBehaviour, Interactable, ISavable
@@ -15,6 +17,12 @@ public class QuestionerController : MonoBehaviour, Interactable, ISavable
 
     //State
     bool used = false;
+
+    public List<QuestionsAndAnswers> QuestionsAndAnswersList
+    {
+        get { return QnA; }
+        set { QnA = value; }
+    }
 
     private void Awake()
     {
@@ -51,7 +59,9 @@ public class QuestionerController : MonoBehaviour, Interactable, ISavable
         yield return DialogManager.Instance.ShowDialog(dialog);
         used = true;
         fov.gameObject.SetActive(false);
+
         QuizManager.i.Show(QnA);
+
         yield return new WaitUntil(() => QuizManager.i.finishQuiz == true);
         QuizManager.i.Close();
         AudioManager.i.PlayMusic(GameController.Instance.CurrentScene.SceneMusic, fade: true);
@@ -97,15 +107,32 @@ public class QuestionerController : MonoBehaviour, Interactable, ISavable
 
     public object CaptureState()
     {
-        return used;
+        var saveData = new QuestionerSaveData()
+        {
+            usedSave = used,
+            QnASave = QnA,
+        };
+
+        return saveData;
     }
 
     public void RestoreState(object state)
     {
-        used = (bool)state;
-
+        var saveData = state as QuestionerSaveData;
+        used = saveData.usedSave;
         if (used)
             fov.gameObject.SetActive(false);
+        else
+        {
+            QnA = saveData.QnASave;
+        }
     }
+}
+
+[Serializable]
+public class QuestionerSaveData
+{
+    public bool usedSave;
+    public List<QuestionsAndAnswers> QnASave;
 }
 

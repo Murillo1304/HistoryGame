@@ -6,6 +6,7 @@ using UnityEngine;
 public class QuestionsAndAnswers
 {
     public string Question;
+    public string ImageName;
     public string[] Answers;
     public int CorrectAnswer;
 }

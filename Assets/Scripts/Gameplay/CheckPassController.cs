@@ -85,6 +85,9 @@ public class CheckPassController : MonoBehaviour, Interactable, ISavable
         passCheck = (bool)state;
 
         if (passCheck)
+        {
             fov.gameObject.SetActive(false);
+            blocker.gameObject.SetActive(false);
+        }
     }
 }

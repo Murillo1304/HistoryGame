@@ -13,6 +13,7 @@ public class QuizUI : MonoBehaviour
     int currentQuestion = 0;
 
     [SerializeField] Text QuestionTxt;
+    [SerializeField] Image QuestionImage;
     [SerializeField] Text ScoreText;
 
     int totalQuestions = 0;
@@ -87,13 +88,43 @@ public class QuizUI : MonoBehaviour
         if (QnA.Count > 0)
         {
             currentQuestion = Random.Range(0, QnA.Count);
-
+            if (QuestionImage != null && QnA[currentQuestion].ImageName != null)
+                SetImage(QnA[currentQuestion].ImageName);
             QuestionTxt.text = QnA[currentQuestion].Question;
+
             SetAnswer();
         }
         else
         {
             StartCoroutine(GameOver());
         }
+    }
+
+    void SetImage(string nombreImagen)
+    {
+        Debug.Log("Asignando Imagen");
+
+        string absolutePath = System.IO.Path.Combine(Application.streamingAssetsPath, nombreImagen);
+
+        Texture2D texture = LoadTextureFromStreamingAssets(absolutePath);
+
+        if (texture != null)
+        {
+            Sprite newSprite = Sprite.Create(texture, new Rect(0, 0, texture.width, texture.height), Vector2.one * 0.5f);
+
+            QuestionImage.sprite = newSprite;
+
+            QuestionImage.preserveAspect = true;
+        }
+    }
+
+    private Texture2D LoadTextureFromStreamingAssets(string path)
+    {
+        byte[] fileData = System.IO.File.ReadAllBytes(path);
+
+        Texture2D texture = new Texture2D(2, 2);
+        texture.LoadImage(fileData);
+
+        return texture;
     }
 }

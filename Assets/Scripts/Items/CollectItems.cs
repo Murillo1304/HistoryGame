@@ -9,8 +9,7 @@ public class CollectItems : MonoBehaviour, ISavable
     [SerializeField] GameObject blocker;
     Pickup[] pickups;
     int count;
-    int collect = 0;
-    bool Complete = false;
+    int Collect = 0;
 
     private void Awake()
     {
@@ -20,8 +19,8 @@ public class CollectItems : MonoBehaviour, ISavable
 
     public void checkCompleteItems()
     {
-        collect += 1;
-        if (collect == count)
+        Collect += 1;
+        if (Collect == count)
         {
             blocker.SetActive(false);
             StartCoroutine(DialogManager.Instance.ShowDialogText($"¡El paso se ha desbloqueado!"));
@@ -30,13 +29,13 @@ public class CollectItems : MonoBehaviour, ISavable
 
     public object CaptureState()
     {
-        return Complete;
+        return Collect;
     }
 
     public void RestoreState(object state)
     {
-        Complete = (bool)state;
-        if (Complete)
+        Collect = (int)state;
+        if (Collect == count)
         {
             blocker.SetActive(false);
         }
