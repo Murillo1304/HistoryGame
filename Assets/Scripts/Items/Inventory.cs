@@ -133,6 +133,7 @@ public class Inventory : MonoBehaviour, ISavable
             items = slots.Select(i => i.GetSaveData()).ToList(),
             pokeballs = pokeballSlots.Select(i => i.GetSaveData()).ToList(),
             tms = tmSlots.Select(i => i.GetSaveData()).ToList(),
+            key = keySlots.Select(i => i.GetSaveData()).ToList(),
         };
 
         return saveData;
@@ -145,8 +146,9 @@ public class Inventory : MonoBehaviour, ISavable
         slots = saveData.items.Select(i => new ItemSlot(i)).ToList();
         pokeballSlots = saveData.pokeballs.Select(i => new ItemSlot(i)).ToList();
         tmSlots = saveData.tms.Select(i => new ItemSlot(i)).ToList();
+        keySlots = saveData.key.Select(i => new ItemSlot(i)).ToList();
 
-        allSlots = new List<List<ItemSlot>>() { slots, pokeballSlots, tmSlots };
+        allSlots = new List<List<ItemSlot>>() { slots, pokeballSlots, tmSlots, keySlots };
 
         OnUpdated?.Invoke();
     }
@@ -205,4 +207,5 @@ public class InventorySaveData
     public List<ItemSaveData> items;
     public List<ItemSaveData> pokeballs;
     public List<ItemSaveData> tms;
+    public List<ItemSaveData> key;
 }

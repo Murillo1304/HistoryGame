@@ -54,6 +54,8 @@ public class InventoryUI : MonoBehaviour
         UpdateItemList();
 
         inventory.OnUpdated += UpdateItemList;
+
+        itemIcon.sprite = null;
     }
 
     void UpdateItemList()

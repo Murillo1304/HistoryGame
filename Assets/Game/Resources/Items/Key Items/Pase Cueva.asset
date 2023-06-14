@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 771d4b24d9b60074590c8e6d34d580fe, type: 3}
+  m_Name: Pase Cueva
+  m_EditorClassIdentifier: 
+  name: Pase Cueva
+  description: Un pase que te permite ingresar a las cuevas
+  message: 
+  icon: {fileID: 1328702268, guid: ea9e4e5a03c30184895a038c50777800, type: 3}
+  price: 0
+  isSellable: 0

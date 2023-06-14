@@ -40,6 +40,8 @@ public class Pokemon
     public event System.Action OnStatusChanged;
     public event System.Action OnHPChanged;
 
+    public bool hasLevelUp { get; private set; } = false;
+
     public void Init()
     {
         //Generar movimientos
@@ -172,6 +174,7 @@ public class Pokemon
         {
             ++level;
             CalculateStats();
+            hasLevelUp = true;
             return true;
         }
 

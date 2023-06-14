@@ -182,6 +182,12 @@ public class GameController : MonoBehaviour
         StartCoroutine(questioner.TriggerQuiz(playerController));
     }
 
+    public void OnEnterPassCheckerView(CheckPassController checker)
+    {
+        state = GameState.Cutscene;
+        StartCoroutine(checker.TriggerPassChecker(playerController));
+    }
+
     void EndBattle(bool won)
     {
         if(trainer != null && (won == true || battleCanLose == true))

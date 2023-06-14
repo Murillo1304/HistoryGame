@@ -749,8 +749,20 @@ PrefabInstance:
       value: -11.8
       objectReference: {fileID: 0}
     - target: {fileID: 604053221051329526, guid: b35a3070eeddb4544a9021f47fd7103b, type: 3}
+      propertyPath: slots.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 604053221051329526, guid: b35a3070eeddb4544a9021f47fd7103b, type: 3}
+      propertyPath: tmSlots.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 604053221051329526, guid: b35a3070eeddb4544a9021f47fd7103b, type: 3}
       propertyPath: keySlots.Array.size
-      value: 1
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 604053221051329526, guid: b35a3070eeddb4544a9021f47fd7103b, type: 3}
+      propertyPath: pokeballSlots.Array.size
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 604053221051329526, guid: b35a3070eeddb4544a9021f47fd7103b, type: 3}
       propertyPath: slots.Array.data[5].item
@@ -4315,13 +4327,7 @@ MonoBehaviour:
   wildPokemons:
   - pokemon: {fileID: 11400000, guid: 11d1108e38affdf489897d6ae77ae7dc, type: 2}
     levelRange: {x: 2, y: 4}
-    chancePercentage: 70
-  - pokemon: {fileID: 11400000, guid: d759c60d298ea784ca316176a74d6296, type: 2}
-    levelRange: {x: 2, y: 5}
-    chancePercentage: 20
-  - pokemon: {fileID: 11400000, guid: 484379c5482602043a90120019a86dad, type: 2}
-    levelRange: {x: 2, y: 4}
-    chancePercentage: 10
+    chancePercentage: 100
   wildPokemonsInWater: []
   totalChance: 100
   totalChanceWater: -1

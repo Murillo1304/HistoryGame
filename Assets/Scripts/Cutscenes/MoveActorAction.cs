@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using static UnityEditor.Progress;
 
 [System.Serializable]
 public class MoveActorAction : CutsceneAction
@@ -15,6 +16,8 @@ public class MoveActorAction : CutsceneAction
         foreach (var moveVec in movePatterns)
         {
             yield return character.Move(moveVec, checkCollision: false);
+            if (actor.GetIsPlayer())
+                PlayerController.i.OnMoveOver();
         }
     }
 }
@@ -25,5 +28,6 @@ public class CutsceneActor
     [SerializeField] bool isPlayer;
     [SerializeField] Character character;
 
+    public bool GetIsPlayer() => isPlayer;
     public Character GetCharacter() => (isPlayer) ? PlayerController.i.Character : character;
 }

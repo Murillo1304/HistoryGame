@@ -1424,6 +1424,11 @@ MonoBehaviour:
   - rid: 5464443197396615175
   - rid: 5464443197396615179
   - rid: 5464443197396615180
+  - rid: 5464443304907112452
+  - rid: 5464443304907112448
+  - rid: 5464443304907112449
+  - rid: 5464443304907112451
+  - rid: 5464443304907112450
   - rid: 5464443197396615174
   references:
     version: 2
@@ -1529,6 +1534,50 @@ MonoBehaviour:
         name: DisableObjectAction
         waitForCompletion: 1
         go: {fileID: 1507684779}
+    - rid: 5464443304907112448
+      type: {class: DialogueAction, ns: , asm: Assembly-CSharp}
+      data:
+        name: DialogueAction
+        waitForCompletion: 1
+        dialog:
+          lines:
+          - "\xA1Necesitar\xE1s esto para comenzar tu camino!"
+    - rid: 5464443304907112449
+      type: {class: GiveItemAction, ns: , asm: Assembly-CSharp}
+      data:
+        name: GiveItemAction
+        waitForCompletion: 1
+        items:
+        - item: {fileID: 11400000, guid: 767f8f0282802ec48a9e8cab6dbc52eb, type: 2}
+          count: 5
+    - rid: 5464443304907112450
+      type: {class: GiveKeyItemAction, ns: , asm: Assembly-CSharp}
+      data:
+        name: GiveKeyItemAction
+        waitForCompletion: 1
+        passCave: {fileID: 11400000, guid: c87db755d4df47846bc52adde328bd3e, type: 2}
+        passLake: {fileID: 11400000, guid: 8a11ea5c6097d6341960edee5d033929, type: 2}
+        passForest: {fileID: 11400000, guid: 201bb6c86a71be149b96ed8778afeaa9, type: 2}
+        passMountain: {fileID: 11400000, guid: d47872683f825064c9c3dee475314383, type: 2}
+        passCity: {fileID: 11400000, guid: cde6aa82f655c3a4c8da4a509f291e20, type: 2}
+    - rid: 5464443304907112451
+      type: {class: DialogueAction, ns: , asm: Assembly-CSharp}
+      data:
+        name: DialogueAction
+        waitForCompletion: 1
+        dialog:
+          lines:
+          - "\xA1Adem\xE1s toma estos pases!"
+          - "\xA1Con esto podr\xE1s visitar varios lugares!"
+    - rid: 5464443304907112452
+      type: {class: TurnActorAction, ns: , asm: Assembly-CSharp}
+      data:
+        name: TurnActorAction
+        waitForCompletion: 1
+        actor:
+          isPlayer: 1
+          character: {fileID: 0}
+        direction: 0
 --- !u!1001 &1058617555
 PrefabInstance:
   m_ObjectHideFlags: 0

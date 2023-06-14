@@ -48,8 +48,16 @@ public class CutsceneEditor : Editor
                 cutscene.AddAction(new TrainerBattleAction());
             else if (GUILayout.Button("Delay Seconds"))
                 cutscene.AddAction(new DelayAction());
-            else if (GUILayout.Button("Teleport Player"))
+        }
+
+        using (var scope = new GUILayout.HorizontalScope())
+        {
+            if (GUILayout.Button("Teleport Player"))
                 cutscene.AddAction(new TeleportPlayerAction());
+            else if (GUILayout.Button("Give Item"))
+                cutscene.AddAction(new GiveItemAction());
+            else if (GUILayout.Button("Give Pass"))
+                cutscene.AddAction(new GiveKeyItemAction());
         }
 
         base.OnInspectorGUI();

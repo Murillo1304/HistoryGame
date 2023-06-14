@@ -7,6 +7,13 @@ public class GlobalSettings : MonoBehaviour
     [SerializeField] Color highlightedColor;
     [SerializeField] Color answerBoxColor;
 
+    //Configuracio Zonas
+    public bool goCave { get; set; } = true;
+    public bool goLake { get; set; } = true;
+    public bool goForest { get; set; } = false;
+    public bool goMountain { get; set; } = false;
+    public bool goCity { get; set; } = false;
+
     public bool UseInternet { get; set; } = false;
 
     public string SaveSlotName { get; set; } = null;
