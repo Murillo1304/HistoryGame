@@ -33,9 +33,9 @@ public class QuestionAsigner : MonoBehaviour, ISavable
 
         if (activity == Actividad.Actividad01)
             if (taxonomy == Taxonomia.Entender)
-                questions = CopyQuestionsEntender(QuestionLoader.i.jsonQuestions.act01.entender);
+                questions = CopyQuestions(QuestionLoader.i.jsonQuestions.act01.entender);
             else if (taxonomy == Taxonomia.Aplicar)
-                questions = CopyQuestionsAplicar(QuestionLoader.i.jsonQuestions.act01.aplicar);
+                questions = CopyQuestions(QuestionLoader.i.jsonQuestions.act01.aplicar);
 
         foreach (var questioner in questioners)
         {
@@ -72,33 +72,11 @@ public class QuestionAsigner : MonoBehaviour, ISavable
         }
     }
 
-    public List<QuestionsAndAnswers> CopyQuestionsEntender(List<PreguntaEntender> original)
+    public List<QuestionsAndAnswers> CopyQuestions(List<Pregunta> original)
     {
         List<QuestionsAndAnswers> copiaPreguntas = new List<QuestionsAndAnswers>();
 
-        foreach (PreguntaEntender preguntaOriginal in original)
-        {
-            QuestionsAndAnswers preguntaCopia = new QuestionsAndAnswers();
-            preguntaCopia.Question = preguntaOriginal.pregunta;
-
-            // Combina las opciones al azar
-            preguntaCopia.Answers = preguntaOriginal.opciones.OrderBy(opcion => UnityEngine.Random.value).ToArray();
-
-            // Cambia el índice de respuesta a la respuesta correcta
-            int indiceRespuestaCorrecta = Array.IndexOf(preguntaCopia.Answers, preguntaOriginal.opciones[preguntaOriginal.respuesta-1]);
-            preguntaCopia.CorrectAnswer = indiceRespuestaCorrecta + 1;
-
-            copiaPreguntas.Add(preguntaCopia);
-        }
-
-        return copiaPreguntas;
-    }
-
-    public List<QuestionsAndAnswers> CopyQuestionsAplicar(List<PreguntaAplicar> original)
-    {
-        List<QuestionsAndAnswers> copiaPreguntas = new List<QuestionsAndAnswers>();
-
-        foreach (PreguntaAplicar preguntaOriginal in original)
+        foreach (Pregunta preguntaOriginal in original)
         {
             QuestionsAndAnswers preguntaCopia = new QuestionsAndAnswers();
             preguntaCopia.Question = preguntaOriginal.pregunta;

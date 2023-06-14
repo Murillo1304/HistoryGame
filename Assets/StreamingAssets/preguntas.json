@@ -3,6 +3,7 @@
     "entender": [
       {
         "pregunta": "No es una leyenda o mito que trata de explicar el origen de la cultura inca:",
+        "imagen": "",
         "opciones": [
           "La leyenda de los Hermanos Ayar",
           "La leyenda de Manco Capac y Mama Ocllo",
@@ -13,6 +14,7 @@
       },
       {
         "pregunta": "La Leyenda de Manco Cápac y Mama Ocllo escrita por el Inca Garcilaso de la Vega la encontramos en su obra:",
+        "imagen": "",
         "opciones": [
           "La Florida del Inca",
           "Don Quijote de la Mancha",
@@ -23,6 +25,7 @@
       },
       {
         "pregunta": "El Imperio del Tahuantinsuyo en ambas leyenda nos da a conocer que se fundó en el Cerro:",
+        "imagen": "",
         "opciones": [
           "Huanacaure",
           "Pichu Pichu",
@@ -33,6 +36,7 @@
       },
       {
         "pregunta": "El personaje legendario que funda la cultura Inca fue:",
+        "imagen": "",
         "opciones": [
           "Sinchi Roca",
           "Pachacútec",

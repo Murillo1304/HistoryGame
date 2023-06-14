@@ -29,15 +29,7 @@ public class QuestionLoader : MonoBehaviour
 }
 
 [System.Serializable]
-public class PreguntaEntender
-{
-    public string pregunta;
-    public string[] opciones;
-    public int respuesta;
-}
-
-[System.Serializable]
-public class PreguntaAplicar
+public class Pregunta
 {
     public string pregunta;
     public string imagen;
@@ -48,8 +40,8 @@ public class PreguntaAplicar
 [System.Serializable]
 public class Act01
 {
-    public List<PreguntaEntender> entender;
-    public List<PreguntaAplicar> aplicar;
+    public List<Pregunta> entender;
+    public List<Pregunta> aplicar;
 }
 
 [System.Serializable]
