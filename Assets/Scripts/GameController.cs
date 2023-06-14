@@ -17,7 +17,11 @@ public class GameController : MonoBehaviour
     [SerializeField] GameObject buttonA;
     [SerializeField] GameObject buttonB;
     [SerializeField] GameObject buttonDpad;
-    
+
+    [Header("Audio")]
+    [SerializeField] AudioClip wildBattleMusic;
+    [SerializeField] AudioClip trainerBattleMusic;
+
     GameState state;
     GameState prevState;
     GameState stateBeforeEvolution;
@@ -138,12 +142,16 @@ public class GameController : MonoBehaviour
         state = GameState.FreeRoam;
     }
 
-    public void StartBattle(BattleTrigger trigger)
+    public IEnumerator StartBattle(BattleTrigger trigger)
     {
         state = GameState.Battle;
         buttonMenu.SetActive(false);
-        battleSystem.gameObject.SetActive(true);
+        AudioManager.i.PlayMusic(wildBattleMusic);
+        yield return Fader.i.BlinkEffect();
         worldCamera.gameObject.SetActive(false);
+        battleSystem.gameObject.SetActive(true);
+
+        StartCoroutine(Fader.i.FadeOut(1f));
 
         var playerParty = playerController.GetComponent<PokemonParty>();
         var wildPokemon = CurrentScene.GetComponent<MapArea>().GetRandomWildPokemon(trigger);
@@ -156,12 +164,16 @@ public class GameController : MonoBehaviour
     public TrainerController trainer { get; set; }
     public bool battleCanLose { get; set; } = false;
 
-    public void StartTrainerBattle(TrainerController trainer)
+    public IEnumerator StartTrainerBattle(TrainerController trainer)
     {
         state = GameState.Battle;
         buttonMenu.SetActive(false);
-        battleSystem.gameObject.SetActive(true);
+        AudioManager.i.PlayMusic(trainerBattleMusic);
+        yield return Fader.i.BlinkEffect();
         worldCamera.gameObject.SetActive(false);
+        battleSystem.gameObject.SetActive(true);
+
+        StartCoroutine(Fader.i.FadeOut(1f));
 
         this.trainer = trainer;
         var playerParty = playerController.GetComponent<PokemonParty>();

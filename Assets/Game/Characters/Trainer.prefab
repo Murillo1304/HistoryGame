@@ -185,6 +185,7 @@ MonoBehaviour:
   - {fileID: 2008611861, guid: 1238901a3d189034aa8d4921e972928f, type: 3}
   - {fileID: 1098140134, guid: 1238901a3d189034aa8d4921e972928f, type: 3}
   - {fileID: -2098266462, guid: 1238901a3d189034aa8d4921e972928f, type: 3}
+  surfSprites: []
   defauldDirection: 1
 --- !u!114 &2690925321196277517
 MonoBehaviour:
@@ -382,7 +383,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1298850309
   m_SortingLayer: 2
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: -1102207778, guid: 3ae12697ae504414bbf0797ea36dfddd, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0

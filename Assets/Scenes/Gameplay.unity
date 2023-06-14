@@ -1487,6 +1487,14 @@ PrefabInstance:
       propertyPath: partyScreen
       value: 
       objectReference: {fileID: 1093150331}
+    - target: {fileID: 1765609568362444574, guid: b35a3070eeddb4544a9021f47fd7103b, type: 3}
+      propertyPath: wildBattleMusic
+      value: 
+      objectReference: {fileID: 8300000, guid: ccaa7f93fb1aa6f4cbed8705844c0b93, type: 3}
+    - target: {fileID: 1765609568362444574, guid: b35a3070eeddb4544a9021f47fd7103b, type: 3}
+      propertyPath: trainerBattleMusic
+      value: 
+      objectReference: {fileID: 8300000, guid: c58b916565114324e944578a8ad54ce3, type: 3}
     - target: {fileID: 1765609568415736897, guid: b35a3070eeddb4544a9021f47fd7103b, type: 3}
       propertyPath: m_Offset.y
       value: -0.3

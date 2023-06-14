@@ -27,8 +27,6 @@ public class BattleSystem : MonoBehaviour
     [SerializeField] InventoryUI inventoryUI;
 
     [Header("Audio")]
-    [SerializeField] AudioClip wildBattleMusic;
-    [SerializeField] AudioClip trainerBattleMusic;
     [SerializeField] AudioClip battleVictoryMusic;
 
     [Header("Background Images")]
@@ -77,8 +75,6 @@ public class BattleSystem : MonoBehaviour
 
         battleTrigger = trigger;
 
-        AudioManager.i.PlayMusic(wildBattleMusic);
-
         StartCoroutine(SetupBattle());
     }
 
@@ -96,8 +92,6 @@ public class BattleSystem : MonoBehaviour
         trainer = trainerParty.GetComponent<TrainerController>();
 
         battleTrigger = trigger;
-
-        AudioManager.i.PlayMusic(trainerBattleMusic);
 
         StartCoroutine(SetupBattle());
     }

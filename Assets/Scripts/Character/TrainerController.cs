@@ -41,7 +41,7 @@ public class TrainerController : MonoBehaviour, Interactable, ISavable
             AudioManager.i.PlayMusic(trainerAppearsClip);
 
             yield return DialogManager.Instance.ShowDialog(dialog);
-            GameController.Instance.StartTrainerBattle(this);
+            StartCoroutine(GameController.Instance.StartTrainerBattle(this));
         }
         else
         {
@@ -56,7 +56,7 @@ public class TrainerController : MonoBehaviour, Interactable, ISavable
             AudioManager.i.PlayMusic(trainerAppearsClip);
 
             yield return DialogManager.Instance.ShowDialog(dialog);
-            GameController.Instance.StartTrainerBattle(this);
+            yield return GameController.Instance.StartTrainerBattle(this);
         }
     }
 
@@ -78,7 +78,7 @@ public class TrainerController : MonoBehaviour, Interactable, ISavable
 
         //Mostrar texto
         yield return DialogManager.Instance.ShowDialog(dialog);
-        GameController.Instance.StartTrainerBattle(this);
+        StartCoroutine(GameController.Instance.StartTrainerBattle(this));
     }
 
     public void BattleLost()
