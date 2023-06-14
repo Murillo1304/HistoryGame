@@ -53,6 +53,28 @@
           "Uruguay"
         ],
         "respuesta": 3
+      },
+      {
+        "pregunta": "¿Cuál de estos animales no es autóctono del Perú?",
+        "imagen": "pregunta18.png",
+        "opciones": [
+          "1 y 2",
+          "Solo 3",
+          "2 y 4",
+          "Solo 1"
+        ],
+        "respuesta": 3
+      },
+      {
+        "pregunta": "Tahuantinsuyo significa:",
+        "imagen": "",
+        "opciones": [
+          "Los cuatros suyos",
+          "Las cuatro regiones del sol",
+          "Imperio de los Incas",
+          "Legendario Imperio Inca"
+        ],
+        "respuesta": 2
       }
     ]
   }

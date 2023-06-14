@@ -28,7 +28,7 @@ public class Fader : MonoBehaviour
     public IEnumerator BlinkEffect()
     {
         float blinkDuration = 0.25f;
-        int blinkCount = 5;
+        int blinkCount = 4;
 
         var blinkSequence = DOTween.Sequence();
         for (int i = 0; i < blinkCount; i++)

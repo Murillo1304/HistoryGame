@@ -22,7 +22,7 @@ public class QuizManager : MonoBehaviour
         i = this;
     }
 
-    public void Show(List<QuestionsAndAnswers> quizList)
+    public void Show(List<QuestionsAndAnswers> quizList, Taxonomia taxonomy)
     {
         finishQuiz = false;
         quizStart?.Invoke();
@@ -30,9 +30,9 @@ public class QuizManager : MonoBehaviour
         bool containsImage = quizList.Any(item => item.ImageName != null);
 
         if (!containsImage)
-            quiz.ShowQuiz(quizList);
+            quiz.ShowQuiz(quizList, taxonomy);
         else
-            quizImage.ShowQuiz(quizList);
+            quizImage.ShowQuiz(quizList, taxonomy);
     }
 
     public void Close()

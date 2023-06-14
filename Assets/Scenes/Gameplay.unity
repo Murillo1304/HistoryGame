@@ -4609,6 +4609,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   highlightedColor: {r: 0.04045032, g: 0.32067835, b: 0.9528302, a: 1}
   answerBoxColor: {r: 0.25490198, g: 0.25490198, b: 0.25490198, a: 1}
+  answerCorrect: {r: 0.253115, g: 0.6792453, b: 0.35814595, a: 1}
+  answerWrong: {r: 0.8396226, g: 0.1544589, b: 0.1544589, a: 1}
+  timeQuestions: 10
 --- !u!114 &1049437706
 MonoBehaviour:
   m_ObjectHideFlags: 0

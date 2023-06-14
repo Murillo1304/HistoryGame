@@ -39,6 +39,7 @@ public class QuestionAsigner : MonoBehaviour, ISavable
 
         foreach (var questioner in questioners)
         {
+            questioner.taxonomy = taxonomy;
             questioner.QuestionsAndAnswersList = GetRandomQuestion();
         }
     }
@@ -101,7 +102,9 @@ public class QuestionAsigner : MonoBehaviour, ISavable
         {
             QuestionsAndAnswers preguntaCopia = new QuestionsAndAnswers();
             preguntaCopia.Question = preguntaOriginal.pregunta;
-            preguntaCopia.ImageName = preguntaOriginal.imagen;
+
+            if(preguntaOriginal.imagen != "")
+                preguntaCopia.ImageName = preguntaOriginal.imagen;
 
             // Combina las opciones al azar
             preguntaCopia.Answers = preguntaOriginal.opciones.OrderBy(opcion => UnityEngine.Random.value).ToArray();

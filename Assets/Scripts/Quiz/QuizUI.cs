@@ -1,3 +1,5 @@
+using DG.Tweening;
+using DG.Tweening.Core;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -8,6 +10,8 @@ public class QuizUI : MonoBehaviour
     [SerializeField] GameObject quizPanel;
     [SerializeField] GameObject resultsPanel;
     [SerializeField] GameObject[] options;
+    [SerializeField] GameObject timePanel;
+    [SerializeField] GameObject timeBar;
 
     List<QuestionsAndAnswers> QnA;
     int currentQuestion = 0;
@@ -19,35 +23,70 @@ public class QuizUI : MonoBehaviour
     int totalQuestions = 0;
     int score = 0;
 
-    public void ShowQuiz(List<QuestionsAndAnswers> quiz)
+    Tween animacion;
+
+    public void ShowQuiz(List<QuestionsAndAnswers> quiz, Taxonomia taxonomy)
     {
-        score= 0;
+        score = 0;
         QnA = quiz;
         totalQuestions = QnA.Count;
         GenerateQuestion();
         gameObject.SetActive(true);
         quizPanel.SetActive(true);
         resultsPanel.SetActive(false);
+
+        if (taxonomy == Taxonomia.Aplicar)
+        {
+            timePanel.gameObject.SetActive(true);
+            timeBar.transform.localScale = new Vector3(1f, 1f);
+            StartCoroutine(StartCountdown());
+        }
+        else
+        {
+            timePanel.gameObject.SetActive(false);
+        }
     }
 
-    public IEnumerator GameOver()
+    IEnumerator StartCountdown()
+    {
+        float timeRemaining = GlobalSettings.i.TimeQuestions;
+        animacion = timeBar.transform.DOScaleX(0, timeRemaining);
+        animacion.OnComplete(() =>
+        {
+            //Se terminó el tiempo
+            options[QnA[currentQuestion].CorrectAnswer - 1].GetComponent<Image>().color = GlobalSettings.i.AnswerCorrect;
+            QnA.RemoveAt(currentQuestion);
+            StartCoroutine(WaitForNext());
+        });
+        yield return animacion.WaitForCompletion();
+    }
+
+    public void ExitQuiz()
+    {
+        QuizManager.i.finishQuiz = true;
+    }
+
+    public IEnumerator SeeScore()
     {
         quizPanel.SetActive(false);
         resultsPanel.SetActive(true);
         ScoreText.text = "Score: " + score + "/" + totalQuestions;
-        yield return new WaitForSeconds(1.5f);
+        yield return new WaitForSeconds(1f);
         QuizManager.i.finishQuiz = true;
     }
 
     public void Correct()
     {
         score += 1;
+        if(animacion != null) animacion.Kill();
         QnA.RemoveAt(currentQuestion);
         StartCoroutine(WaitForNext());
     }
 
     public void Wrong()
     {
+        if (animacion != null) animacion.Kill();
+        options[QnA[currentQuestion].CorrectAnswer - 1].GetComponent<Image>().color = GlobalSettings.i.AnswerCorrect;
         QnA.RemoveAt(currentQuestion);
         StartCoroutine(WaitForNext());
     }
@@ -55,7 +94,7 @@ public class QuizUI : MonoBehaviour
     IEnumerator WaitForNext()
     {
         SetRunningCoroutine(true);
-        yield return new WaitForSeconds(1);
+        yield return new WaitForSeconds(2f);
         GenerateQuestion();
         SetRunningCoroutine(false);
     }
@@ -96,14 +135,12 @@ public class QuizUI : MonoBehaviour
         }
         else
         {
-            StartCoroutine(GameOver());
+            ExitQuiz();
         }
     }
 
     void SetImage(string nombreImagen)
     {
-        Debug.Log("Asignando Imagen");
-
         string absolutePath = System.IO.Path.Combine(Application.streamingAssetsPath, nombreImagen);
 
         Texture2D texture = LoadTextureFromStreamingAssets(absolutePath);

@@ -15,13 +15,13 @@ public class AnswerScript : MonoBehaviour
         {
             if (isCorrect)
             {
-                GetComponent<Image>().color = Color.green;
+                GetComponent<Image>().color = GlobalSettings.i.AnswerCorrect;
                 Debug.Log("Correcto");
                 quizUI.Correct();
             }
             else
             {
-                GetComponent<Image>().color = Color.red;
+                GetComponent<Image>().color = GlobalSettings.i.AnswerWrong;
                 Debug.Log("Incorrecto");
                 quizUI.Wrong();
             }

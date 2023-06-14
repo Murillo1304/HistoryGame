@@ -15,7 +15,7 @@ public class QuizGiver : MonoBehaviour, ISavable
     {
         yield return DialogManager.Instance.ShowDialog(dialog);
         used = true;
-        QuizManager.i.Show(QnA);
+        QuizManager.i.Show(QnA, taxonomy);
         yield return new WaitUntil(() => QuizManager.i.finishQuiz == true);
         QuizManager.i.Close();
     }
