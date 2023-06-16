@@ -1,0 +1,45 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 55eb119118472dd42a727667cfd82ca1, type: 3}
+  m_Name: Alqui
+  m_EditorClassIdentifier: 
+  name: Alqo
+  description: 
+  frontSprite: {fileID: 21300000, guid: 252d490e6ee5a6b418177ca3b41e54aa, type: 3}
+  backSprite: {fileID: 21300000, guid: c07690e197fe0b049ac5a1b19efda1ba, type: 3}
+  type1: 4
+  type2: 0
+  maxHp: 39
+  attack: 52
+  defense: 43
+  spAttack: 60
+  spDefense: 50
+  speed: 65
+  expYield: 120
+  growthRate: 3
+  catchRate: 45
+  learnableMoves:
+  - moveBase: {fileID: 11400000, guid: 74d33be41b65f5345954f2e452394c28, type: 2}
+    level: 1
+  - moveBase: {fileID: 11400000, guid: 771624cfde7dc0d468cf8314cbbb5529, type: 2}
+    level: 4
+  - moveBase: {fileID: 11400000, guid: f02b44bd2c5a9c142b493fb9ea755562, type: 2}
+    level: 7
+  - moveBase: {fileID: 11400000, guid: 7a704294dee5d6e49a23f5fb8d0ff54a, type: 2}
+    level: 8
+  learnableByItems:
+  - {fileID: 11400000, guid: 40dc725a5fb587e429cfe3e1ef20a9e4, type: 2}
+  - {fileID: 11400000, guid: 7ebd50933d8fb0a4b9d12623d828945c, type: 2}
+  evolutions:
+  - evolvesInto: {fileID: 11400000, guid: cb6bb765d8fb5f74493489448e7e46e0, type: 2}
+    requiredLevel: 14
+    requiredItem: {fileID: 0}

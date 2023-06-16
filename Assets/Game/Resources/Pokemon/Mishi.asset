@@ -1,0 +1,45 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 55eb119118472dd42a727667cfd82ca1, type: 3}
+  m_Name: Mishi
+  m_EditorClassIdentifier: 
+  name: Mishi
+  description: 
+  frontSprite: {fileID: 21300000, guid: 648d9bd88e3b1a34c8107c2bde44967b, type: 3}
+  backSprite: {fileID: 21300000, guid: 0e801dca4f309b34f907d4acd996c6cb, type: 3}
+  type1: 9
+  type2: 0
+  maxHp: 39
+  attack: 52
+  defense: 43
+  spAttack: 60
+  spDefense: 50
+  speed: 65
+  expYield: 120
+  growthRate: 3
+  catchRate: 45
+  learnableMoves:
+  - moveBase: {fileID: 11400000, guid: 74d33be41b65f5345954f2e452394c28, type: 2}
+    level: 1
+  - moveBase: {fileID: 11400000, guid: 771624cfde7dc0d468cf8314cbbb5529, type: 2}
+    level: 4
+  - moveBase: {fileID: 11400000, guid: f02b44bd2c5a9c142b493fb9ea755562, type: 2}
+    level: 7
+  - moveBase: {fileID: 11400000, guid: 3f5bdb5080a3c3e4bbdf3971f1dba3c0, type: 2}
+    level: 8
+  learnableByItems:
+  - {fileID: 11400000, guid: 40dc725a5fb587e429cfe3e1ef20a9e4, type: 2}
+  - {fileID: 11400000, guid: 7ebd50933d8fb0a4b9d12623d828945c, type: 2}
+  evolutions:
+  - evolvesInto: {fileID: 11400000, guid: ff0d0eae8c0cb314382e94d64ed9752e, type: 2}
+    requiredLevel: 14
+    requiredItem: {fileID: 0}

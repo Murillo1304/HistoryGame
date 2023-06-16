@@ -58,6 +58,8 @@ public class CutsceneEditor : Editor
                 cutscene.AddAction(new GiveItemAction());
             else if (GUILayout.Button("Give Pass"))
                 cutscene.AddAction(new GiveKeyItemAction());
+            else if (GUILayout.Button("Healer"))
+                cutscene.AddAction(new HealerAction());
         }
 
         base.OnInspectorGUI();

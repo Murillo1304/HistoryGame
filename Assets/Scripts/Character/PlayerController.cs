@@ -40,7 +40,6 @@ public class PlayerController : MonoBehaviour, ISavable
 
             if(input != Vector2.zero)
             {
-                //Debug.Log("X: " + input.x + "Y: " + input.y);
                 StartCoroutine(character.Move(input, OnMoveOver));
             }
         }
@@ -94,7 +93,8 @@ public class PlayerController : MonoBehaviour, ISavable
         {
             position = new float[] { transform.position.x, transform.position.y },
             pokemons = GetComponent<PokemonParty>().Pokemons.Select(p => p.GetSaveData()).ToList(),
-            positionHealer = new float[] { positionHealer.x, positionHealer.y}
+            positionHealer = new float[] { positionHealer.x, positionHealer.y },
+            isSurfing = character.Animator.IsSurfing
         };
 
         return saveData;
@@ -114,6 +114,10 @@ public class PlayerController : MonoBehaviour, ISavable
         //Restaurar posicion healer
         var posHealer = saveData.positionHealer;
         positionHealer = new Vector3(posHealer[0], posHealer[1]);
+
+        //Restaurar isSurfing
+        var surfing = saveData.isSurfing;
+        character.Animator.IsSurfing = surfing;
     }
 
     public string Name
@@ -135,4 +139,5 @@ public class PlayerSaveData
     public float[] position;
     public List<PokemonSaveData> pokemons;
     public float[] positionHealer;
+    public bool isSurfing;
 }

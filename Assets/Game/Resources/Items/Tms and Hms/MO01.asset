@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: MO01
   m_EditorClassIdentifier: 
   name: MO01
-  description: "Ense\xF1ar el movimiento Corte a un pokemon"
+  description: "Ense\xF1ar el movimiento Corte a un hatun"
   message: 
   icon: {fileID: 2095353651, guid: ea9e4e5a03c30184895a038c50777800, type: 3}
   price: 0

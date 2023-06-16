@@ -1,0 +1,188 @@
+{
+  "act01": {
+    "entender": [
+      {
+        "pregunta": "No es una leyenda o mito que trata de explicar el origen de la cultura inca:",
+        "imagen": "",
+        "opciones": [
+          "La leyenda de los Hermanos Ayar",
+          "La leyenda de Manco Capac y Mama Ocllo",
+          "La leyenda de Machu Picchu",
+          "La leyenda del Lago Titicaca"
+        ],
+        "respuesta": 3
+      },
+      {
+        "pregunta": "La Leyenda de Manco Cápac y Mama Ocllo escrita por el Inca Garcilaso de la Vega la encontramos en su obra:",
+        "imagen": "",
+        "opciones": [
+          "La Florida del Inca",
+          "Don Quijote de la Mancha",
+          "Suma y narración de los Incas",
+          "Los Comentarios Reales"
+        ],
+        "respuesta": 4
+      },
+      {
+        "pregunta": "El Imperio del Tahuantinsuyo en ambas leyendas nos da a conocer que se fundó en el Cerro:",
+        "imagen": "",
+        "opciones": [
+          "Huanacaure",
+          "Pichu Pichu",
+          "Machu Picchu",
+          "Los siete colores"
+        ],
+        "respuesta": 1
+      },
+      {
+        "pregunta": "El personaje legendario que funda la cultura Inca fue:",
+        "imagen": "",
+        "opciones": [
+          "Sinchi Roca",
+          "Pachacútec",
+          "Ayar Uchu",
+          "Manco Cápac"
+        ],
+        "respuesta": 4
+      }
+    ],
+    "aplicar": [
+      {
+        "pregunta": "Observa el mapa de Sudamérica y responde que país sí formó parte del Imperio del Tahuantinsuyo",
+        "imagen": "pregunta5",
+        "opciones": [
+          "Paraguay",
+          "Venezuela",
+          "Bolivia",
+          "Uruguay"
+        ],
+        "respuesta": 3
+      },
+      {
+        "pregunta": "En el Mapa de Sudamérica se muestra la extensión que alcanzo el Imperio Inca. Identifique que suyo representa el de color rojo",
+        "imagen": "pregunta6",
+        "opciones": [
+          "Chinchaysuyo",
+          "Contisuyo",
+          "Collasuyo",
+          "Antisuyo"
+        ],
+        "respuesta": 1
+      },
+      {
+        "pregunta": "Tahuantinsuyo significa:",
+        "imagen": "",
+        "opciones": [
+          "Los cuatros suyos",
+          "Las cuatro regiones del sol",
+          "Imperio de los Incas",
+          "Legendario Imperio Inca"
+        ],
+        "respuesta": 2
+      },
+      {
+        "pregunta": "En el grafico fue el Centro de los Cuatro Suyos u Ombligo del Mundo Andino",
+        "imagen": "pregunta8",
+        "opciones": [
+          "Puno",
+          "Arequipa",
+          "Cusco",
+          "Ayacucho"
+        ],
+        "respuesta": 3
+      }
+    ],
+    "analizar": [
+      {
+        "pregunta": "¿Cómo se llamaba, en el incanato, aquel funcionario al traducir su nombre significa \"el que todo lo ve\"?",
+        "imagen": "",
+        "opciones": [
+          "Apunchic",
+          "Curaca",
+          "Apocuna",
+          "Tucuy Ricoc"
+        ],
+        "respuesta": 4
+      },
+      {
+        "pregunta": "Representaba el jefe máximo del imperio (con poder absoluto), considerado hijo del sol, señor de la tierra ordenador del mundo",
+        "imagen": "",
+        "opciones": [
+          "Auqui",
+          "Inca",
+          "Apunchic",
+          "Curaca"
+        ],
+        "respuesta": 2
+      },
+      {
+        "pregunta": "Era el escogido del Inca como su heredero, secundaba a su padre en el gobierno",
+        "imagen": "",
+        "opciones": [
+          "Auqui",
+          "Inca",
+          "Coya",
+          "Curaca"
+        ],
+        "respuesta": 1
+      },
+      {
+        "pregunta": "En la Pirámide de organización social del incanato analiza cual es el orden correcto de los grupos sociales",
+        "imagen": "pregunta12",
+        "opciones": [
+          "1.Nobleza 2.Realeza 3.Pueblo",
+          "1.Pueblo 2.Realeza 3.Nobleza",
+          "1.Realeza 2.Pueblo 3.Nobleza",
+          "1.Realeza 2.Nobleza 3.Pueblo"
+        ],
+        "respuesta": 4
+      },
+      {
+        "pregunta": "Era la esposa principal del Inca, madre del príncipe heredero del trono",
+        "imagen": "",
+        "opciones": [
+          "Coya",
+          "Acllas",
+          "Concubinas",
+          "Vírgenes del Sol"
+        ],
+        "respuesta": 1
+      },
+      {
+        "pregunta": "Fue la principal actividad económica realizada por los habitantes del Tahuantinsuyo",
+        "imagen": "",
+        "opciones": [
+          "Minería",
+          "Ganadería",
+          "Pesca",
+          "Agricultura"
+        ],
+        "respuesta": 4
+      }
+    ],
+    "evaluar": [
+      {
+        "pregunta": "La fragmentación del Imperio a la llegada de los españoles se debió a:",
+        "imagen": "",
+        "opciones": [
+          "Expansión del Imperio incaico",
+          "La guerra civil inca",
+          "La guerra contra los Chancas",
+          "Conflictos políticos"
+        ],
+        "respuesta": 2
+      },
+      {
+        "pregunta": "Es una de las causas que dio origen a la caída del imperio del Tahuantinsuyo",
+        "imagen": "",
+        "opciones": [
+          "La guerra civil entre Húascar y Atahualpa",
+          "Superioridad religiosa",
+          "Superioridad en el idioma",
+          "El inca no tenía heredero"
+        ],
+        "respuesta": 1
+      }
+    ]
+  }
+}

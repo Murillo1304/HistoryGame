@@ -1,0 +1,47 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 55eb119118472dd42a727667cfd82ca1, type: 3}
+  m_Name: Amaru
+  m_EditorClassIdentifier: 
+  name: Amaru
+  description: 
+  frontSprite: {fileID: 21300000, guid: f922005b074c5ce428b719a5e2c13575, type: 3}
+  backSprite: {fileID: 21300000, guid: 396c28d6976ca0e4cb789588b7e177a3, type: 3}
+  type1: 8
+  type2: 0
+  maxHp: 40
+  attack: 45
+  defense: 40
+  spAttack: 35
+  spDefense: 35
+  speed: 56
+  expYield: 120
+  growthRate: 3
+  catchRate: 255
+  learnableMoves:
+  - moveBase: {fileID: 11400000, guid: 846a1e2b1dd4bc940b370bde60c0bb85, type: 2}
+    level: 1
+  - moveBase: {fileID: 11400000, guid: f02b44bd2c5a9c142b493fb9ea755562, type: 2}
+    level: 3
+  - moveBase: {fileID: 11400000, guid: 7ac84c5bcf973a64bba40a73e906d83b, type: 2}
+    level: 7
+  - moveBase: {fileID: 11400000, guid: 5e42aaab87789e140a965e88a83842cd, type: 2}
+    level: 10
+  - moveBase: {fileID: 11400000, guid: fb9e44a38b817974ea9e37229821e91e, type: 2}
+    level: 12
+  learnableByItems:
+  - {fileID: 11400000, guid: f02b44bd2c5a9c142b493fb9ea755562, type: 2}
+  - {fileID: 11400000, guid: 846a1e2b1dd4bc940b370bde60c0bb85, type: 2}
+  evolutions:
+  - evolvesInto: {fileID: 11400000, guid: 2cc840e7f1946df4c9852c106f18880c, type: 2}
+    requiredLevel: 13
+    requiredItem: {fileID: 0}

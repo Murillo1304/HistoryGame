@@ -730,10 +730,78 @@ PrefabInstance:
       propertyPath: dialog.lines.Array.data[0]
       value: Luces cansado. Tomate un descanso.
       objectReference: {fileID: 0}
+    - target: {fileID: 1175979326573501971, guid: 5573b881b175cc04dbc7669dc038c0a9, type: 3}
+      propertyPath: walkUpSprites.Array.data[0]
+      value: 
+      objectReference: {fileID: -1284262203, guid: 8144ea61ef1255345ae7f6b34d9fb950, type: 3}
+    - target: {fileID: 1175979326573501971, guid: 5573b881b175cc04dbc7669dc038c0a9, type: 3}
+      propertyPath: walkUpSprites.Array.data[1]
+      value: 
+      objectReference: {fileID: -1079333198, guid: 8144ea61ef1255345ae7f6b34d9fb950, type: 3}
+    - target: {fileID: 1175979326573501971, guid: 5573b881b175cc04dbc7669dc038c0a9, type: 3}
+      propertyPath: walkUpSprites.Array.data[2]
+      value: 
+      objectReference: {fileID: -1284262203, guid: 8144ea61ef1255345ae7f6b34d9fb950, type: 3}
+    - target: {fileID: 1175979326573501971, guid: 5573b881b175cc04dbc7669dc038c0a9, type: 3}
+      propertyPath: walkUpSprites.Array.data[3]
+      value: 
+      objectReference: {fileID: -1923803484, guid: 8144ea61ef1255345ae7f6b34d9fb950, type: 3}
+    - target: {fileID: 1175979326573501971, guid: 5573b881b175cc04dbc7669dc038c0a9, type: 3}
+      propertyPath: walkDownSprites.Array.data[0]
+      value: 
+      objectReference: {fileID: -107362437, guid: 8144ea61ef1255345ae7f6b34d9fb950, type: 3}
+    - target: {fileID: 1175979326573501971, guid: 5573b881b175cc04dbc7669dc038c0a9, type: 3}
+      propertyPath: walkDownSprites.Array.data[1]
+      value: 
+      objectReference: {fileID: 187721356, guid: 8144ea61ef1255345ae7f6b34d9fb950, type: 3}
+    - target: {fileID: 1175979326573501971, guid: 5573b881b175cc04dbc7669dc038c0a9, type: 3}
+      propertyPath: walkDownSprites.Array.data[2]
+      value: 
+      objectReference: {fileID: 361231717, guid: 8144ea61ef1255345ae7f6b34d9fb950, type: 3}
+    - target: {fileID: 1175979326573501971, guid: 5573b881b175cc04dbc7669dc038c0a9, type: 3}
+      propertyPath: walkDownSprites.Array.data[3]
+      value: 
+      objectReference: {fileID: -107362437, guid: 8144ea61ef1255345ae7f6b34d9fb950, type: 3}
+    - target: {fileID: 1175979326573501971, guid: 5573b881b175cc04dbc7669dc038c0a9, type: 3}
+      propertyPath: walkLeftSprites.Array.data[0]
+      value: 
+      objectReference: {fileID: 128446326, guid: 8144ea61ef1255345ae7f6b34d9fb950, type: 3}
+    - target: {fileID: 1175979326573501971, guid: 5573b881b175cc04dbc7669dc038c0a9, type: 3}
+      propertyPath: walkLeftSprites.Array.data[1]
+      value: 
+      objectReference: {fileID: 1590616274, guid: 8144ea61ef1255345ae7f6b34d9fb950, type: 3}
+    - target: {fileID: 1175979326573501971, guid: 5573b881b175cc04dbc7669dc038c0a9, type: 3}
+      propertyPath: walkLeftSprites.Array.data[2]
+      value: 
+      objectReference: {fileID: 128446326, guid: 8144ea61ef1255345ae7f6b34d9fb950, type: 3}
+    - target: {fileID: 1175979326573501971, guid: 5573b881b175cc04dbc7669dc038c0a9, type: 3}
+      propertyPath: walkLeftSprites.Array.data[3]
+      value: 
+      objectReference: {fileID: -1373787177, guid: 8144ea61ef1255345ae7f6b34d9fb950, type: 3}
+    - target: {fileID: 1175979326573501971, guid: 5573b881b175cc04dbc7669dc038c0a9, type: 3}
+      propertyPath: walkRightSprites.Array.data[0]
+      value: 
+      objectReference: {fileID: 1330634925, guid: 8144ea61ef1255345ae7f6b34d9fb950, type: 3}
+    - target: {fileID: 1175979326573501971, guid: 5573b881b175cc04dbc7669dc038c0a9, type: 3}
+      propertyPath: walkRightSprites.Array.data[1]
+      value: 
+      objectReference: {fileID: -1771880951, guid: 8144ea61ef1255345ae7f6b34d9fb950, type: 3}
+    - target: {fileID: 1175979326573501971, guid: 5573b881b175cc04dbc7669dc038c0a9, type: 3}
+      propertyPath: walkRightSprites.Array.data[2]
+      value: 
+      objectReference: {fileID: -689593743, guid: 8144ea61ef1255345ae7f6b34d9fb950, type: 3}
+    - target: {fileID: 1175979326573501971, guid: 5573b881b175cc04dbc7669dc038c0a9, type: 3}
+      propertyPath: walkRightSprites.Array.data[3]
+      value: 
+      objectReference: {fileID: -284606997, guid: 8144ea61ef1255345ae7f6b34d9fb950, type: 3}
     - target: {fileID: 1175979326573501977, guid: 5573b881b175cc04dbc7669dc038c0a9, type: 3}
       propertyPath: m_Name
       value: Healer
       objectReference: {fileID: 0}
+    - target: {fileID: 1175979326573501980, guid: 5573b881b175cc04dbc7669dc038c0a9, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -107362437, guid: 8144ea61ef1255345ae7f6b34d9fb950, type: 3}
     - target: {fileID: 1175979326573501981, guid: 5573b881b175cc04dbc7669dc038c0a9, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -809,7 +877,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d9ea2cf8d8cca704681e70956f03bcde, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Dialog: "\xBFDeseas curar a tu pokemon?"
+  Dialog: "\xBFDeseas curar a tus hatuns?"
 --- !u!1001 &1211318955
 PrefabInstance:
   m_ObjectHideFlags: 0

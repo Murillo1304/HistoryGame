@@ -965,7 +965,11 @@ MonoBehaviour:
         dialog:
           lines:
           - "\xA1Hola cari\xF1o! \xBFListo para la aventura?"
-          - El profesor te espera en la escuela
+          - "Si tu padre estuviera aqui estar\xEDa orgulloso"
+          - "\xBFRecuerdas como te llamaba de peque\xF1o?"
+          - Auqui, como el heredero escogido
+          - "\xA1Muchos recuerdos por hoy!"
+          - "\xA1Anda a la escuela, el profesor te espera!"
     - rid: 5464443123976896515
       type: {class: CompleteQuestAction, ns: , asm: Assembly-CSharp}
       data:
@@ -2952,7 +2956,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1175979326573501970, guid: 5573b881b175cc04dbc7669dc038c0a9, type: 3}
       propertyPath: dialog.lines.Array.size
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 1175979326573501970, guid: 5573b881b175cc04dbc7669dc038c0a9, type: 3}
       propertyPath: movementPatter.Array.size
@@ -2960,7 +2964,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1175979326573501970, guid: 5573b881b175cc04dbc7669dc038c0a9, type: 3}
       propertyPath: dialog.lines.Array.data[0]
-      value: "\xA1Apura, el profesor te espera en la escuela!"
+      value: "\xA1Auqui es el escogido del Inca como heredero!"
+      objectReference: {fileID: 0}
+    - target: {fileID: 1175979326573501970, guid: 5573b881b175cc04dbc7669dc038c0a9, type: 3}
+      propertyPath: dialog.lines.Array.data[1]
+      value: "\xA1As\xED te decia tu padre!"
       objectReference: {fileID: 0}
     - target: {fileID: 1175979326573501970, guid: 5573b881b175cc04dbc7669dc038c0a9, type: 3}
       propertyPath: movementPatter.Array.data[0].x
@@ -3164,6 +3172,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d9ea2cf8d8cca704681e70956f03bcde, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Dialog: "\xA1Luces cansado! \xBFTe gustar\xEDa tomarte un descanso?"
 --- !u!483693784 &133883577579993243
 TilemapRenderer:
   m_ObjectHideFlags: 0

@@ -251,7 +251,7 @@ public class GameController : MonoBehaviour
         playerParty.Pokemons.ForEach(p => p.Heal());
         playerParty.PartyUpdated();
         yield return Fader.i.FadeOut(0.5f);
-        yield return DialogManager.Instance.ShowDialogText($"¡Tus pokemon se han recuperado!");
+        yield return DialogManager.Instance.ShowDialogText($"¡Tus hatuns se han recuperado!");
     }
 
     // Update is called once per frame
@@ -334,7 +334,7 @@ public class GameController : MonoBehaviour
 
             Action onBack = () =>
             {
-                partyScreen.SetMessageText("Elige un pokemon");
+                partyScreen.SetMessageText("Elige un hatun");
                 state = GameState.PartyScreen;
             };
 
@@ -397,7 +397,7 @@ public class GameController : MonoBehaviour
             }
             else
             {
-                StartCoroutine(DialogManager.Instance.ShowDialogText($"¡No tienes ningún pokemon!"));
+                StartCoroutine(DialogManager.Instance.ShowDialogText($"¡No tienes ningún hatun!"));
                 state = GameState.FreeRoam;
             }
         }

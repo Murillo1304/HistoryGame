@@ -1,3 +1,4 @@
+using Newtonsoft.Json;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -17,13 +18,22 @@ public class QuestionLoader : MonoBehaviour
 
     private void Start()
     {
-        string rutaArchivo = Application.streamingAssetsPath + "/" + nombreArchivo;
+        TextAsset jsonAsset = Resources.Load<TextAsset>("preguntas");
 
-        // Carga el contenido del archivo JSON como un string
-        string json = System.IO.File.ReadAllText(rutaArchivo);
+        if (jsonAsset != null)
+        {
+            string jsonContent = jsonAsset.text;
+            jsonQuestions = JsonUtility.FromJson<PreguntasData>(jsonContent);
 
-        // Convierte el string JSON en una lista de objetos Pregunta
-        jsonQuestions = JsonUtility.FromJson<PreguntasData>(json);
+            Debug.Log("Entender: " + jsonQuestions.act01.entender.Count);
+            Debug.Log("Aplicar: " + jsonQuestions.act01.aplicar.Count);
+            Debug.Log("Analizar: " + jsonQuestions.act01.analizar.Count);
+            Debug.Log("Evaluar: " + jsonQuestions.act01.evaluar.Count);
+        }
+        else
+        {
+            Debug.LogError("No se pudo cargar el archivo JSON");
+        }
 
     }
 }
@@ -42,6 +52,8 @@ public class Act01
 {
     public List<Pregunta> entender;
     public List<Pregunta> aplicar;
+    public List<Pregunta> analizar;
+    public List<Pregunta> evaluar;
 }
 
 [System.Serializable]

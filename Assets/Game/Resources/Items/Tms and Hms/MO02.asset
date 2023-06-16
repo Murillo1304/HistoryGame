@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b8266145b18a7d747a5b0b3a7d2b6f28, type: 3}
+  m_Name: MO02
+  m_EditorClassIdentifier: 
+  name: MO01
+  description: "Ense\xF1ar el movimiento Surf a un hatun"
+  message: 
+  icon: {fileID: 467281170, guid: ea9e4e5a03c30184895a038c50777800, type: 3}
+  price: 0
+  isSellable: 0
+  move: {fileID: 11400000, guid: 619ed9f8afda98e418dc34af477bd178, type: 2}
+  isHM: 1

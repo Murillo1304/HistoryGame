@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Piedra fuego
   m_EditorClassIdentifier: 
   name: Piedra fuego
-  description: Se usa para evolucionar ciertos pokemon de tipo fuego
+  description: Se usa para evolucionar ciertos hatun de tipo fuego
   message: 
   icon: {fileID: -1121872625, guid: ea9e4e5a03c30184895a038c50777800, type: 3}
   price: 0

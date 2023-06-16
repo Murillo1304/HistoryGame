@@ -57,7 +57,7 @@ public class MapArea : MonoBehaviour
     public Pokemon GetRandomWildPokemon(BattleTrigger trigger)
     {
         var pokemonList = (trigger == BattleTrigger.LongGrass) ? wildPokemons : wildPokemonsInWater;
-        
+
         int randVal = Random.Range(1, 101);
         var pokemonRecord = pokemonList.First(p => randVal >= p.chanceLower && randVal <= p.chanceUpper);
 

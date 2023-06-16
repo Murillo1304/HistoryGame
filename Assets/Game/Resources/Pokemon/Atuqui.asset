@@ -1,0 +1,45 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 55eb119118472dd42a727667cfd82ca1, type: 3}
+  m_Name: Atuqui
+  m_EditorClassIdentifier: 
+  name: Atuqui
+  description: 
+  frontSprite: {fileID: 21300000, guid: 114031dac0414844f800f82d20fef9d3, type: 3}
+  backSprite: {fileID: 21300000, guid: 7f10351af930e2d45996e82a0ccf4d1a, type: 3}
+  type1: 16
+  type2: 0
+  maxHp: 39
+  attack: 52
+  defense: 43
+  spAttack: 60
+  spDefense: 50
+  speed: 65
+  expYield: 120
+  growthRate: 3
+  catchRate: 45
+  learnableMoves:
+  - moveBase: {fileID: 11400000, guid: 74d33be41b65f5345954f2e452394c28, type: 2}
+    level: 1
+  - moveBase: {fileID: 11400000, guid: 771624cfde7dc0d468cf8314cbbb5529, type: 2}
+    level: 4
+  - moveBase: {fileID: 11400000, guid: f02b44bd2c5a9c142b493fb9ea755562, type: 2}
+    level: 7
+  - moveBase: {fileID: 11400000, guid: 7ac84c5bcf973a64bba40a73e906d83b, type: 2}
+    level: 8
+  learnableByItems:
+  - {fileID: 11400000, guid: 40dc725a5fb587e429cfe3e1ef20a9e4, type: 2}
+  - {fileID: 11400000, guid: 7ebd50933d8fb0a4b9d12623d828945c, type: 2}
+  evolutions:
+  - evolvesInto: {fileID: 11400000, guid: 012ea49fd3b97ec42b9a18de8555f9e9, type: 2}
+    requiredLevel: 14
+    requiredItem: {fileID: 0}

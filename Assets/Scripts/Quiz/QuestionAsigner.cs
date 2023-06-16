@@ -36,6 +36,10 @@ public class QuestionAsigner : MonoBehaviour, ISavable
                 questions = CopyQuestions(QuestionLoader.i.jsonQuestions.act01.entender);
             else if (taxonomy == Taxonomia.Aplicar)
                 questions = CopyQuestions(QuestionLoader.i.jsonQuestions.act01.aplicar);
+            else if (taxonomy == Taxonomia.Analizar)
+                questions = CopyQuestions(QuestionLoader.i.jsonQuestions.act01.analizar);
+            else if (taxonomy == Taxonomia.Evaluar)
+                questions = CopyQuestions(QuestionLoader.i.jsonQuestions.act01.evaluar);
 
         foreach (var questioner in questioners)
         {

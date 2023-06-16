@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Antidote
   m_EditorClassIdentifier: 
   name: "Ant\xEDdoto"
-  description: Cura a un pokemon que ha sido envenenado
+  description: Cura a un hatun que ha sido envenenado
   message: "ya no est\xE1 envenenado"
   icon: {fileID: 936587087, guid: ea9e4e5a03c30184895a038c50777800, type: 3}
   price: 250

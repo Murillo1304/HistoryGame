@@ -14,7 +14,7 @@ public class PokemonStarter : MonoBehaviour, Interactable
 
         StarterManager.i.Show(pokemonToGive);
 
-        yield return DialogManager.Instance.ShowDialogText($"¿Te gustaría elegir a {pokemonToGive.Base.Name}?",
+        yield return DialogManager.Instance.ShowDialogText($"¿Te gustaría elegir a {pokemonToGive.Base.Name} el hatun {pokemonToGive.Base.Type1}?",
             choices: new List<string>() { "Sí", "No" },
             onChoiceSelected: (choiceIndex) => selectedChoice = choiceIndex);
 

@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: MaxPotion
   m_EditorClassIdentifier: 
   name: "Poci\xF3n m\xE1xima"
-  description: Recupera el HP de un pokemon completamente
+  description: Recupera el HP de un hatun completamente
   message: "bebi\xF3 la Poci\xF3n m\xE1xima"
   icon: {fileID: 986459365, guid: ea9e4e5a03c30184895a038c50777800, type: 3}
   price: 2500

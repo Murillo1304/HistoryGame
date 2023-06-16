@@ -12,6 +12,7 @@ public class TrainerBattleAction : CutsceneAction
         yield return trainer.CutsceneBattle();
         GameController.Instance.battleCanLose = CanLoseBattle;
         yield return new WaitUntil(() => GameController.Instance.trainer == null);
+        GameController.Instance.battleCanLose = false;
         GameController.Instance.StartCutsceneState();
     }
 }

@@ -35,7 +35,7 @@ public class QuizUI : MonoBehaviour
         quizPanel.SetActive(true);
         resultsPanel.SetActive(false);
 
-        if (taxonomy == Taxonomia.Aplicar)
+        if (taxonomy == Taxonomia.Aplicar || taxonomy == Taxonomia.Analizar || taxonomy == Taxonomia.Evaluar)
         {
             timePanel.gameObject.SetActive(true);
             timeBar.transform.localScale = new Vector3(1f, 1f);
@@ -128,7 +128,7 @@ public class QuizUI : MonoBehaviour
         {
             currentQuestion = Random.Range(0, QnA.Count);
             if (QuestionImage != null && QnA[currentQuestion].ImageName != null)
-                SetImage(QnA[currentQuestion].ImageName);
+                SetImageResources(QnA[currentQuestion].ImageName);
             QuestionTxt.text = QnA[currentQuestion].Question;
 
             SetAnswer();
@@ -139,29 +139,17 @@ public class QuizUI : MonoBehaviour
         }
     }
 
-    void SetImage(string nombreImagen)
+    void SetImageResources(string nombreImagen)
     {
-        string absolutePath = System.IO.Path.Combine(Application.streamingAssetsPath, nombreImagen);
+        Sprite imageSprite = Resources.Load<Sprite>((string)nombreImagen);
 
-        Texture2D texture = LoadTextureFromStreamingAssets(absolutePath);
-
-        if (texture != null)
+        if (imageSprite != null)
         {
-            Sprite newSprite = Sprite.Create(texture, new Rect(0, 0, texture.width, texture.height), Vector2.one * 0.5f);
-
-            QuestionImage.sprite = newSprite;
-
-            QuestionImage.preserveAspect = true;
+            QuestionImage.sprite = imageSprite;
         }
-    }
-
-    private Texture2D LoadTextureFromStreamingAssets(string path)
-    {
-        byte[] fileData = System.IO.File.ReadAllBytes(path);
-
-        Texture2D texture = new Texture2D(2, 2);
-        texture.LoadImage(fileData);
-
-        return texture;
+        else
+        {
+            Debug.LogError("No se pudo cargar la imagen: " + nombreImagen);
+        }
     }
 }

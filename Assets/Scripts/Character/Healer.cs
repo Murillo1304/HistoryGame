@@ -25,7 +25,7 @@ public class Healer : MonoBehaviour
 
             yield return Fader.i.FadeOut(0.5f);
 
-            yield return DialogManager.Instance.ShowDialogText($"¡Tus pokemon tienen toda la vida ahora!");
+            yield return DialogManager.Instance.ShowDialogText($"¡Tus hatun tienen toda la vida ahora!");
         }
         else if (selectedChoice == 1)
         {

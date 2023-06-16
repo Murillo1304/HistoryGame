@@ -13,9 +13,10 @@ MonoBehaviour:
   m_Name: MT03
   m_EditorClassIdentifier: 
   name: MT03
-  description: "Ense\xF1ar el movimiento Onda trueno a un pokemon"
+  description: "Ense\xF1ar el movimiento Onda trueno a un hatun"
   message: 
   icon: {fileID: 1110732013, guid: ea9e4e5a03c30184895a038c50777800, type: 3}
   price: 0
   isSellable: 0
   move: {fileID: 11400000, guid: 59b83efa869329a44b0d60314a5ace87, type: 2}
+  isHM: 0

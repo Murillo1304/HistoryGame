@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Revive
   m_EditorClassIdentifier: 
   name: Revivir
-  description: Revive a un pokemon debilitado y recupera la mitad de su HP
+  description: Revive a un hatun debilitado y recupera la mitad de su HP
   message: "revivi\xF3"
   icon: {fileID: -1204783906, guid: ea9e4e5a03c30184895a038c50777800, type: 3}
   price: 200

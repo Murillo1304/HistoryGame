@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2514e6152e4b4b948aab24af01454273, type: 3}
   m_Name: Pokeball
   m_EditorClassIdentifier: 
-  name: Pokeball
-  description: "Una pokeball b\xE1sica para capturar pokemon salvajes"
-  message: "us\xF3 pokeball"
+  name: Hatunball
+  description: "Una hatunball b\xE1sica para capturar hatun salvajes"
+  message: "us\xF3 hatunball"
   icon: {fileID: -654383833, guid: ea9e4e5a03c30184895a038c50777800, type: 3}
   price: 200
   isSellable: 0

@@ -11,7 +11,7 @@ public class GlobalSettings : MonoBehaviour
     [SerializeField] int timeQuestions = 5;
 
     //Configuracio Zonas
-    public bool goCave { get; set; } = true;
+    public bool goCave { get; set; } = false;
     public bool goLake { get; set; } = true;
     public bool goForest { get; set; } = false;
     public bool goMountain { get; set; } = false;

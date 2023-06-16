@@ -228,7 +228,7 @@ MonoBehaviour:
         waitForCompletion: 1
         dialog:
           lines:
-          - "\xA1Por favor, todos a sus asientos!"
+          - "\xA1Llegas muy tarde, ac\xE9rcate!"
     - rid: 5464443123976896519
       type: {class: TurnActorAction, ns: , asm: Assembly-CSharp}
       data:
@@ -245,7 +245,11 @@ MonoBehaviour:
         waitForCompletion: 1
         dialog:
           lines:
-          - "\xA1Acercate y elige tu primer pokemon!"
+          - "\xA1Todos tus dem\xE1s compa\xF1eros ya se han ido!"
+          - "Durante tu aventura necesitar\xE1s visitar los gimnasios de la regi\xF3n"
+          - Donde pondras tus conocimientos a prueba
+          - "Para comenzar tu aventura necesitar\xE1s un compa\xF1ero"
+          - "\xA1Acercate y elige tu primer Hatun!"
     - rid: 5464443152182542336
       type: {class: EnableObjectAction, ns: , asm: Assembly-CSharp}
       data:
@@ -1336,8 +1340,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pokemonToGive:
-    _base: {fileID: 11400000, guid: 88efef507d8eb3e4b95d9f8e071e2918, type: 2}
-    level: 5
+    _base: {fileID: 11400000, guid: 5b7c24043e8645042b526cf75e6f3e25, type: 2}
+    level: 7
   starterSelect: {fileID: 1667290278}
 --- !u!1 &729090499
 GameObject:
@@ -1425,6 +1429,8 @@ MonoBehaviour:
   - rid: 5464443197396615179
   - rid: 5464443197396615180
   - rid: 5464443304907112452
+  - rid: 5464443397249433601
+  - rid: 5464443397249433600
   - rid: 5464443304907112448
   - rid: 5464443304907112449
   - rid: 5464443304907112451
@@ -1568,7 +1574,8 @@ MonoBehaviour:
         dialog:
           lines:
           - "\xA1Adem\xE1s toma estos pases!"
-          - "\xA1Con esto podr\xE1s visitar varios lugares!"
+          - "\xA1Con estos pases podr\xE1s desafiar gimnasios!"
+          - "\xA1Suerte en tu aventura!"
     - rid: 5464443304907112452
       type: {class: TurnActorAction, ns: , asm: Assembly-CSharp}
       data:
@@ -1578,6 +1585,19 @@ MonoBehaviour:
           isPlayer: 1
           character: {fileID: 0}
         direction: 0
+    - rid: 5464443397249433600
+      type: {class: HealerAction, ns: , asm: Assembly-CSharp}
+      data:
+        name: HealerAction
+        waitForCompletion: 1
+    - rid: 5464443397249433601
+      type: {class: DialogueAction, ns: , asm: Assembly-CSharp}
+      data:
+        name: DialogueAction
+        waitForCompletion: 1
+        dialog:
+          lines:
+          - "\xA1Dejame que cure a tu hatun!"
 --- !u!1001 &1058617555
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1811,8 +1831,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pokemonToGive:
-    _base: {fileID: 11400000, guid: 484379c5482602043a90120019a86dad, type: 2}
-    level: 5
+    _base: {fileID: 11400000, guid: 5a2a2b72af7f8354e82aca1356bb139c, type: 2}
+    level: 7
   starterSelect: {fileID: 1667290278}
 --- !u!4 &1302798476 stripped
 Transform:
@@ -1831,9 +1851,17 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2690925321196277508, guid: 0c1de0791173a944e9b1909b1f9e80e3, type: 3}
+      propertyPath: pokemons.Array.data[0]._base
+      value: 
+      objectReference: {fileID: 11400000, guid: 5b7c24043e8645042b526cf75e6f3e25, type: 2}
+    - target: {fileID: 2690925321196277508, guid: 0c1de0791173a944e9b1909b1f9e80e3, type: 3}
       propertyPath: pokemons.Array.data[0].level
-      value: 30
+      value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 2690925321196277510, guid: 0c1de0791173a944e9b1909b1f9e80e3, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 1170064690, guid: 8fffae7ed09d5e14585055fc4f4b6c09, type: 3}
     - target: {fileID: 2690925321196277511, guid: 0c1de0791173a944e9b1909b1f9e80e3, type: 3}
       propertyPath: m_RootOrder
       value: 7
@@ -1882,6 +1910,86 @@ PrefabInstance:
       propertyPath: defauldDirection
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 2690925321196277514, guid: 0c1de0791173a944e9b1909b1f9e80e3, type: 3}
+      propertyPath: walkUpSprites.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 2690925321196277514, guid: 0c1de0791173a944e9b1909b1f9e80e3, type: 3}
+      propertyPath: walkDownSprites.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 2690925321196277514, guid: 0c1de0791173a944e9b1909b1f9e80e3, type: 3}
+      propertyPath: walkLeftSprites.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 2690925321196277514, guid: 0c1de0791173a944e9b1909b1f9e80e3, type: 3}
+      propertyPath: walkRightSprites.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 2690925321196277514, guid: 0c1de0791173a944e9b1909b1f9e80e3, type: 3}
+      propertyPath: walkUpSprites.Array.data[0]
+      value: 
+      objectReference: {fileID: 2038611952, guid: 8fffae7ed09d5e14585055fc4f4b6c09, type: 3}
+    - target: {fileID: 2690925321196277514, guid: 0c1de0791173a944e9b1909b1f9e80e3, type: 3}
+      propertyPath: walkUpSprites.Array.data[1]
+      value: 
+      objectReference: {fileID: 431527646, guid: 8fffae7ed09d5e14585055fc4f4b6c09, type: 3}
+    - target: {fileID: 2690925321196277514, guid: 0c1de0791173a944e9b1909b1f9e80e3, type: 3}
+      propertyPath: walkUpSprites.Array.data[2]
+      value: 
+      objectReference: {fileID: 1163787231, guid: 8fffae7ed09d5e14585055fc4f4b6c09, type: 3}
+    - target: {fileID: 2690925321196277514, guid: 0c1de0791173a944e9b1909b1f9e80e3, type: 3}
+      propertyPath: walkUpSprites.Array.data[3]
+      value: 
+      objectReference: {fileID: 483860943, guid: 8fffae7ed09d5e14585055fc4f4b6c09, type: 3}
+    - target: {fileID: 2690925321196277514, guid: 0c1de0791173a944e9b1909b1f9e80e3, type: 3}
+      propertyPath: walkDownSprites.Array.data[0]
+      value: 
+      objectReference: {fileID: 1170064690, guid: 8fffae7ed09d5e14585055fc4f4b6c09, type: 3}
+    - target: {fileID: 2690925321196277514, guid: 0c1de0791173a944e9b1909b1f9e80e3, type: 3}
+      propertyPath: walkDownSprites.Array.data[1]
+      value: 
+      objectReference: {fileID: 581249183, guid: 8fffae7ed09d5e14585055fc4f4b6c09, type: 3}
+    - target: {fileID: 2690925321196277514, guid: 0c1de0791173a944e9b1909b1f9e80e3, type: 3}
+      propertyPath: walkDownSprites.Array.data[2]
+      value: 
+      objectReference: {fileID: 1230312214, guid: 8fffae7ed09d5e14585055fc4f4b6c09, type: 3}
+    - target: {fileID: 2690925321196277514, guid: 0c1de0791173a944e9b1909b1f9e80e3, type: 3}
+      propertyPath: walkDownSprites.Array.data[3]
+      value: 
+      objectReference: {fileID: 894840810, guid: 8fffae7ed09d5e14585055fc4f4b6c09, type: 3}
+    - target: {fileID: 2690925321196277514, guid: 0c1de0791173a944e9b1909b1f9e80e3, type: 3}
+      propertyPath: walkLeftSprites.Array.data[0]
+      value: 
+      objectReference: {fileID: -38250908, guid: 8fffae7ed09d5e14585055fc4f4b6c09, type: 3}
+    - target: {fileID: 2690925321196277514, guid: 0c1de0791173a944e9b1909b1f9e80e3, type: 3}
+      propertyPath: walkLeftSprites.Array.data[1]
+      value: 
+      objectReference: {fileID: -227520738, guid: 8fffae7ed09d5e14585055fc4f4b6c09, type: 3}
+    - target: {fileID: 2690925321196277514, guid: 0c1de0791173a944e9b1909b1f9e80e3, type: 3}
+      propertyPath: walkLeftSprites.Array.data[2]
+      value: 
+      objectReference: {fileID: -705360870, guid: 8fffae7ed09d5e14585055fc4f4b6c09, type: 3}
+    - target: {fileID: 2690925321196277514, guid: 0c1de0791173a944e9b1909b1f9e80e3, type: 3}
+      propertyPath: walkLeftSprites.Array.data[3]
+      value: 
+      objectReference: {fileID: -734361977, guid: 8fffae7ed09d5e14585055fc4f4b6c09, type: 3}
+    - target: {fileID: 2690925321196277514, guid: 0c1de0791173a944e9b1909b1f9e80e3, type: 3}
+      propertyPath: walkRightSprites.Array.data[0]
+      value: 
+      objectReference: {fileID: 103508431, guid: 8fffae7ed09d5e14585055fc4f4b6c09, type: 3}
+    - target: {fileID: 2690925321196277514, guid: 0c1de0791173a944e9b1909b1f9e80e3, type: 3}
+      propertyPath: walkRightSprites.Array.data[1]
+      value: 
+      objectReference: {fileID: 262637532, guid: 8fffae7ed09d5e14585055fc4f4b6c09, type: 3}
+    - target: {fileID: 2690925321196277514, guid: 0c1de0791173a944e9b1909b1f9e80e3, type: 3}
+      propertyPath: walkRightSprites.Array.data[2]
+      value: 
+      objectReference: {fileID: 1082694926, guid: 8fffae7ed09d5e14585055fc4f4b6c09, type: 3}
+    - target: {fileID: 2690925321196277514, guid: 0c1de0791173a944e9b1909b1f9e80e3, type: 3}
+      propertyPath: walkRightSprites.Array.data[3]
+      value: 
+      objectReference: {fileID: -1656820131, guid: 8fffae7ed09d5e14585055fc4f4b6c09, type: 3}
     - target: {fileID: 2690925321196277516, guid: 0c1de0791173a944e9b1909b1f9e80e3, type: 3}
       propertyPath: m_Name
       value: Rival
@@ -1895,12 +2003,16 @@ PrefabInstance:
       value: Blue
       objectReference: {fileID: 0}
     - target: {fileID: 2690925321196277517, guid: 0c1de0791173a944e9b1909b1f9e80e3, type: 3}
+      propertyPath: sprite
+      value: 
+      objectReference: {fileID: 607568148, guid: 46cc9eb6e3e9b2f409c2c9037eef5b86, type: 3}
+    - target: {fileID: 2690925321196277517, guid: 0c1de0791173a944e9b1909b1f9e80e3, type: 3}
       propertyPath: dialog.lines.Array.size
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 2690925321196277517, guid: 0c1de0791173a944e9b1909b1f9e80e3, type: 3}
       propertyPath: dialog.lines.Array.data[0]
-      value: "\xA1Hey, as\xED que ya tienes tu primer pokemon!"
+      value: "\xA1Hey, as\xED que ya tienes tu primer hatun!"
       objectReference: {fileID: 0}
     - target: {fileID: 2690925321196277517, guid: 0c1de0791173a944e9b1909b1f9e80e3, type: 3}
       propertyPath: dialog.lines.Array.data[1]
@@ -4095,8 +4207,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pokemonToGive:
-    _base: {fileID: 11400000, guid: d759c60d298ea784ca316176a74d6296, type: 2}
-    level: 5
+    _base: {fileID: 11400000, guid: 9ebd73f6b983dc3429d7bbf80541bf71, type: 2}
+    level: 7
   starterSelect: {fileID: 1667290278}
 --- !u!1001 &1924649146
 PrefabInstance:
@@ -4111,7 +4223,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1175979326573501970, guid: 5573b881b175cc04dbc7669dc038c0a9, type: 3}
       propertyPath: dialog.lines.Array.size
-      value: 1
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 1175979326573501970, guid: 5573b881b175cc04dbc7669dc038c0a9, type: 3}
       propertyPath: movementPatter.Array.size
@@ -4119,7 +4231,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1175979326573501970, guid: 5573b881b175cc04dbc7669dc038c0a9, type: 3}
       propertyPath: dialog.lines.Array.data[0]
-      value: "\xA1No vemos en la otra ciudad!"
+      value: "\xBFSabes c\xF3mo me dicen tus compa\xF1eros?"
+      objectReference: {fileID: 0}
+    - target: {fileID: 1175979326573501970, guid: 5573b881b175cc04dbc7669dc038c0a9, type: 3}
+      propertyPath: dialog.lines.Array.data[1]
+      value: "\xA1Tucuy ricoc, el que todo lo ve!"
+      objectReference: {fileID: 0}
+    - target: {fileID: 1175979326573501970, guid: 5573b881b175cc04dbc7669dc038c0a9, type: 3}
+      propertyPath: dialog.lines.Array.data[2]
+      value: "Debe ser porque los paro rega\xF1ando"
       objectReference: {fileID: 0}
     - target: {fileID: 1175979326573501970, guid: 5573b881b175cc04dbc7669dc038c0a9, type: 3}
       propertyPath: movementPatter.Array.data[0].x

@@ -1,0 +1,3523 @@
+fileFormatVersion: 2
+guid: 46cc9eb6e3e9b2f409c2c9037eef5b86
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 32
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: hg-ss trainer_0
+      rect:
+        serializedVersion: 2
+        x: 22
+        y: 801
+        width: 36
+        height: 65
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 16fb290dbce79e64b893dd5ea657b8c5
+      internalID: -952098485
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hg-ss trainer_1
+      rect:
+        serializedVersion: 2
+        x: 102
+        y: 801
+        width: 35
+        height: 65
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 90a528050cf7d1c439ce2411cec58e25
+      internalID: -1205363242
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hg-ss trainer_2
+      rect:
+        serializedVersion: 2
+        x: 254
+        y: 801
+        width: 46
+        height: 67
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 47f2ae4f7f2037b49ac6af959654f912
+      internalID: 967115823
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hg-ss trainer_3
+      rect:
+        serializedVersion: 2
+        x: 492
+        y: 800
+        width: 54
+        height: 71
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6cd8f8b5aaaae0b4d9e1b32e5201ae66
+      internalID: 1283563920
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hg-ss trainer_4
+      rect:
+        serializedVersion: 2
+        x: 575
+        y: 858
+        width: 4
+        height: 4
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ee293b27dded1c64dbebd013a1eaeb67
+      internalID: -900522032
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hg-ss trainer_5
+      rect:
+        serializedVersion: 2
+        x: 579
+        y: 801
+        width: 41
+        height: 72
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cb72c56928fcc4a4b8e82253bbf800b3
+      internalID: -1532369630
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hg-ss trainer_6
+      rect:
+        serializedVersion: 2
+        x: 734
+        y: 800
+        width: 51
+        height: 76
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0ec6425103ccc584fbbe7d27c86e37e9
+      internalID: -1804002833
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hg-ss trainer_7
+      rect:
+        serializedVersion: 2
+        x: 817
+        y: 801
+        width: 47
+        height: 69
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ec82d36530bc28c4b9950d8c918cbc69
+      internalID: -1877435653
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pesquero
+      rect:
+        serializedVersion: 2
+        x: 891
+        y: 801
+        width: 63
+        height: 77
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8db5b41a05513e740ac90c8eba816da3
+      internalID: 1529194147
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kid-1
+      rect:
+        serializedVersion: 2
+        x: 182
+        y: 800
+        width: 35
+        height: 58
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 01960cfb3a0acf6489cc18dab7f82bb0
+      internalID: 980624248
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kid-2
+      rect:
+        serializedVersion: 2
+        x: 335
+        y: 801
+        width: 47
+        height: 56
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0d8d9113ea86991478b3de6bc005548e
+      internalID: 1062479521
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kid-3
+      rect:
+        serializedVersion: 2
+        x: 411
+        y: 801
+        width: 55
+        height: 54
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 052f9cc73badf4e43b0768309d559eb9
+      internalID: -624968131
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hg-ss trainer_12
+      rect:
+        serializedVersion: 2
+        x: 619
+        y: 848
+        width: 4
+        height: 4
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f6a97a33838bf0b438959cd6de06288d
+      internalID: -1465498559
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hg-ss trainer_13
+      rect:
+        serializedVersion: 2
+        x: 659
+        y: 801
+        width: 44
+        height: 47
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 33a0b0f26adc9fd4298192c19c678267
+      internalID: 314431082
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hg-ss trainer_14
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 721
+        width: 50
+        height: 71
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 47834403880615b4b98d9b48f7f1a3cf
+      internalID: -348863676
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hg-ss trainer_15
+      rect:
+        serializedVersion: 2
+        x: 97
+        y: 721
+        width: 46
+        height: 73
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7a13b9462bd65f34eb734e3162b4772b
+      internalID: -1354917719
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hg-ss trainer_16
+      rect:
+        serializedVersion: 2
+        x: 175
+        y: 721
+        width: 50
+        height: 77
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 60e11a7fcce368e46854e47a6537eb61
+      internalID: 1906352442
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hg-ss trainer_17
+      rect:
+        serializedVersion: 2
+        x: 260
+        y: 722
+        width: 40
+        height: 74
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 35012101dd397b543805ed8f45659047
+      internalID: 1480469945
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hg-ss trainer_18
+      rect:
+        serializedVersion: 2
+        x: 339
+        y: 721
+        width: 42
+        height: 72
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4ec7dc15351ca8742a128b70f3ad61af
+      internalID: -1073221798
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hg-ss trainer_19
+      rect:
+        serializedVersion: 2
+        x: 427
+        y: 721
+        width: 27
+        height: 69
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 58511fe5b2d098043913d0b4c8f78e4e
+      internalID: 783259441
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hg-ss trainer_20
+      rect:
+        serializedVersion: 2
+        x: 500
+        y: 721
+        width: 41
+        height: 66
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5eaba9daaac0fc04ca08f94136c5a625
+      internalID: 2051358244
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hg-ss trainer_21
+      rect:
+        serializedVersion: 2
+        x: 585
+        y: 721
+        width: 30
+        height: 73
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7c95576aa8125ae49b4fb5d63913b034
+      internalID: -717947385
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hg-ss trainer_22
+      rect:
+        serializedVersion: 2
+        x: 614
+        y: 724
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a50d78399de3b7d49bf97dcfd58cb8d4
+      internalID: 127334179
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hg-ss trainer_23
+      rect:
+        serializedVersion: 2
+        x: 620
+        y: 728
+        width: 4
+        height: 4
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bd065fc58c5ead14385f042e24122021
+      internalID: -195010806
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hg-ss trainer_24
+      rect:
+        serializedVersion: 2
+        x: 653
+        y: 722
+        width: 53
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 14496cd630dc85c4286d16b46fc303a1
+      internalID: 1292911762
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hg-ss trainer_25
+      rect:
+        serializedVersion: 2
+        x: 735
+        y: 721
+        width: 38
+        height: 52
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0cf680e84fe1950448f7cc3fa623477a
+      internalID: -1488535350
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hg-ss trainer_26
+      rect:
+        serializedVersion: 2
+        x: 771
+        y: 723
+        width: 14
+        height: 18
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9e6244f0534d84142b35d8519f3ba000
+      internalID: -2055932717
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hg-ss trainer_27
+      rect:
+        serializedVersion: 2
+        x: 817
+        y: 721
+        width: 46
+        height: 49
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d5b6793821ab8674b9b0ce629ee5ac53
+      internalID: -920508851
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hg-ss trainer_28
+      rect:
+        serializedVersion: 2
+        x: 907
+        y: 721
+        width: 27
+        height: 71
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 21f7019240f759c42874eeae2462624d
+      internalID: 924196038
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hg-ss trainer_29
+      rect:
+        serializedVersion: 2
+        x: 664
+        y: 721
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 867ab41f441412c49a587bd6178650b5
+      internalID: 1473126464
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hg-ss trainer_30
+      rect:
+        serializedVersion: 2
+        x: 21
+        y: 641
+        width: 39
+        height: 76
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9b36ba3eb8d0fc749be82d4f69f6589b
+      internalID: -273302667
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hg-ss trainer_31
+      rect:
+        serializedVersion: 2
+        x: 98
+        y: 640
+        width: 44
+        height: 75
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a2c9534f5abbe7d429591d83e6eb29da
+      internalID: -1798744101
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hg-ss trainer_32
+      rect:
+        serializedVersion: 2
+        x: 258
+        y: 641
+        width: 45
+        height: 73
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a838821b3fcd61e44ae409ec139b24e4
+      internalID: 2022546420
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hg-ss trainer_33
+      rect:
+        serializedVersion: 2
+        x: 419
+        y: 641
+        width: 44
+        height: 78
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 960bbc2c14fc1d84899b29ef1c9451a6
+      internalID: -2122682451
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hg-ss trainer_34
+      rect:
+        serializedVersion: 2
+        x: 499
+        y: 707
+        width: 5
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 418754ca2303b8a4b81d4511d2230d2c
+      internalID: 1723791132
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hg-ss trainer_35
+      rect:
+        serializedVersion: 2
+        x: 501
+        y: 641
+        width: 39
+        height: 68
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 457245d486180d04ca4ad0dd3b84007b
+      internalID: -502608925
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rival
+      rect:
+        serializedVersion: 2
+        x: 571
+        y: 641
+        width: 58
+        height: 73
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6c956ca885efb904694d7f37c3097da4
+      internalID: 607568148
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hg-ss trainer_37
+      rect:
+        serializedVersion: 2
+        x: 574
+        y: 708
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: acefc36492c437f4b8b4a1ca4f72b628
+      internalID: -636722720
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hg-ss trainer_38
+      rect:
+        serializedVersion: 2
+        x: 670
+        y: 641
+        width: 34
+        height: 71
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e5e2ffee735e9ff4baddfd75841fad4e
+      internalID: -1745240746
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hg-ss trainer_39
+      rect:
+        serializedVersion: 2
+        x: 739
+        y: 641
+        width: 42
+        height: 76
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8b60df42c77a4bb4fac73d51ee8ec656
+      internalID: -734295727
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hg-ss trainer_40
+      rect:
+        serializedVersion: 2
+        x: 822
+        y: 641
+        width: 36
+        height: 76
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 40e9376f1cc6e7b4bb790d92ae204cae
+      internalID: 1621675048
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hg-ss trainer_41
+      rect:
+        serializedVersion: 2
+        x: 907
+        y: 641
+        width: 25
+        height: 70
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e365f578df1071345a340d207e0f3890
+      internalID: -176281067
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hg-ss trainer_42
+      rect:
+        serializedVersion: 2
+        x: 180
+        y: 641
+        width: 41
+        height: 67
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4d3c55e7ab4d3f749955da1713bda566
+      internalID: -1231606462
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hg-ss trainer_43
+      rect:
+        serializedVersion: 2
+        x: 334
+        y: 641
+        width: 52
+        height: 44
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d3677069f24d30c4384c28fc1038ea81
+      internalID: 568700952
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hg-ss trainer_44
+      rect:
+        serializedVersion: 2
+        x: 19
+        y: 561
+        width: 43
+        height: 74
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8a43ec9d92a201c4d85d2efc7bc21e77
+      internalID: 87462679
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hg-ss trainer_45
+      rect:
+        serializedVersion: 2
+        x: 95
+        y: 560
+        width: 52
+        height: 52
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3dcfadd1bffdf78429e1202124635104
+      internalID: -781698252
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hg-ss trainer_46
+      rect:
+        serializedVersion: 2
+        x: 176
+        y: 561
+        width: 44
+        height: 74
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4d6de71f41987ff4e92de45e3c9a5d2a
+      internalID: 1479477621
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hg-ss trainer_47
+      rect:
+        serializedVersion: 2
+        x: 219
+        y: 597
+        width: 4
+        height: 4
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5e542eb6c1d637847a6a61561be3bc4e
+      internalID: 481980311
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hg-ss trainer_48
+      rect:
+        serializedVersion: 2
+        x: 265
+        y: 561
+        width: 32
+        height: 75
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ea448704412f8594ab21106cd44abd68
+      internalID: -1794189907
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hg-ss trainer_49
+      rect:
+        serializedVersion: 2
+        x: 341
+        y: 561
+        width: 39
+        height: 70
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 88a2cb4903d8cb24e9e63fef53bf4ef5
+      internalID: 965930011
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hg-ss trainer_50
+      rect:
+        serializedVersion: 2
+        x: 417
+        y: 561
+        width: 45
+        height: 67
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5b8a14f077dcd5347967a4fda7845811
+      internalID: -1217665217
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hg-ss trainer_51
+      rect:
+        serializedVersion: 2
+        x: 496
+        y: 560
+        width: 49
+        height: 61
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 67805c5f14d830c4284eac7020bde1b2
+      internalID: 1139051135
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hg-ss trainer_52
+      rect:
+        serializedVersion: 2
+        x: 586
+        y: 560
+        width: 32
+        height: 76
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b2007780853ec51489fe1229368cfe43
+      internalID: 816153236
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: water-1
+      rect:
+        serializedVersion: 2
+        x: 663
+        y: 561
+        width: 34
+        height: 55
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8ed6e0eec14cc6e4fb0db910ad00e083
+      internalID: -569816475
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: water-2
+      rect:
+        serializedVersion: 2
+        x: 740
+        y: 561
+        width: 40
+        height: 41
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2f2b6e1a1072c91479b86497826bf09e
+      internalID: 1333892560
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hg-ss trainer_55
+      rect:
+        serializedVersion: 2
+        x: 820
+        y: 561
+        width: 39
+        height: 73
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fe78b87c32623f94ba30c27dc7a254d1
+      internalID: -2099893549
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hg-ss trainer_56
+      rect:
+        serializedVersion: 2
+        x: 900
+        y: 561
+        width: 40
+        height: 74
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e15771d09dd0f184a90c92f135bec8f8
+      internalID: 1135033318
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hg-ss trainer_57
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 543
+        width: 15
+        height: 14
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cde0ca59e70727842a9c3d2b4ef5117c
+      internalID: 396591628
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hg-ss trainer_58
+      rect:
+        serializedVersion: 2
+        x: 113
+        y: 553
+        width: 4
+        height: 4
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 903626bc3d2198b46986040afc87cfe2
+      internalID: 930341591
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hg-ss trainer_59
+      rect:
+        serializedVersion: 2
+        x: 198
+        y: 545
+        width: 20
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 71b5427f4fc62684fa16fbbdcab0c041
+      internalID: -1300404896
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hg-ss trainer_60
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 481
+        width: 48
+        height: 75
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7ba42ef973272c748bccd2850b69a3a7
+      internalID: 1371177556
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hg-ss trainer_61
+      rect:
+        serializedVersion: 2
+        x: 337
+        y: 481
+        width: 47
+        height: 74
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 972bbe264ffb0b54d8c74189e11ea801
+      internalID: 411938510
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hg-ss trainer_62
+      rect:
+        serializedVersion: 2
+        x: 812
+        y: 481
+        width: 58
+        height: 77
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a3dee4eeab243124581dc05de88c8bad
+      internalID: 1929167687
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hg-ss trainer_63
+      rect:
+        serializedVersion: 2
+        x: 13
+        y: 482
+        width: 52
+        height: 53
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 273f517b5ea0c814f907592798b88863
+      internalID: 1944667845
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hg-ss trainer_64
+      rect:
+        serializedVersion: 2
+        x: 94
+        y: 532
+        width: 4
+        height: 4
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 73f3b10783d79224e9010ce933cce4a9
+      internalID: 1631093382
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hg-ss trainer_65
+      rect:
+        serializedVersion: 2
+        x: 95
+        y: 481
+        width: 49
+        height: 71
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e6b36775de17e7949be306ad57c24dd4
+      internalID: 2054249787
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hg-ss trainer_66
+      rect:
+        serializedVersion: 2
+        x: 177
+        y: 481
+        width: 45
+        height: 72
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4bd9cca372c946248bed50a6194670d0
+      internalID: 543027842
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hg-ss trainer_67
+      rect:
+        serializedVersion: 2
+        x: 417
+        y: 481
+        width: 46
+        height: 72
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ad18aee51ef2cfd44b981b6d5f9b0707
+      internalID: 1960443762
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hg-ss trainer_68
+      rect:
+        serializedVersion: 2
+        x: 497
+        y: 481
+        width: 46
+        height: 70
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5e80aa55e60eec04e8830006af150070
+      internalID: 1611276499
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hg-ss trainer_69
+      rect:
+        serializedVersion: 2
+        x: 579
+        y: 481
+        width: 42
+        height: 65
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a12692e87163c2a4c844fcea14deabf9
+      internalID: -9411352
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hg-ss trainer_70
+      rect:
+        serializedVersion: 2
+        x: 641
+        y: 480
+        width: 78
+        height: 71
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 032b1146edf3f4a4fa0805e493108259
+      internalID: -528152932
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hg-ss trainer_71
+      rect:
+        serializedVersion: 2
+        x: 731
+        y: 481
+        width: 56
+        height: 71
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5e12d32d0d1963f44b4b59af3fcd15cf
+      internalID: 483694342
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hg-ss trainer_72
+      rect:
+        serializedVersion: 2
+        x: 895
+        y: 481
+        width: 51
+        height: 53
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e3cdd38f0581e314197f60eb0bf63b50
+      internalID: 1683880595
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hg-ss trainer_73
+      rect:
+        serializedVersion: 2
+        x: 20
+        y: 401
+        width: 33
+        height: 56
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3b01946a09b494c49a6ff7fb3ea2ca16
+      internalID: 1658971177
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hg-ss trainer_74
+      rect:
+        serializedVersion: 2
+        x: 108
+        y: 401
+        width: 27
+        height: 54
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3b5d5c8cd7dc79c4681c0b80bad47948
+      internalID: -983998785
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hg-ss trainer_75
+      rect:
+        serializedVersion: 2
+        x: 174
+        y: 401
+        width: 50
+        height: 67
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 07b6ece3556f68f469cceb604c1028d0
+      internalID: -599387889
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hg-ss trainer_76
+      rect:
+        serializedVersion: 2
+        x: 260
+        y: 401
+        width: 38
+        height: 72
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8b33640c686d4fe4694fe7823de95b92
+      internalID: -1508200893
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hg-ss trainer_77
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 401
+        width: 80
+        height: 72
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2131a9a78ec72f442b6e2d2da4c59914
+      internalID: 796732354
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hg-ss trainer_78
+      rect:
+        serializedVersion: 2
+        x: 404
+        y: 401
+        width: 75
+        height: 79
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4b950c356e5516143a317c9292df3bd7
+      internalID: 1423669388
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hg-ss trainer_79
+      rect:
+        serializedVersion: 2
+        x: 497
+        y: 400
+        width: 52
+        height: 58
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8e06e1a164d86824f9b03536638b1487
+      internalID: 1328885539
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hg-ss trainer_80
+      rect:
+        serializedVersion: 2
+        x: 574
+        y: 400
+        width: 36
+        height: 69
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4740c925fce10a24c9c1f7acada18fe2
+      internalID: -468839219
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hg-ss trainer_81
+      rect:
+        serializedVersion: 2
+        x: 648
+        y: 401
+        width: 65
+        height: 71
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 35bafc742cf506448a38533ec393a671
+      internalID: 2135574457
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hg-ss trainer_82
+      rect:
+        serializedVersion: 2
+        x: 735
+        y: 401
+        width: 45
+        height: 69
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 17f5da36c643fec4f996104a80a769f1
+      internalID: 298080018
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hg-ss trainer_83
+      rect:
+        serializedVersion: 2
+        x: 783
+        y: 450
+        width: 5
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f0431f443765d0847a6b030e0e09decd
+      internalID: -300056949
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hg-ss trainer_84
+      rect:
+        serializedVersion: 2
+        x: 821
+        y: 400
+        width: 42
+        height: 70
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 272fe3cdba350b94eb66c7f5be8eb9c3
+      internalID: -1957832484
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hg-ss trainer_85
+      rect:
+        serializedVersion: 2
+        x: 900
+        y: 401
+        width: 39
+        height: 76
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2b5b3d3457813c849bf3c314bd550223
+      internalID: -1408198375
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hg-ss trainer_86
+      rect:
+        serializedVersion: 2
+        x: 787
+        y: 440
+        width: 5
+        height: 4
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f45e101eebe0fe64399776e191545561
+      internalID: 80636059
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hg-ss trainer_87
+      rect:
+        serializedVersion: 2
+        x: 254
+        y: 430
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5096d0af5dcc1de47b9827b389c100d8
+      internalID: 1507286799
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hg-ss trainer_88
+      rect:
+        serializedVersion: 2
+        x: 53
+        y: 419
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e186e271444603e45973d8e4d8fc9e92
+      internalID: -1584568306
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hg-ss trainer_89
+      rect:
+        serializedVersion: 2
+        x: 57
+        y: 405
+        width: 4
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 64e15c7f7eb31a04798f9591ced17310
+      internalID: -621947722
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hg-ss trainer_90
+      rect:
+        serializedVersion: 2
+        x: 260
+        y: 400
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3cd8fe5b5d6c608459753641b4d72dcc
+      internalID: -90596904
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hg-ss trainer_91
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 320
+        width: 39
+        height: 80
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 262696e07c796e14bbb39e1f379b1232
+      internalID: -1257838903
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hg-ss trainer_92
+      rect:
+        serializedVersion: 2
+        x: 103
+        y: 321
+        width: 35
+        height: 75
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d3824a5550b4b3241b294c4cc075cf21
+      internalID: -147992779
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hg-ss trainer_93
+      rect:
+        serializedVersion: 2
+        x: 181
+        y: 320
+        width: 33
+        height: 78
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 92a692ef5de614f4f80259c44f8d3a2b
+      internalID: -630581257
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hg-ss trainer_94
+      rect:
+        serializedVersion: 2
+        x: 244
+        y: 320
+        width: 69
+        height: 74
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 43a38dcb6e9680546955c56cd58f901e
+      internalID: 1590723585
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hg-ss trainer_95
+      rect:
+        serializedVersion: 2
+        x: 331
+        y: 320
+        width: 59
+        height: 76
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 28c4e6415b3571b4d9ae629f8320388d
+      internalID: -1812595362
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hg-ss trainer_96
+      rect:
+        serializedVersion: 2
+        x: 420
+        y: 321
+        width: 39
+        height: 70
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 88348718b7770e4448e18f65d844c763
+      internalID: -2011526694
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hg-ss trainer_97
+      rect:
+        serializedVersion: 2
+        x: 490
+        y: 321
+        width: 25
+        height: 29
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b4d800d9b3987874eb80b55287e0551f
+      internalID: 2034381034
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hg-ss trainer_98
+      rect:
+        serializedVersion: 2
+        x: 515
+        y: 322
+        width: 33
+        height: 55
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d38ab1b7aa6a17249a6897cd2e3e4629
+      internalID: -1839728572
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hg-ss trainer_99
+      rect:
+        serializedVersion: 2
+        x: 574
+        y: 320
+        width: 55
+        height: 79
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fed872b09ea138e4d8f4477192334c7b
+      internalID: 860510634
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hg-ss trainer_100
+      rect:
+        serializedVersion: 2
+        x: 658
+        y: 321
+        width: 42
+        height: 76
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a3cf81a1bd7f36644b0c5c0ff9cf2292
+      internalID: 440480946
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hg-ss trainer_101
+      rect:
+        serializedVersion: 2
+        x: 738
+        y: 321
+        width: 36
+        height: 71
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0d7ba918393334844857006ba3e838dd
+      internalID: -1384380547
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hg-ss trainer_102
+      rect:
+        serializedVersion: 2
+        x: 817
+        y: 321
+        width: 45
+        height: 69
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0ea688c5b09e68b489a41a292d71bb7e
+      internalID: 567699545
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hg-ss trainer_103
+      rect:
+        serializedVersion: 2
+        x: 899
+        y: 322
+        width: 42
+        height: 70
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 611b3e7e809ef1c49994d68172b45928
+      internalID: -1182864004
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hg-ss trainer_104
+      rect:
+        serializedVersion: 2
+        x: 21
+        y: 241
+        width: 39
+        height: 68
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5da2778a4f6ed9748902f610a19b2c53
+      internalID: 81351103
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hg-ss trainer_105
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 241
+        width: 41
+        height: 68
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 291479506abd9d146b1a33b3ab9a3279
+      internalID: 242081368
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hg-ss trainer_106
+      rect:
+        serializedVersion: 2
+        x: 172
+        y: 240
+        width: 59
+        height: 74
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 15496fc7ed0fe29408e0a382c7c80704
+      internalID: -634696249
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hg-ss trainer_107
+      rect:
+        serializedVersion: 2
+        x: 251
+        y: 241
+        width: 57
+        height: 77
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ce3bdaf76778ed14a9b84f1a286db360
+      internalID: -1715257542
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hg-ss trainer_108
+      rect:
+        serializedVersion: 2
+        x: 336
+        y: 242
+        width: 35
+        height: 77
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b37c940b275198d479639dafa364549c
+      internalID: 1632545180
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hg-ss trainer_109
+      rect:
+        serializedVersion: 2
+        x: 402
+        y: 240
+        width: 76
+        height: 66
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1773b76c782f6464998d7ed0b2387bf8
+      internalID: 1706753860
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hg-ss trainer_110
+      rect:
+        serializedVersion: 2
+        x: 495
+        y: 297
+        width: 4
+        height: 4
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 14d411c3afae7b143ae19e352ec399bd
+      internalID: -956571350
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hg-ss trainer_111
+      rect:
+        serializedVersion: 2
+        x: 499
+        y: 241
+        width: 41
+        height: 71
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a7154a2449b7159459ca90963d5eb99a
+      internalID: -445711636
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hg-ss trainer_112
+      rect:
+        serializedVersion: 2
+        x: 584
+        y: 241
+        width: 31
+        height: 70
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 98a3437cc4b386a42aee6b90079dbfea
+      internalID: 1260347115
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hg-ss trainer_113
+      rect:
+        serializedVersion: 2
+        x: 895
+        y: 241
+        width: 36
+        height: 66
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 55497e7a35ca8834580c7d6266b3ca77
+      internalID: 1436562293
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hg-ss trainer_114
+      rect:
+        serializedVersion: 2
+        x: 539
+        y: 287
+        width: 4
+        height: 4
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d2a7e5c6b501b8e4b9bda3811fe4eb2a
+      internalID: -1136243380
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hg-ss trainer_115
+      rect:
+        serializedVersion: 2
+        x: 661
+        y: 241
+        width: 38
+        height: 54
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bbc1fa075d7c33c4b820a33a5d7f9629
+      internalID: -1528142656
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hg-ss trainer_116
+      rect:
+        serializedVersion: 2
+        x: 742
+        y: 241
+        width: 35
+        height: 56
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8500ea6bb1ec5e3479a390ee16ae919c
+      internalID: 382729137
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hg-ss trainer_117
+      rect:
+        serializedVersion: 2
+        x: 817
+        y: 241
+        width: 46
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1403e67b77789c2479d1b3640fd459e8
+      internalID: -1097406255
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hg-ss trainer_118
+      rect:
+        serializedVersion: 2
+        x: 23
+        y: 161
+        width: 39
+        height: 65
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 988a14c470164db418a2f54b32ea51b9
+      internalID: -1309256340
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hg-ss trainer_119
+      rect:
+        serializedVersion: 2
+        x: 105
+        y: 160
+        width: 45
+        height: 80
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a1dc2004092348247a4ab4a41bdf2f74
+      internalID: -744173208
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hg-ss trainer_120
+      rect:
+        serializedVersion: 2
+        x: 193
+        y: 161
+        width: 28
+        height: 59
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a32c2d8f69f4d4445bee2fe178914eb7
+      internalID: 470480682
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hg-ss trainer_121
+      rect:
+        serializedVersion: 2
+        x: 264
+        y: 160
+        width: 26
+        height: 80
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 71c458c74c022cf459d37c780b45bfd3
+      internalID: 846667918
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hg-ss trainer_122
+      rect:
+        serializedVersion: 2
+        x: 340
+        y: 161
+        width: 38
+        height: 71
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8994a25f8c85a4943b18c58635600764
+      internalID: 2036694772
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hg-ss trainer_123
+      rect:
+        serializedVersion: 2
+        x: 427
+        y: 160
+        width: 36
+        height: 80
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0d31bf025fcc45d4283c9b89b4d4d3a5
+      internalID: -921378548
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hg-ss trainer_124
+      rect:
+        serializedVersion: 2
+        x: 501
+        y: 160
+        width: 23
+        height: 80
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1b433acebafe3a947a01750ff2edd4ea
+      internalID: 2136024458
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hg-ss trainer_125
+      rect:
+        serializedVersion: 2
+        x: 528
+        y: 162
+        width: 28
+        height: 74
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fef1f0f30be27eb4ea6266e5915ca771
+      internalID: 1302951836
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lider
+      rect:
+        serializedVersion: 2
+        x: 579
+        y: 161
+        width: 51
+        height: 72
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: be3f7cba2f309e74e96e8fc5c1e3f010
+      internalID: 830245159
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hg-ss trainer_127
+      rect:
+        serializedVersion: 2
+        x: 649
+        y: 160
+        width: 65
+        height: 80
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 49f218784ab78a84fb4d0d6813605ced
+      internalID: 1797233186
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hg-ss trainer_128
+      rect:
+        serializedVersion: 2
+        x: 734
+        y: 160
+        width: 43
+        height: 73
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 23808e78960bc1547b8949a70f774a78
+      internalID: -140213760
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hg-ss trainer_129
+      rect:
+        serializedVersion: 2
+        x: 800
+        y: 160
+        width: 66
+        height: 68
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c9f7b88fc1878f4429027df2e15aa355
+      internalID: 1866898980
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hg-ss trainer_130
+      rect:
+        serializedVersion: 2
+        x: 900
+        y: 161
+        width: 52
+        height: 76
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 84ccea2bf3140a64980a006471f0a4d2
+      internalID: -1516447699
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hg-ss trainer_131
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 80
+        width: 33
+        height: 80
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 04b1ca80f6a2d9c4e98f7332f65e8bdf
+      internalID: 1748364470
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hg-ss trainer_132
+      rect:
+        serializedVersion: 2
+        x: 101
+        y: 81
+        width: 37
+        height: 69
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 26bde76faf91ba540b7b35af41f0bf6b
+      internalID: 2012896228
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hg-ss trainer_133
+      rect:
+        serializedVersion: 2
+        x: 195
+        y: 81
+        width: 34
+        height: 77
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f5bea0c7d1bf2b84f9ee5c5fb9a869c4
+      internalID: -393317554
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hg-ss trainer_134
+      rect:
+        serializedVersion: 2
+        x: 259
+        y: 80
+        width: 41
+        height: 75
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 590e7de92e4cb0241960d308d7e27136
+      internalID: -1553358861
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hg-ss trainer_135
+      rect:
+        serializedVersion: 2
+        x: 335
+        y: 80
+        width: 65
+        height: 68
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 45b507c0328092545b131ebba97008e6
+      internalID: 196956460
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hg-ss trainer_136
+      rect:
+        serializedVersion: 2
+        x: 417
+        y: 81
+        width: 44
+        height: 74
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7e04f1be0931c834aafd67453129b516
+      internalID: -1800864430
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hg-ss trainer_137
+      rect:
+        serializedVersion: 2
+        x: 505
+        y: 80
+        width: 46
+        height: 79
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ff36ff36ad29a2140b5d84eeb581bb87
+      internalID: 453226170
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hg-ss trainer_138
+      rect:
+        serializedVersion: 2
+        x: 560
+        y: 83
+        width: 79
+        height: 76
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f9c291b94d3f1864180abe49794723f1
+      internalID: 116767045
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hg-ss trainer_139
+      rect:
+        serializedVersion: 2
+        x: 667
+        y: 80
+        width: 29
+        height: 79
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3d818484fa1f2c44a9b88aea36ce96db
+      internalID: -464700711
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hg-ss trainer_140
+      rect:
+        serializedVersion: 2
+        x: 739
+        y: 81
+        width: 43
+        height: 76
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6e5022b2b03de3e41beee363b361969d
+      internalID: 659580203
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hg-ss trainer_141
+      rect:
+        serializedVersion: 2
+        x: 823
+        y: 81
+        width: 35
+        height: 76
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ba6241ff7fa586a44849a48d9d521ce6
+      internalID: 1640907413
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hg-ss trainer_142
+      rect:
+        serializedVersion: 2
+        x: 907
+        y: 81
+        width: 27
+        height: 71
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 156c8539ea093634b9fed6bf61e8b7d1
+      internalID: -1918588918
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hg-ss trainer_143
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 0
+        width: 44
+        height: 78
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f63c3a94939c68e49b94bd01d3d23146
+      internalID: -1540624814
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hg-ss trainer_144
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 0
+        width: 44
+        height: 75
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b6c4cc0ae4b28cd4da99568a54b029c3
+      internalID: -1960570555
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hg-ss trainer_145
+      rect:
+        serializedVersion: 2
+        x: 118
+        y: 2
+        width: 39
+        height: 76
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ee865a5a53d36234da6a562c36b09314
+      internalID: -1884926591
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hg-ss trainer_146
+      rect:
+        serializedVersion: 2
+        x: 173
+        y: 1
+        width: 54
+        height: 73
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 77f4e6e5157f12840a41658e4728a79d
+      internalID: 656016510
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hg-ss trainer_147
+      rect:
+        serializedVersion: 2
+        x: 244
+        y: 0
+        width: 50
+        height: 80
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 50d0284e5e4fec94f94d427812b21c94
+      internalID: 49204334
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hg-ss trainer_148
+      rect:
+        serializedVersion: 2
+        x: 340
+        y: 0
+        width: 39
+        height: 80
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4adc16997d862954394a8321a2c4abb3
+      internalID: -524585714
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hg-ss trainer_149
+      rect:
+        serializedVersion: 2
+        x: 415
+        y: 1
+        width: 36
+        height: 66
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 062a6a8d02deb5141b9378b9b29fd7f9
+      internalID: 1216486678
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hg-ss trainer_150
+      rect:
+        serializedVersion: 2
+        x: 503
+        y: 1
+        width: 39
+        height: 65
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cf5ed21e90bc04541970e8da5ef1b444
+      internalID: -168712907
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hg-ss trainer_151
+      rect:
+        serializedVersion: 2
+        x: 585
+        y: 1
+        width: 36
+        height: 66
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8b4dbcbc1ee5b1046a22e94a92da7c8c
+      internalID: 1634669518
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hg-ss trainer_152
+      rect:
+        serializedVersion: 2
+        x: 664
+        y: 1
+        width: 28
+        height: 66
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0c6bfa72fe152504d8ea4d63a83b6353
+      internalID: -28344036
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hg-ss trainer_153
+      rect:
+        serializedVersion: 2
+        x: 707
+        y: 5
+        width: 246
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 543697b47afd8ba448fa5d1f87251e1b
+      internalID: 369777050
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      hg-ss trainer_97: 2034381034
+      kid-2: 1062479521
+      hg-ss trainer_81: 2135574457
+      hg-ss trainer_88: -1584568306
+      hg-ss trainer_108: 1632545180
+      hg-ss trainer_132: 2012896228
+      hg-ss trainer_151: 1634669518
+      hg-ss trainer_116: 382729137
+      hg-ss trainer_61: 411938510
+      hg-ss trainer_75: -599387889
+      hg-ss trainer_12: -1465498559
+      hg-ss trainer_64: 1631093382
+      hg-ss trainer_86: 80636059
+      hg-ss trainer_143: -1540624814
+      hg-ss trainer_96: -2011526694
+      hg-ss trainer_47: 481980311
+      hg-ss trainer_40: 1621675048
+      hg-ss trainer_127: 1797233186
+      hg-ss trainer_55: -2099893549
+      hg-ss trainer_125: 1302951836
+      hg-ss trainer_23: -195010806
+      hg-ss trainer_102: 567699545
+      hg-ss trainer_71: 483694342
+      hg-ss trainer_46: 1479477621
+      hg-ss trainer_84: -1957832484
+      hg-ss trainer_146: 656016510
+      hg-ss trainer_91: -1257838903
+      kid-3: -624968131
+      hg-ss trainer_129: 1866898980
+      kid-1: 980624248
+      hg-ss trainer_104: 81351103
+      hg-ss trainer_138: 116767045
+      hg-ss trainer_19: 783259441
+      hg-ss trainer_39: -734295727
+      hg-ss trainer_147: 49204334
+      hg-ss trainer_130: -1516447699
+      hg-ss trainer_135: 196956460
+      hg-ss trainer_7: -1877435653
+      hg-ss trainer_62: 1929167687
+      hg-ss trainer_112: 1260347115
+      hg-ss trainer_37: -636722720
+      hg-ss trainer_101: -1384380547
+      hg-ss trainer_21: -717947385
+      hg-ss trainer_103: -1182864004
+      hg-ss trainer_49: 965930011
+      hg-ss trainer_107: -1715257542
+      hg-ss trainer_31: -1798744101
+      hg-ss trainer_105: 242081368
+      hg-ss trainer_137: 453226170
+      hg-ss trainer_136: -1800864430
+      hg-ss trainer_87: 1507286799
+      hg-ss trainer_66: 543027842
+      hg-ss trainer_133: -393317554
+      hg-ss trainer_119: -744173208
+      hg-ss trainer_43: 568700952
+      hg-ss trainer_123: -921378548
+      hg-ss trainer_83: -300056949
+      hg-ss trainer_59: -1300404896
+      hg-ss trainer_65: 2054249787
+      hg-ss trainer_45: -781698252
+      hg-ss trainer_94: 1590723585
+      hg-ss trainer_3: 1283563920
+      hg-ss trainer_93: -630581257
+      hg-ss trainer_152: -28344036
+      hg-ss trainer_89: -621947722
+      hg-ss trainer_67: 1960443762
+      hg-ss trainer_69: -9411352
+      hg-ss trainer_124: 2136024458
+      hg-ss trainer_148: -524585714
+      hg-ss trainer_24: 1292911762
+      hg-ss trainer_50: -1217665217
+      hg-ss trainer_74: -983998785
+      hg-ss trainer_99: 860510634
+      hg-ss trainer_2: 967115823
+      hg-ss trainer_90: -90596904
+      hg-ss trainer_32: 2022546420
+      hg-ss trainer_33: -2122682451
+      hg-ss trainer_14: -348863676
+      hg-ss trainer_100: 440480946
+      hg-ss trainer_63: 1944667845
+      hg-ss trainer_77: 796732354
+      hg-ss trainer_115: -1528142656
+      hg-ss trainer_58: 930341591
+      hg-ss trainer_118: -1309256340
+      hg-ss trainer_0: -952098485
+      water-1: -569816475
+      hg-ss trainer_153: 369777050
+      hg-ss trainer_44: 87462679
+      hg-ss trainer_128: -140213760
+      hg-ss trainer_92: -147992779
+      hg-ss trainer_18: -1073221798
+      hg-ss trainer_113: 1436562293
+      hg-ss trainer_121: 846667918
+      hg-ss trainer_72: 1683880595
+      hg-ss trainer_122: 2036694772
+      hg-ss trainer_48: -1794189907
+      hg-ss trainer_139: -464700711
+      hg-ss trainer_134: -1553358861
+      hg-ss trainer_38: -1745240746
+      hg-ss trainer_82: 298080018
+      hg-ss trainer_41: -176281067
+      hg-ss trainer_34: 1723791132
+      hg-ss trainer_149: 1216486678
+      hg-ss trainer_85: -1408198375
+      hg-ss trainer_140: 659580203
+      hg-ss trainer_80: -468839219
+      hg-ss trainer_5: -1532369630
+      hg-ss trainer_13: 314431082
+      hg-ss trainer_73: 1658971177
+      hg-ss trainer_106: -634696249
+      hg-ss trainer_76: -1508200893
+      hg-ss trainer_20: 2051358244
+      hg-ss trainer_70: -528152932
+      hg-ss trainer_141: 1640907413
+      hg-ss trainer_30: -273302667
+      hg-ss trainer_25: -1488535350
+      hg-ss trainer_1: -1205363242
+      hg-ss trainer_95: -1812595362
+      water-2: 1333892560
+      hg-ss trainer_26: -2055932717
+      hg-ss trainer_60: 1371177556
+      hg-ss trainer_57: 396591628
+      hg-ss trainer_6: -1804002833
+      hg-ss trainer_52: 816153236
+      hg-ss trainer_79: 1328885539
+      pesquero: 1529194147
+      hg-ss trainer_78: 1423669388
+      hg-ss trainer_51: 1139051135
+      hg-ss trainer_29: 1473126464
+      hg-ss trainer_4: -900522032
+      hg-ss trainer_120: 470480682
+      hg-ss trainer_131: 1748364470
+      hg-ss trainer_35: -502608925
+      hg-ss trainer_150: -168712907
+      hg-ss trainer_16: 1906352442
+      hg-ss trainer_110: -956571350
+      hg-ss trainer_111: -445711636
+      hg-ss trainer_145: -1884926591
+      hg-ss trainer_28: 924196038
+      lider: 830245159
+      hg-ss trainer_144: -1960570555
+      hg-ss trainer_17: 1480469945
+      hg-ss trainer_56: 1135033318
+      hg-ss trainer_42: -1231606462
+      hg-ss trainer_142: -1918588918
+      hg-ss trainer_114: -1136243380
+      hg-ss trainer_117: -1097406255
+      hg-ss trainer_22: 127334179
+      hg-ss trainer_109: 1706753860
+      hg-ss trainer_68: 1611276499
+      hg-ss trainer_98: -1839728572
+      hg-ss trainer_27: -920508851
+      hg-ss trainer_15: -1354917719
+      rival: 607568148
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

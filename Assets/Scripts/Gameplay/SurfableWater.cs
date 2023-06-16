@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 
-public class SurfableWater : MonoBehaviour, Interactable, IPlayerTriggerable
+public class SurfableWater : MonoBehaviour, Interactable
 {
     bool isJumpingToWater = false;
 
@@ -48,7 +48,7 @@ public class SurfableWater : MonoBehaviour, Interactable, IPlayerTriggerable
     {
         if (UnityEngine.Random.Range(1, 101) <= 10)
         {
-            StartCoroutine(GameController.Instance.StartBattle(BattleTrigger.Water));
+            //StartCoroutine(GameController.Instance.StartBattle(BattleTrigger.Water));
         }
     }
 }

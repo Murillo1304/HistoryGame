@@ -47,4 +47,13 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Lake-Lab.unity
     guid: 966cec2551e7b094a943c60eb024fb8f
+  - enabled: 1
+    path: Assets/Scenes/Lake-Water.unity
+    guid: a1ac774d589570d4dac416e8edb637cb
+  - enabled: 1
+    path: Assets/Scenes/Lake-Jungle.unity
+    guid: 63ee2d638dda33b40bca500bda820c97
+  - enabled: 1
+    path: Assets/Scenes/Gym.unity
+    guid: fc31aabce70a59545a05315f8cf697b2
   m_configObjects: {}

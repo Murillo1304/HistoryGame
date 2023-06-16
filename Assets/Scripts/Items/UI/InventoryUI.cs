@@ -51,11 +51,12 @@ public class InventoryUI : MonoBehaviour
 
     private void Start()
     {
+        itemIcon.sprite = null;
+        itemDescription.text = null;
+
         UpdateItemList();
 
         inventory.OnUpdated += UpdateItemList;
-
-        itemIcon.sprite = null;
     }
 
     void UpdateItemList()
@@ -337,6 +338,7 @@ public class InventoryUI : MonoBehaviour
             var item = slots[selectedItem].Item;
             itemIcon.sprite = item.Icon;
             itemDescription.text = item.Description;
+
         }
         else
         {

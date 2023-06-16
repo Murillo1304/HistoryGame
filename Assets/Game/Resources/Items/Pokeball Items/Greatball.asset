@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Greatball
   m_EditorClassIdentifier: 
   name: Superball
-  description: Una pokeball de mayor calidad para capturar pokemon salvajes
+  description: Una pokeball de mayor calidad para capturar hatun salvajes
   message: "us\xF3 superball"
   icon: {fileID: -1458229319, guid: ea9e4e5a03c30184895a038c50777800, type: 3}
   price: 500

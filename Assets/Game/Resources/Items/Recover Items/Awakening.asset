@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Awakening
   m_EditorClassIdentifier: 
   name: Despertar
-  description: "Despierta a un pokemon que est\xE1 dormido"
+  description: "Despierta a un hatun que est\xE1 dormido"
   message: "se despert\xF3 del sue\xF1o"
   icon: {fileID: -1422237134, guid: ea9e4e5a03c30184895a038c50777800, type: 3}
   price: 250

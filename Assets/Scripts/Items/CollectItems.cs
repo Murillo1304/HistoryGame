@@ -1,7 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using static UnityEditor.Progress;
 using static UnityEngine.UIElements.UxmlAttributeDescription;
 
 public class CollectItems : MonoBehaviour, ISavable

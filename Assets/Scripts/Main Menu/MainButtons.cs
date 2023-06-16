@@ -14,6 +14,8 @@ public class MainButtons : MonoBehaviour
     {
         if (Application.platform == RuntimePlatform.Android)
             Application.targetFrameRate = 120;
+        else
+            Application.targetFrameRate = 240;
     }
 
     public void GetSlots()

@@ -1,0 +1,44 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 55eb119118472dd42a727667cfd82ca1, type: 3}
+  m_Name: Waylluq
+  m_EditorClassIdentifier: 
+  name: Waylluq
+  description: 
+  frontSprite: {fileID: 21300000, guid: b07fddfd2339ffd438bc5fe6ded7611a, type: 3}
+  backSprite: {fileID: 21300000, guid: d9e2a432fcb1b4c43afe535044821a2e, type: 3}
+  type1: 5
+  type2: 0
+  maxHp: 60
+  attack: 72
+  defense: 63
+  spAttack: 80
+  spDefense: 70
+  speed: 85
+  expYield: 120
+  growthRate: 3
+  catchRate: 45
+  learnableMoves:
+  - moveBase: {fileID: 11400000, guid: 74d33be41b65f5345954f2e452394c28, type: 2}
+    level: 1
+  - moveBase: {fileID: 11400000, guid: 771624cfde7dc0d468cf8314cbbb5529, type: 2}
+    level: 4
+  - moveBase: {fileID: 11400000, guid: 4b5c112285558454396f9079fd007594, type: 2}
+    level: 7
+  - moveBase: {fileID: 11400000, guid: f02b44bd2c5a9c142b493fb9ea755562, type: 2}
+    level: 7
+  - moveBase: {fileID: 11400000, guid: a51d799d0614e7243af4d0abe9af2f31, type: 2}
+    level: 17
+  learnableByItems:
+  - {fileID: 11400000, guid: f02b44bd2c5a9c142b493fb9ea755562, type: 2}
+  - {fileID: 11400000, guid: 4e6a0cc106c62234f94fad9d00ff4f23, type: 2}
+  evolutions: []
