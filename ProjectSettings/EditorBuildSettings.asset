@@ -36,6 +36,9 @@ EditorBuildSettings:
     path: Assets/Scenes/Town1.unity
     guid: 11eaf9663b9bf6843a81b49d95ff407b
   - enabled: 1
+    path: Assets/Scenes/Town2.unity
+    guid: 39c17a7447cf90c478a7913c3d9690f7
+  - enabled: 1
     path: Assets/Scenes/T1-PokemonCenter.unity
     guid: 7af4401449b29304c8bc809dc1ccdb1d
   - enabled: 1

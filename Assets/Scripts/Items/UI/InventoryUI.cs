@@ -7,6 +7,7 @@ using UnityEditor;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityStandardAssets.CrossPlatformInput;
+using static UnityEditor.Progress;
 
 public enum InventoryUIState { ItemSelection, PartySelection, MoveToForget, Busy}
 
@@ -343,6 +344,8 @@ public class InventoryUI : MonoBehaviour
         else
         {
             itemIcon.color = noItemColor;
+            itemIcon.sprite = null;
+            itemDescription.text = null;
         }
 
         HandleScrolling();

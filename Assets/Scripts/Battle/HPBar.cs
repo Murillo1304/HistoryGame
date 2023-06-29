@@ -27,8 +27,10 @@ public class HPBar : MonoBehaviour
             curHP -= changeAmt * Time.deltaTime;
             health.transform.localScale = new Vector3(curHP, 1f);
             ChangeColor(curHP);
+            Debug.Log("Entre aqui");
             yield return null;
         }
+        ChangeColor(newHp);
         health.transform.localScale = new Vector3(newHp, 1f);
 
         IsUpdating = false;
