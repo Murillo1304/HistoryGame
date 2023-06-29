@@ -970,6 +970,8 @@ MonoBehaviour:
           - Auqui, como el heredero escogido
           - "\xA1Muchos recuerdos por hoy!"
           - "\xA1Anda a la escuela, el profesor te espera!"
+          - Debes salir e ir a la casa de al lado
+          - "\xA1Imposible perderte!"
     - rid: 5464443123976896515
       type: {class: CompleteQuestAction, ns: , asm: Assembly-CSharp}
       data:
