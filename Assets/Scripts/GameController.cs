@@ -104,18 +104,17 @@ public class GameController : MonoBehaviour
         //partyScreen.OnChangePokemonFinish += () => state = GameState.PartyScreen;
 
 
-
-        if (GlobalSettings.i.SaveSlotName != null)
+        if (!GlobalSettings.i.Cargar)
         {
-            //Cargar
+            //Nueva partida
+            //Guardar
+            SavingSystem.i.Save(GlobalSettings.i.SaveSlotName);
+            Debug.Log("Guardado automatico: " + GlobalSettings.i.SaveSlotName);
+        }
+        else
+        {
             SavingSystem.i.Load(GlobalSettings.i.SaveSlotName);
             state = GameState.FreeRoam;
-        }
-
-        if (GlobalSettings.i.UseInternet)
-        {
-            //Hacer GET y decodificar
-
         }
     }
 
@@ -410,13 +409,13 @@ public class GameController : MonoBehaviour
         else if (selectItem == 2)
         {
             //Guardar
-            SavingSystem.i.Save("saveSlot1");
+            SavingSystem.i.Save(GlobalSettings.i.SaveSlotName);
             state = GameState.FreeRoam;
         }
         else if (selectItem == 3)
         {
             //Cargar
-            SavingSystem.i.Load("saveSlot1");
+            SavingSystem.i.Load(GlobalSettings.i.SaveSlotName);
             state = GameState.FreeRoam;
         }
     }

@@ -50,6 +50,8 @@ public class LoginUI : MonoBehaviour
         form.AddField("username", username);
         form.AddField("password", password);
 
+        if (Application.platform == RuntimePlatform.Android) url = "http://192.168.18.9:3000";
+
         using (UnityWebRequest request = UnityWebRequest.Post(url, form))
         {
             yield return request.SendWebRequest();

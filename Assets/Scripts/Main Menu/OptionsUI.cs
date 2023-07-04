@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Text.RegularExpressions;
 using UnityEngine;
 
 public class OptionsUI : MonoBehaviour
@@ -17,7 +18,7 @@ public class OptionsUI : MonoBehaviour
 
     private void Start()
     {   
-        var slots = GetSaveSlotsNames();
+        var slots = GetSaveSlotsWithUsername(GlobalSettings.i.FirstName, GlobalSettings.i.Lastname);
         if (slots.Count() > 0)
         {
             ButtonLoad.SetActive(true);
@@ -28,24 +29,21 @@ public class OptionsUI : MonoBehaviour
         }
     }
 
-    public string[] GetSaveSlotsNames()
+    public string[] GetSaveSlotsWithUsername(string lastname, string firstname)
     {
-        string directoryPath = Application.persistentDataPath;
-        string[] saveSlotFiles = GetFilesWithSaveSlot(directoryPath);
-        return saveSlotFiles;
-    }
+        string[] files = Directory.GetFiles(Application.persistentDataPath);
+        string pattern = @"saveSlot-" + firstname + lastname + @".*-\d+-\d+";
+        List<string> miLista = new List<string>();
 
-    private static string[] GetFilesWithSaveSlot(string directoryPath)
-    {
-        DirectoryInfo directoryInfo = new DirectoryInfo(directoryPath);
-        FileInfo[] files = directoryInfo.GetFiles("*saveSlot*");
-        string[] fileNames = new string[files.Length];
-
-        for (int i = 0; i < files.Length; i++)
+        foreach (string file in files)
         {
-            fileNames[i] = files[i].Name;
+            string fileName = Path.GetFileName(file);
+            if (Regex.IsMatch(fileName, pattern))
+            {
+                miLista.Add(fileName);
+            }
         }
 
-        return fileNames;
+        return miLista.ToArray();
     }
 }

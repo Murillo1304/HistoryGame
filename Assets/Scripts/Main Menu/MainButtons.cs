@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -7,6 +8,7 @@ public class MainButtons : MonoBehaviour
 {
     [SerializeField] GameObject login;
     [SerializeField] GameObject options;
+    [SerializeField] GameObject slotList;
 
     string[] slots;
     
@@ -20,8 +22,8 @@ public class MainButtons : MonoBehaviour
 
     public void GetSlots()
     {
-        slots = OptionsUI.i.GetSaveSlotsNames();
-        Debug.Log(slots[0]);
+        slots = OptionsUI.i.GetSaveSlotsWithUsername(GlobalSettings.i.FirstName, GlobalSettings.i.Lastname);
+        GlobalSettings.i.slots = slots;
     }
 
     public void Access()
@@ -29,7 +31,12 @@ public class MainButtons : MonoBehaviour
         if (GlobalSettings.i.UseInternet)
             StartCoroutine(Login());
         else
+        {
+            //Sin internet
+            GlobalSettings.i.FirstName = "Usuario";
+            GlobalSettings.i.Lastname = "Invitado";
             ActivateOptions();
+        }
     }
 
     public IEnumerator Login()
@@ -42,6 +49,9 @@ public class MainButtons : MonoBehaviour
         {
             GlobalSettings.i.Username = LoginUI.i.username;
             ActivateOptions();
+
+            yield return ConfigurationDecoder.i.GetConfiguration(GlobalSettings.i.Username);
+            yield return new WaitUntil(() => ConfigurationDecoder.i.requestResponse == true);
         }
     }
 
@@ -54,15 +64,35 @@ public class MainButtons : MonoBehaviour
 
     public void Play()
     {     
+        //Setear configuracion
+        if (GlobalSettings.i.UseInternet)
+        {
+            ConfigurationDecoder.i.SetConfiguration();
+        }
+        else
+        {
+            //Setear configuracion estandar
+            GlobalSettings.i.goLake = true;
+            GlobalSettings.i.actCave = Actividad.Actividad02;
+        }
+        AsignNameNewSaveSlot();
         Loader.Load(Scene.Gameplay);
         Destroy(gameObject);
     }
 
+    public void AsignNameNewSaveSlot()
+    {
+        string newSlotName = "saveSlot-" + GlobalSettings.i.FirstName + GlobalSettings.i.Lastname + "-" + (slots.Count() + 1).ToString() + "-" + GlobalSettings.i.CreateCodeConfiguration();
+        GlobalSettings.i.SaveSlotName = newSlotName;
+        Debug.Log("Nuevo slot: " + newSlotName);
+    }
+
+
     public void LoadGame()
     {
-        GlobalSettings.i.SaveSlotName = slots[0];
-        Loader.Load(Scene.Gameplay);
-        Destroy(gameObject);
+        login.SetActive(false);
+        options.SetActive(false);
+        slotList.SetActive(true);
     }
 
     public void Exit()
