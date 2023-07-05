@@ -25945,8 +25945,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2f2c529c7c93db64da6fb809da3a0ddc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  activity: 0
   taxonomy: 1
+  scenary: 1
+  numberQuestions: 1
+  showScore: 0
 --- !u!4 &785063739
 Transform:
   m_ObjectHideFlags: 0

@@ -6,11 +6,15 @@ using UnityEngine;
 
 public enum Actividad { Actividad01, Actividad02, Actividad03, Actividad04, Actividad05, Actividad06, Actividad07 }
 public enum Taxonomia { Entender, Aplicar, Analizar, Evaluar }
+public enum Escenario { Cuevas, Lago, Bosque, Montaña, Ciudad }
 
 public class QuestionAsigner : MonoBehaviour, ISavable
 {
-    [SerializeField] Actividad activity;
+    Actividad activity;
     [SerializeField] Taxonomia taxonomy;
+    [SerializeField] Escenario scenary;
+    [SerializeField] int numberQuestions = 1;
+    [SerializeField] bool showScore = false;
     QuestionerController[] questioners;
 
     List<QuestionsAndAnswers> questions;
@@ -31,7 +35,19 @@ public class QuestionAsigner : MonoBehaviour, ISavable
         Asigned = true;
         questioners = GetComponentsInChildren<QuestionerController>();
 
+        if (scenary == Escenario.Cuevas)
+            activity = GlobalSettings.i.actCave;
+        else if (scenary == Escenario.Lago)
+            activity = GlobalSettings.i.actLake;
+        else if (scenary == Escenario.Bosque)
+            activity = GlobalSettings.i.actForest;
+        else if (scenary == Escenario.Montaña)
+            activity = GlobalSettings.i.actMountain;
+        else if (scenary == Escenario.Ciudad)
+            activity = GlobalSettings.i.actCity;
+
         if (activity == Actividad.Actividad01)
+        {
             if (taxonomy == Taxonomia.Entender)
                 questions = CopyQuestions(QuestionLoader.i.jsonQuestions.act01.entender);
             else if (taxonomy == Taxonomia.Aplicar)
@@ -40,23 +56,98 @@ public class QuestionAsigner : MonoBehaviour, ISavable
                 questions = CopyQuestions(QuestionLoader.i.jsonQuestions.act01.analizar);
             else if (taxonomy == Taxonomia.Evaluar)
                 questions = CopyQuestions(QuestionLoader.i.jsonQuestions.act01.evaluar);
+        }
+        else if (activity == Actividad.Actividad02)
+        {
+            if (taxonomy == Taxonomia.Entender)
+                questions = CopyQuestions(QuestionLoader.i.jsonQuestions.act02.entender);
+            else if (taxonomy == Taxonomia.Aplicar)
+                questions = CopyQuestions(QuestionLoader.i.jsonQuestions.act02.aplicar);
+            else if (taxonomy == Taxonomia.Analizar)
+                questions = CopyQuestions(QuestionLoader.i.jsonQuestions.act02.analizar);
+            else if (taxonomy == Taxonomia.Evaluar)
+                questions = CopyQuestions(QuestionLoader.i.jsonQuestions.act02.evaluar);
+        }
+        else if (activity == Actividad.Actividad03)
+        {
+            if (taxonomy == Taxonomia.Entender)
+                questions = CopyQuestions(QuestionLoader.i.jsonQuestions.act03.entender);
+            else if (taxonomy == Taxonomia.Aplicar)
+                questions = CopyQuestions(QuestionLoader.i.jsonQuestions.act03.aplicar);
+            else if (taxonomy == Taxonomia.Analizar)
+                questions = CopyQuestions(QuestionLoader.i.jsonQuestions.act03.analizar);
+            else if (taxonomy == Taxonomia.Evaluar)
+                questions = CopyQuestions(QuestionLoader.i.jsonQuestions.act03.evaluar);
+        }
+        else if (activity == Actividad.Actividad04)
+        {
+            if (taxonomy == Taxonomia.Entender)
+                questions = CopyQuestions(QuestionLoader.i.jsonQuestions.act04.entender);
+            else if (taxonomy == Taxonomia.Aplicar)
+                questions = CopyQuestions(QuestionLoader.i.jsonQuestions.act04.aplicar);
+            else if (taxonomy == Taxonomia.Analizar)
+                questions = CopyQuestions(QuestionLoader.i.jsonQuestions.act04.analizar);
+            else if (taxonomy == Taxonomia.Evaluar)
+                questions = CopyQuestions(QuestionLoader.i.jsonQuestions.act04.evaluar);
+        }
+        else if (activity == Actividad.Actividad05)
+        {
+            if (taxonomy == Taxonomia.Entender)
+                questions = CopyQuestions(QuestionLoader.i.jsonQuestions.act05.entender);
+            else if (taxonomy == Taxonomia.Aplicar)
+                questions = CopyQuestions(QuestionLoader.i.jsonQuestions.act05.aplicar);
+            else if (taxonomy == Taxonomia.Analizar)
+                questions = CopyQuestions(QuestionLoader.i.jsonQuestions.act05.analizar);
+            else if (taxonomy == Taxonomia.Evaluar)
+                questions = CopyQuestions(QuestionLoader.i.jsonQuestions.act05.evaluar);
+        }
+        else if (activity == Actividad.Actividad06)
+        {
+            if (taxonomy == Taxonomia.Entender)
+                questions = CopyQuestions(QuestionLoader.i.jsonQuestions.act06.entender);
+            else if (taxonomy == Taxonomia.Aplicar)
+                questions = CopyQuestions(QuestionLoader.i.jsonQuestions.act06.aplicar);
+            else if (taxonomy == Taxonomia.Analizar)
+                questions = CopyQuestions(QuestionLoader.i.jsonQuestions.act06.analizar);
+            else if (taxonomy == Taxonomia.Evaluar)
+                questions = CopyQuestions(QuestionLoader.i.jsonQuestions.act06.evaluar);
+        }
+        else if (activity == Actividad.Actividad07)
+        {
+            if (taxonomy == Taxonomia.Entender)
+                questions = CopyQuestions(QuestionLoader.i.jsonQuestions.act07.entender);
+            else if (taxonomy == Taxonomia.Aplicar)
+                questions = CopyQuestions(QuestionLoader.i.jsonQuestions.act07.aplicar);
+            else if (taxonomy == Taxonomia.Analizar)
+                questions = CopyQuestions(QuestionLoader.i.jsonQuestions.act07.analizar);
+            else if (taxonomy == Taxonomia.Evaluar)
+                questions = CopyQuestions(QuestionLoader.i.jsonQuestions.act07.evaluar);
+        }
+
+        bool lower = questioners.Length * numberQuestions <= questions.Count;
 
         foreach (var questioner in questioners)
         {
             questioner.taxonomy = taxonomy;
-            questioner.QuestionsAndAnswersList = GetRandomQuestion();
+            questioner.showScore = showScore;
+            questioner.QuestionsAndAnswersList = GetRandomQuestion(lower);
         }
     }
 
-    private List<QuestionsAndAnswers> GetRandomQuestion()
+    private List<QuestionsAndAnswers> GetRandomQuestion(bool remove)
     {
-        int randomIndex = UnityEngine.Random.Range(0, questions.Count);
-        QuestionsAndAnswers randomQuestion = questions[randomIndex];
-
-        questions.RemoveAt(randomIndex);
-
         List<QuestionsAndAnswers> newList = new List<QuestionsAndAnswers>();
-        newList.Add(randomQuestion);
+
+        for (int i = 0; i < numberQuestions; i++)
+        {
+            int randomIndex = UnityEngine.Random.Range(0, questions.Count);
+            QuestionsAndAnswers randomQuestion = questions[randomIndex];
+
+            if (remove)
+                questions.RemoveAt(randomIndex);
+
+            newList.Add(randomQuestion);
+        }
 
         return newList;
     }

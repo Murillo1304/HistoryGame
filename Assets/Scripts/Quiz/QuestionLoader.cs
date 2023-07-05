@@ -24,11 +24,6 @@ public class QuestionLoader : MonoBehaviour
         {
             string jsonContent = jsonAsset.text;
             jsonQuestions = JsonUtility.FromJson<PreguntasData>(jsonContent);
-
-            Debug.Log("Entender: " + jsonQuestions.act01.entender.Count);
-            Debug.Log("Aplicar: " + jsonQuestions.act01.aplicar.Count);
-            Debug.Log("Analizar: " + jsonQuestions.act01.analizar.Count);
-            Debug.Log("Evaluar: " + jsonQuestions.act01.evaluar.Count);
         }
         else
         {
@@ -48,7 +43,7 @@ public class Pregunta
 }
 
 [System.Serializable]
-public class Act01
+public class Act
 {
     public List<Pregunta> entender;
     public List<Pregunta> aplicar;
@@ -59,5 +54,11 @@ public class Act01
 [System.Serializable]
 public class PreguntasData
 {
-    public Act01 act01;
+    public Act act01;
+    public Act act02;
+    public Act act03;
+    public Act act04;
+    public Act act05;
+    public Act act06;
+    public Act act07;
 }

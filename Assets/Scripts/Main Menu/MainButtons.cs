@@ -84,7 +84,6 @@ public class MainButtons : MonoBehaviour
     {
         string newSlotName = "saveSlot-" + GlobalSettings.i.FirstName + GlobalSettings.i.Lastname + "-" + (slots.Count() + 1).ToString() + "-" + GlobalSettings.i.CreateCodeConfiguration();
         GlobalSettings.i.SaveSlotName = newSlotName;
-        Debug.Log("Nuevo slot: " + newSlotName);
     }
 
 

@@ -25,7 +25,9 @@ public class QuizUI : MonoBehaviour
 
     Tween animacion;
 
-    public void ShowQuiz(List<QuestionsAndAnswers> quiz, Taxonomia taxonomy)
+    bool showScore = false;
+
+    public void ShowQuiz(List<QuestionsAndAnswers> quiz, Taxonomia taxonomy, bool showScore = false)
     {
         score = 0;
         QnA = quiz;
@@ -45,6 +47,8 @@ public class QuizUI : MonoBehaviour
         {
             timePanel.gameObject.SetActive(false);
         }
+
+        this.showScore = showScore;
     }
 
     IEnumerator StartCountdown()
@@ -135,7 +139,10 @@ public class QuizUI : MonoBehaviour
         }
         else
         {
-            ExitQuiz();
+            if (!showScore)
+                ExitQuiz();
+            else
+                StartCoroutine(SeeScore());
         }
     }
 

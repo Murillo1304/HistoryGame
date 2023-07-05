@@ -18,6 +18,7 @@ public class QuestionerController : MonoBehaviour, Interactable, ISavable
     //State
     bool used = false;
     public Taxonomia taxonomy { get; set; }
+    public bool showScore { get; set; }
 
     public List<QuestionsAndAnswers> QuestionsAndAnswersList
     {
@@ -61,7 +62,7 @@ public class QuestionerController : MonoBehaviour, Interactable, ISavable
         used = true;
         fov.gameObject.SetActive(false);
 
-        QuizManager.i.Show(QnA, taxonomy);
+        QuizManager.i.Show(QnA, taxonomy, showScore);
 
         yield return new WaitUntil(() => QuizManager.i.finishQuiz == true);
         QuizManager.i.Close();
@@ -111,6 +112,7 @@ public class QuestionerController : MonoBehaviour, Interactable, ISavable
         var saveData = new QuestionerSaveData()
         {
             usedSave = used,
+            showScoreSave = showScore,
             QnASave = QnA,
             taxonomySave = taxonomy,
         };
@@ -122,6 +124,7 @@ public class QuestionerController : MonoBehaviour, Interactable, ISavable
     {
         var saveData = state as QuestionerSaveData;
         used = saveData.usedSave;
+        showScore = saveData.showScoreSave;
         taxonomy = saveData.taxonomySave;
         if (used)
             fov.gameObject.SetActive(false);
@@ -136,6 +139,7 @@ public class QuestionerController : MonoBehaviour, Interactable, ISavable
 public class QuestionerSaveData
 {
     public bool usedSave;
+    public bool showScoreSave;
     public List<QuestionsAndAnswers> QnASave;
     public Taxonomia taxonomySave;
 }

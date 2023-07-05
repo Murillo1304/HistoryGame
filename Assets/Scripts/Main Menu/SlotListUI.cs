@@ -63,7 +63,7 @@ public class SlotListUI : MonoBehaviour
         if (activity == 0) line += "Edad Moderna";
         else if (escenary == 1) line += "Imperio del Tahuantisuyo";
         else if (escenary == 2) line += "Conquista y Virreinato";
-        else if (escenary == 3) line += "Regiones Naturales del Perú";
+        else if (escenary == 3) line += "Regiones Naturales";
         else if (escenary == 4) line += "Herramientas cartográficas";
         else if (escenary == 5) line += "Prevención de desastres";
         else if (escenary == 6) line += "Agentes económicos";

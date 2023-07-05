@@ -2,6 +2,148 @@
   "act01": {
     "entender": [
       {
+        "pregunta": "Acontecimiento que marca el inicio de la Edad Media:",
+        "imagen": "",
+        "opciones": [
+          "Toma de Constantinopla",
+          "Caída del Imperio Romano de Oriente",
+          "Caída del Imperio Romano de Occidente",
+          "Descubrimiento de América"
+        ],
+        "respuesta": 2
+      },
+      {
+        "pregunta": "Identifica que hecho histórico se dio en la Edad Media:",
+        "imagen": "act1Preg02",
+        "opciones": [
+          "Descubrimiento de América",
+          "La toma de Constantinopla",
+          "Surgimiento del feudalismo",
+          "Los grandes inventos chinos"
+        ],
+        "respuesta": 3
+      },
+      {
+        "pregunta": "Los grandes descubrimientos geográficos como el descubrimiento de América se dieron en la Edad:",
+        "imagen": "",
+        "opciones": [
+          "Contemporánea",
+          "Media",
+          "Moderna",
+          "Antigua"
+        ],
+        "respuesta": 3
+      },
+      {
+        "pregunta": "La Caída de Constantinopla o Roma de Oriente marca el inicio de la Edad:",
+        "imagen": "",
+        "opciones": [
+          "Moderna",
+          "Media",
+          "Antigua",
+          "Contemporánea"
+        ],
+        "respuesta": 1
+      }
+    ],
+    "aplicar": [
+      {
+        "pregunta": "El personaje nace en Génova Italia planteaba la esfericidad de la tierra y que navegando en línea recta por el océano atlántico se llegaba más rápido a las Indias:",
+        "imagen": "act1Preg05",
+        "opciones": [
+          "Américo Vespucio",
+          "Bartolomé Días",
+          "Vasco da Gama",
+          "Cristóbal Colón"
+        ],
+        "respuesta": 4
+      },
+      {
+        "pregunta": "Mira la imagen y menciona quien logro en 1487 descubrir el Cabo de las Tormentas llamado después Cabo de Buena Esperanza",
+        "imagen": "act1Preg06",
+        "opciones": [
+          "Alvares de Cabral",
+          "Cristóbal Colon",
+          "Vasco da Gama",
+          "Bartolomé Días"
+        ],
+        "respuesta": 4
+      },
+      {
+        "pregunta": "Mercader y explorador florentino que descubrió que las tierras halladas por Colón correspondían a un nuevo mundo:",
+        "imagen": "",
+        "opciones": [
+          "Marco Polo",
+          "Américo Vespucio",
+          "Pablo Toscanelli",
+          "Martín Waldsemuller"
+        ],
+        "respuesta": 2
+      }
+    ],
+    "analizar": [
+      {
+        "pregunta": "Países que iniciaron los grandes descubrimientos geográficos durante la Edad Moderna:",
+        "imagen": "",
+        "opciones": [
+          "Alemania e Inglaterra",
+          "España y Francia",
+          "Portugal y España",
+          "Inglaterra y Portugal"
+        ],
+        "respuesta": 3
+      },
+      {
+        "pregunta": "Causa principal por la cual se inician los grandes descubrimientos geográficos:",
+        "imagen": "",
+        "opciones": [
+          "Invención de la Imprenta",
+          "Toma de Constantinopla por los Turcos Otomanos",
+          "Invención del Nao",
+          "Descubrimiento de la pólvora"
+        ],
+        "respuesta": 2
+      },
+      {
+        "pregunta": "La empresa Conquistadora de Colon fue financiada por los reyes católicos de:",
+        "imagen": "",
+        "opciones": [
+          "Portugal",
+          "Francia",
+          "España",
+          "Inglaterra"
+        ],
+        "respuesta": 3
+      }
+    ],
+    "evaluar": [
+      {
+        "pregunta": "La toma de Constantinopla trajo el bloqueo de la ruta de las especies que se dirigía de Europa a :",
+        "imagen": "",
+        "opciones": [
+          "La China",
+          "América",
+          "Grecia",
+          "Las Indias"
+        ],
+        "respuesta": 4
+      },
+      {
+        "pregunta": "España y Portugal inician una conquista por descubrir nuevas tierras para obtener:",
+        "imagen": "",
+        "opciones": [
+          "Pólvora y recursos minerales",
+          "Recursos animales",
+          "Recursos naturales y metales preciosos",
+          "Recursos vegetales"
+        ],
+        "respuesta": 3
+      }
+    ]
+  },
+  "act02": {
+    "entender": [
+      {
         "pregunta": "No es una leyenda o mito que trata de explicar el origen de la cultura inca:",
         "imagen": "",
         "opciones": [
@@ -182,6 +324,379 @@
           "El inca no tenía heredero"
         ],
         "respuesta": 1
+      }
+    ]
+  },
+  "act03": {
+    "entender": [
+      {
+        "pregunta": "El Documento que permitió a Colon el descubrimiento y posterior conquista de América fue la capitulación de:",
+        "imagen": "",
+        "opciones": [
+          "Toledo",
+          "Burgos",
+          "Santa Fe",
+          "Valladolid"
+        ],
+        "respuesta": 3
+      },
+      {
+        "pregunta": "La invasión a América generó pugnas o enfrentamientos entre los reinos de:",
+        "imagen": "",
+        "opciones": [
+          "España y Portugal",
+          "España y Holanda",
+          "Portugal e Inglaterra",
+          "Inglaterra e Italia"
+        ],
+        "respuesta": 1
+      },
+      {
+        "pregunta": "El primero en recibir noticias del Tahuantinsuyo fue:",
+        "imagen": "",
+        "opciones": [
+          "Vasco Núñez de Balboa",
+          "Pascual de Andagoya",
+          "Américo Vespucio",
+          "Francisco Pizarro"
+        ],
+        "respuesta": 1
+      }
+    ],
+    "aplicar": [
+      {
+        "pregunta": "A la muerte de Atahualpa, Pizarro nombró como sucesor",
+        "imagen": "",
+        "opciones": [
+          "Huáscar",
+          "Manco Inca",
+          "Toparpa",
+          "Calcuchímac"
+        ],
+        "respuesta": 3
+      },
+      {
+        "pregunta": "El protector de Indios, Obispo de Chiapas, quien motivó a España para promulgar leyes en favor de los nativos americanos.",
+        "imagen": "",
+        "opciones": [
+          "Hernando de Luque",
+          "El Padre Vittoria",
+          "Bartolomé de las Casas",
+          "Vicente Valverde"
+        ],
+        "respuesta": 3
+      },
+      {
+        "pregunta": "El hallazgo del Tahuantinsuyo, significó para Europa:",
+        "imagen": "",
+        "opciones": [
+          "El nacimiento de nuevas potencias como España y Portugal",
+          "El despegue económico inmediato de algunos países como Inglaterra",
+          "La llegada de nuevos productos alimenticios conocidos sólo en Asia",
+          "La mezcla racial y cultural con los aborígenes superiores"
+        ],
+        "respuesta": 1
+      }
+    ],
+    "analizar": [
+      {
+        "pregunta": "Se especula que la frase \"por este lado se va a Panamá, a ser pobres, y por este otro se va al Perú , a ser ricos\" fue pronunciada por:",
+        "imagen": "",
+        "opciones": [
+          "Almagro en la porfía de Atacames",
+          "Felipillo",
+          "Pizarro en la Isla del Gallo",
+          "Valverde en el requerimiento"
+        ],
+        "respuesta": 3
+      },
+      {
+        "pregunta": "Representaba el jefe máximo del imperio (con poder absoluto), considerado hijo del sol, señor de la tierra ordenador del mundo",
+        "imagen": "",
+        "opciones": [
+          "Auqui",
+          "Inca",
+          "Apunchic",
+          "Curaca"
+        ],
+        "respuesta": 2
+      },
+      {
+        "pregunta": "Institución dirigida por un presidente e integrada por oidores nombrados todos por el Rey:",
+        "imagen": "",
+        "opciones": [
+          "Cabildo o Ayuntamientos",
+          "Real Audiencia",
+          "Capitanía",
+          "Corregimiento"
+        ],
+        "respuesta": 1
+      },
+      {
+        "pregunta": "La extensión del Virreinato comprendía los actuales países de:",
+        "imagen": "",
+        "opciones": [
+          "Argentina - Chile - Perú - Venezuela",
+          "Colombia",
+          "Ecuador - Colombia - Perú - Brasil - Chile - Argentina",
+          "Toda América del Sur excepto los dominios de Portugal y la Gobernación de Venezuela",
+          "Todo América del Sur excepto la Gobernación de Venezuela"
+        ],
+        "respuesta": 1
+      }
+    ],
+    "evaluar": [
+      {
+        "pregunta": "La principal actividad económica desarrollada en la colonia:",
+        "imagen": "",
+        "opciones": [
+          "La Minería",
+          "La Manufactura",
+          "La Artesanía",
+          "La Agricultura"
+        ],
+        "respuesta": 1
+      },
+      {
+        "pregunta": "El establecimiento de la Santa Inquisición, tuvo como objetivo:",
+        "imagen": "",
+        "opciones": [
+          "Aplicar el racionalismo",
+          "Defender la pureza de la fe católica",
+          "Introducir las ideas de la Ilustración",
+          "Destrucción de las Huacas regionales"
+        ],
+        "respuesta": 2
+      },
+      {
+        "pregunta": "Constituyó el principal ingreso para la Corona española:",
+        "imagen": "",
+        "opciones": [
+          "La avería",
+          "La media anata",
+          "El diezmo",
+          "El tributo indígena"
+        ],
+        "respuesta": 4
+      }
+    ]
+  },
+  "act04": {
+    "entender": [
+      {
+        "pregunta": "Según la imagen en cual de las Ocho Regiones naturales predomina esta forma de relieve:",
+        "imagen": "act4Preg01",
+        "opciones": [
+          "Yunga",
+          "Quechua",
+          "Costa o Chala",
+          "Selva Alta o Rupa Rupa"
+        ],
+        "respuesta": 3
+      }
+    ],
+    "aplicar": [
+      {
+        "pregunta": "La Puya de Raimondi es una flora característica de la Región:",
+        "imagen": "act4Preg02",
+        "opciones": [
+          "Janca o Puna",
+          "Quechua",
+          "Yunga",
+          "Janca o Cordillera"
+        ],
+        "respuesta": 1
+      }
+    ],
+    "analizar": [
+      {
+        "pregunta": "Esta región natural se encuentra entre los 2,500 y 3,500 metros sobre el nivel del mar",
+        "imagen": "",
+        "opciones": [
+          "Quechua",
+          "Costa",
+          "Cordillera",
+          "Puna"
+        ],
+        "respuesta": 1
+      }
+    ],
+    "evaluar": [
+      {
+        "pregunta": "El Condor es una especie de fauna característico de la Región:",
+        "imagen": "act4Preg04",
+        "opciones": [
+          "Yunga",
+          "Puna",
+          "Selva Baja",
+          "Cordillera"
+        ],
+        "respuesta": 4
+      }
+    ]
+  },
+  "act05": {
+    "entender": [
+      {
+        "pregunta": "El paralelo más grande de la Tierra es:",
+        "imagen": "",
+        "opciones": [
+          "Ecuador",
+          "Capricornio",
+          "Greenwich",
+          "Cáncer"
+        ],
+        "respuesta": 1
+      }
+    ],
+    "aplicar": [
+      {
+        "pregunta": "Línea imaginaria que divide a la tierra en hemisferio occidental y oriental o longitud oeste y este:",
+        "imagen": "act5Preg02",
+        "opciones": [
+          "Meridiano Base de Greenwich",
+          "Línea Ecuatorial",
+          "Círculo Polar Ártico",
+          "Meridiano de 180°"
+        ],
+        "respuesta": 1
+      }
+    ],
+    "analizar": [
+      {
+        "pregunta": "Cuanto tiempo emplea en girar la Tierra en 60°",
+        "imagen": "",
+        "opciones": [
+          "8 horas",
+          "4 horas",
+          "10 horas",
+          "6 horas"
+        ],
+        "respuesta": 2
+      }
+    ],
+    "evaluar": [
+      {
+        "pregunta": "Es el arte y técnica de elaborar los documentos que representan la superficie terrestre:",
+        "imagen": "",
+        "opciones": [
+          "Geografía",
+          "Cartografía",
+          "Geología",
+          "Espeleología"
+        ],
+        "respuesta": 2
+      }
+    ]
+  },
+  "act06": {
+    "entender": [
+      {
+        "pregunta": "El Perú es un país altamente sísmico por ubicarse dentro del:",
+        "imagen": "",
+        "opciones": [
+          "Perímetro volcánico andino",
+          "Cinturón de Fuego del Pacifico",
+          "Cinturón de Fuego del Atlántico",
+          "Cinturón de Fuego del Indico"
+        ],
+        "respuesta": 2
+      }
+    ],
+    "aplicar": [
+      {
+        "pregunta": "Son flujos de grandes masas de lodo, agua y piedra que descienden por las quebradas arrasando con todo:",
+        "imagen": "",
+        "opciones": [
+          "Aluvión",
+          "Huaico",
+          "Sequia",
+          "Helada"
+        ],
+        "respuesta": 2
+      }
+    ],
+    "analizar": [
+      {
+        "pregunta": "Organismo del Estado que\ttiene por finalidad proteger a la población, previniendo daños, proporcionando ayuda oportuna y adecuada, y asegurando su rehabilitación en casos de desastres:",
+        "imagen": "",
+        "opciones": [
+          "FONCODES",
+          "INDECI",
+          "DEMUNA",
+          "SOAT"
+        ],
+        "respuesta": 2
+      }
+    ],
+    "evaluar": [
+      {
+        "pregunta": "A que fenómeno natural corresponde la imagen:",
+        "imagen": "act6Preg04",
+        "opciones": [
+          "Helada",
+          "Friaje",
+          "Huaico",
+          "Sequia"
+        ],
+        "respuesta": 4
+      }
+    ]
+  },
+  "act07": {
+    "entender": [
+      {
+        "pregunta": "Los elementos modernos de la producción son",
+        "imagen": "",
+        "opciones": [
+          "Empresa y estado",
+          "Trabajo",
+          "técnica y estado",
+          "Trabajo",
+          "tierra y capital",
+          "Inversión",
+          "producción y consumo"
+        ],
+        "respuesta": 1
+      }
+    ],
+    "aplicar": [
+      {
+        "pregunta": "La producción genera fundamentalmente:",
+        "imagen": "",
+        "opciones": [
+          "Expectativas",
+          "Bienes y servicios",
+          "Utilidades",
+          "Consumo"
+        ],
+        "respuesta": 2
+      }
+    ],
+    "analizar": [
+      {
+        "pregunta": "Modelo de mercado en el cual existe un solo vendedor y muchos compradores.",
+        "imagen": "",
+        "opciones": [
+          "Oligopolio",
+          "Monopsonio",
+          "Duopolio",
+          "Monopolio"
+        ],
+        "respuesta": 4
+      }
+    ],
+    "evaluar": [
+      {
+        "pregunta": "El Banco Central de Reserva y SEDAPAL son monopolios:",
+        "imagen": "",
+        "opciones": [
+          "De coalición",
+          "Particulares",
+          "Públicos",
+          "De hecho"
+        ],
+        "respuesta": 3
       }
     ]
   }

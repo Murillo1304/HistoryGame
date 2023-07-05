@@ -22,6 +22,7 @@ public class ConfigurationDecoder : MonoBehaviour
 
     public IEnumerator GetConfiguration(string username)
     {
+        Debug.Log("Buscando configuracion");
         requestResponse = false;
         if (Application.platform == RuntimePlatform.Android) url = "http://192.168.18.9:3000";
         string urlComplete = url + "/" + username + "/13";

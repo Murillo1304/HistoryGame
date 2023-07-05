@@ -52,7 +52,7 @@ public class CheckPassController : MonoBehaviour, Interactable, ISavable
             }
             else
             {
-                yield return DialogManager.Instance.ShowDialogText($"¡Necesitas el {pass.Name} para poder pasar!");
+                yield return DialogManager.Instance.ShowDialogText($"¡El profesor no te dió el {pass.Name} asi que no puedes pasar!");
             }
         }
         else

@@ -78,6 +78,7 @@ public class LoginUI : MonoBehaviour
             else
             {
                 Debug.LogError("POST request failed. Error: " + request.error);
+                yield return null;
             }
         }
     }

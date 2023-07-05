@@ -172,7 +172,7 @@ PrefabInstance:
       objectReference: {fileID: 11400000, guid: cf98244ecf1e3b94c83ff3fb9c4a1f9d, type: 2}
     - target: {fileID: 2690925321196277508, guid: 0c1de0791173a944e9b1909b1f9e80e3, type: 3}
       propertyPath: pokemons.Array.data[0].level
-      value: 7
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 2690925321196277510, guid: 0c1de0791173a944e9b1909b1f9e80e3, type: 3}
       propertyPath: m_Sprite
